@@ -71,6 +71,10 @@ rust-check:
     cargo clippy --workspace --all-targets -- -D warnings
     cargo test --workspace
 
+# Check pure-Rust Next.js extracted crate (requires `just submodules-init frameworks/next.js` and nightly)
+next-rust-check:
+    cargo check --manifest-path crates/ay-vercel-next/Cargo.toml
+
 # Run Python Ruff lint/format checks and pytest suite via uv
 py-check:
     uv run ruff check python

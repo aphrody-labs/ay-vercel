@@ -1,0 +1,28 @@
+[workspace]
+
+[package]
+name = "ay-vercel-next"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+repository = "https://github.com/aphrody-labs/ay-vercel"
+description = "Pure-Rust Next.js engine extracted from frameworks/next.js (next-api, next-build, next-core, turbopack) without N-API"
+
+[dependencies]
+next-api = { path = "../../frameworks/next.js/crates/next-api", default-features = false }
+next-build = { path = "../../frameworks/next.js/crates/next-build" }
+next-code-frame = { path = "../../frameworks/next.js/crates/next-code-frame" }
+next-core = { path = "../../frameworks/next.js/crates/next-core", default-features = false }
+next-custom-transforms = { path = "../../frameworks/next.js/crates/next-custom-transforms" }
+turbo-tasks = { path = "../../frameworks/next.js/turbopack/crates/turbo-tasks" }
+turbo-tasks-backend = { path = "../../frameworks/next.js/turbopack/crates/turbo-tasks-backend" }
+turbopack-core = { path = "../../frameworks/next.js/turbopack/crates/turbopack-core" }
+
+[lints.rust]
+unsafe_code = "forbid"
+non_ascii_idents = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+expect_used = "deny"

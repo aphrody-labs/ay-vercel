@@ -6,6 +6,7 @@ members = [
   "crates/ay-vercel-function",
 ]
 exclude = [
+  "crates/ay-vercel-next",
   "frameworks",
   "sdk",
   "skills",
