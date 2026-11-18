@@ -1,0 +1,26 @@
+{
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false,
+    "MD034": false,
+    "MD041": false,
+    "MD024": { "siblings_only": true },
+    "MD036": false,
+    "MD060": false
+  },
+  "ignores": [
+    "node_modules/**",
+    "target/**",
+    "frameworks/**",
+    "sdk/**",
+    "skills/**",
+    "mcp/**",
+    "docs/vercel/**",
+    "agents/**",
+    "ui/**",
+    "runtime/**",
+    "python/**",
+    "templates/**"
+  ]
+}

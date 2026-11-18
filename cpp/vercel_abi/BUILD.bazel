@@ -1,0 +1,25 @@
+load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
+
+cc_library(
+    name = "vercel_abi",
+    srcs = ["vercel_abi.cc"],
+    hdrs = ["vercel_abi.h"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@abseil-cpp//absl/crc:crc32c",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "vercel_abi_test",
+    size = "small",
+    srcs = ["vercel_abi_test.cc"],
+    deps = [
+        ":vercel_abi",
+        "@abseil-cpp//absl/crc:crc32c",
+        "@googletest//:gtest_main",
+    ],
+)

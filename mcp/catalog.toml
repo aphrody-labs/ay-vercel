@@ -1,0 +1,68 @@
+# Authoritative MCP server and package catalog for Vercel & Vercel-Labs.
+
+[[server]]
+id = "vercel"
+name = "Vercel Official MCP Server"
+transport = "http"
+url = "https://mcp.vercel.com"
+auth = "oauth-cimd"
+upstream = "vercel/vercel-mcp-overview"
+fork = "aphrody-labs/vercel-mcp-overview"
+description = "Official Vercel Streamable HTTP MCP server covering docs search, projects, deployments, logs, domains, DNS, firewall, flags, edge config, storage, sandboxes, drives, observability, traces, agent runs, and AI Gateway."
+
+[[server]]
+id = "next-devtools"
+name = "Next.js DevTools MCP"
+transport = "stdio"
+command = "bunx"
+args = ["next-devtools-mcp@latest"]
+auth = "none"
+upstream = "vercel/next-devtools-mcp"
+fork = "aphrody-labs/next-devtools-mcp"
+description = "Model Context Protocol server for live Next.js App Router diagnostics, routes, errors, build/runtime metadata, and upgrade/cache tooling."
+
+[[sdk]]
+id = "mcp-handler"
+package = "mcp-handler"
+upstream = "vercel-labs/mcp-handler"
+fork = "aphrody-labs/mcp-handler"
+description = "Server adapter for deploying Streamable HTTP and SSE MCP servers on Next.js, Nuxt, SvelteKit, and Vercel Fluid Compute."
+
+[[sdk]]
+id = "acp-handler"
+package = "@vercel/acp-handler"
+upstream = "vercel/acp-handler"
+fork = "aphrody-labs/acp-handler"
+description = "Agentic Commerce Protocol handler for Vercel server endpoints."
+
+[[sdk]]
+id = "mcp-to-ai-sdk"
+package = "mcp-to-ai-sdk"
+upstream = "vercel-labs/mcp-to-ai-sdk"
+fork = "aphrody-labs/mcp-to-ai-sdk"
+description = "Adapter converting MCP server tool definitions into AI SDK tool schemas."
+
+[[sdk]]
+id = "add-mcp"
+package = "add-mcp"
+upstream = "neon-solutions/add-mcp"
+fork = "aphrody-labs/add-mcp"
+description = "Cross-agent MCP configuration CLI recommended by Vercel docs (`bunx add-mcp https://mcp.vercel.com`)."
+
+[[starter]]
+id = "mcp-for-nextjs"
+upstream = "vercel-labs/mcp-for-next.js"
+fork = "aphrody-labs/mcp-for-next.js"
+description = "Reference Next.js App Router `/app/mcp/route.ts` MCP server template."
+
+[[starter]]
+id = "mcp-apps-nextjs-starter"
+upstream = "vercel-labs/mcp-apps-nextjs-starter"
+fork = "aphrody-labs/mcp-apps-nextjs-starter"
+description = "Starter template for interactive MCP Apps in Next.js."
+
+[[starter]]
+id = "contentful-mcp-server"
+upstream = "vercel-labs/contentful-mcp-server"
+fork = "aphrody-labs/contentful-mcp-server"
+description = "MCP server for Contentful Management API deployed on Vercel."

@@ -1,0 +1,1364 @@
+{
+  "$schema": "https://cloudflare.github.io/agent-skills-discovery-rfc/schema.json",
+  "generated_at": "2026-11-18T14:45:33.598Z",
+  "skills": [
+    {
+      "name": "Vercel Academy",
+      "description": "Vercel academy skill",
+      "url": "/skills/academy/SKILL.md",
+      "sha256": "106f9668b371c29620ac16f0dd0eeff99e9f719aca48882c76da32a5a3e7c454",
+      "bytes": 3573
+    },
+    {
+      "name": "access-protected-vercel-deployment",
+      "description": "Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header.",
+      "url": "/skills/access-protected-vercel-deployment/SKILL.md",
+      "sha256": "f945af10cd07f893386cb319a0836357c96e8ab01aebb1740876f206f82f18d6",
+      "bytes": 7641
+    },
+    {
+      "name": "add",
+      "description": "Add Turborepo to an existing repository in any toolchain Turborepo supports. Use when asked to add, introduce, or set up Turborepo or turbo in a repository that does not use it yet.",
+      "url": "/skills/add/SKILL.md",
+      "sha256": "cf25fa265e0d283b46a6e5e05de635398c10eba6190e386dd8cb7ffb110ccbe3",
+      "bytes": 5556
+    },
+    {
+      "name": "add-diagnostic",
+      "description": "Add a new diagnostic code following the defineDiagnostics() conventions from nostics",
+      "url": "/skills/add-diagnostic/SKILL.md",
+      "sha256": "50682bed1f33b126bd5cc7855eff2f24a4684e18ea6840d00d6b331de886bacc",
+      "bytes": 1341
+    },
+    {
+      "name": "add-function-examples",
+      "description": "Guide for adding new AI function examples, for testing specific features against the actual provider APIs.",
+      "url": "/skills/add-function-examples/SKILL.md",
+      "sha256": "72b5673af67b44895dc4a49845ceb552e31cc08a0bc9c7cd1fe8532e3242749c",
+      "bytes": 2024
+    },
+    {
+      "name": "add-harness-package",
+      "description": "Guide for adding new AI SDK harness packages. Use when creating a new @ai-sdk/harness-<name> package that adapts a coding-agent runtime to HarnessV1.",
+      "url": "/skills/add-harness-package/SKILL.md",
+      "sha256": "10a86b1945c77145c70a670ae5beb4945aaaa962ce7dad94d7a7a15d9ca33339",
+      "bytes": 13686
+    },
+    {
+      "name": "add-provider-package",
+      "description": "Guide for adding first-party AI provider packages to the AI SDK. Use when creating a provider package under packages/ to integrate an external AI service.",
+      "url": "/skills/add-provider-package/SKILL.md",
+      "sha256": "a22ce924bdedb9db5fcb934be6769ffcd10dc494972715aba3c70e9ff9d94fd5",
+      "bytes": 12517
+    },
+    {
+      "name": "adr-skill",
+      "description": "Create, update, or consult Architecture Decision Records (ADRs). Use when capturing an architecture decision and its rationale, maintaining its lifecycle, checking decisions that govern planned changes, or when a session leads to a new decision affecting future work across multiple layers. Do not use for routine bug fixes or features confined to API internals or a single provider or harness adapter.",
+      "url": "/skills/adr-skill/SKILL.md",
+      "sha256": "b55b16004610383b0e3ff12849cca5478794a7484927f2d6aa47942ebd42ee06",
+      "bytes": 5481
+    },
+    {
+      "name": "agent-desktop",
+      "description": "Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CLI. Use when an AI agent must see or act on a desktop GUI: click buttons, fill forms, read UI state, navigate menus, toggle checkboxes, scroll, drag, type text, press shortcuts, take screenshots, manage windows, use the clipboard, launch or close apps, read notifications. Triggers on: \"click button\", \"fill form\", \"open app\", \"read UI\", \"computer use\", \"operate desktop\", \"accessibility tree\", \"snapshot app\", \"type into field\", \"navigate menu\", \"toggle checkbox\", \"take screenshot\", \"desktop automation\", \"agent-desktop\", or any desktop GUI task on macOS, Windows or Linux.",
+      "url": "/skills/agent-desktop/SKILL.md",
+      "sha256": "f761e9aaddd00a6f39982dc5d65655f014cd5254bcf4301b30556e33a62c9584",
+      "bytes": 10118
+    },
+    {
+      "name": "agent-desktop-ffi",
+      "description": "C-ABI bindings over agent-desktop's PlatformAdapter. Consumers (Python ctypes, Swift, Node ffi-napi, Go cgo, C++, Ruby fiddle) link libagent_desktop_ffi.{dylib,so,dll} and call `ad_*` functions directly instead of spawning the CLI binary per call. The canonical observe-act workflow is: ad_init → ad_adapter_create[_with_session] → ad_snapshot → read qualified refs (@s8f3k2p9:e5) → ad_execute_by_ref → ad_free_string → ad_adapter_destroy.",
+      "url": "/skills/agent-desktop-ffi/SKILL.md",
+      "sha256": "4a2564ce3739d6cd7bc6e3bd9e0a2ce2a6684a6ac507ef2988bfec7d934e3bb4",
+      "bytes": 11098
+    },
+    {
+      "name": "agent-desktop-linux",
+      "description": "Linux platform guide for the agent-desktop CLI. Lists per command group what works on X11 and on Wayland, how to check the AT-SPI accessibility bus, the first-contact gotchas (app names, Chromium and Electron flags, headed focus, blocked key combos), and where to find lifecycle, screenshot, clipboard, tray, notification and troubleshooting details. Triggers on: \"linux desktop automation\", \"AT-SPI tree\", \"automate GNOME app\", \"agent-desktop on Linux\", \"accessibility bus not available\", \"empty supported_surfaces\", \"wayland screenshot consent\", or any Linux GUI interaction task.",
+      "url": "/skills/agent-desktop-linux/SKILL.md",
+      "sha256": "3347961bc3846cd5de5b74fb86ae1750673d46c18c87eb45307761b04fe77b76",
+      "bytes": 17378
+    },
+    {
+      "name": "agent-desktop-macos",
+      "description": "macOS platform guide for the agent-desktop CLI. Use for desktop automation on macOS: granting Accessibility and Screen Recording permission (TCC), what headed mode does on macOS (physical-first click, type and scroll), surfaces (menu, menubar, sheet, popover, alert, dock, menu-bar-extras), menu bar apps and system panels with no window, Notification Center, Chromium and Electron apps including launch --cdp, and fixing PERM_DENIED, empty accessibility trees, ACTION_FAILED and APP_UNRESPONSIVE.",
+      "url": "/skills/agent-desktop-macos/SKILL.md",
+      "sha256": "76c7f7bba96328848e5b064f1661d53652b18a58ca5c3e816794d1527478a38e",
+      "bytes": 8426
+    },
+    {
+      "name": "agent-desktop-windows",
+      "description": "Windows platform guide for the agent-desktop CLI. Lists per command group what works on Windows and what refuses, the first-contact gotchas (PowerShell ref quoting, minimized windows, headed-only input), and where to find shell surfaces, notifications, the cursor overlay, UIPI elevation, Chromium/Electron settle behavior and troubleshooting. Triggers on: \"windows desktop automation\", \"UIA tree\", \"automate Windows app\", \"agent-desktop on Windows\", \"elevated window input blocked\", \"E_ACCESSDENIED\", or any Windows GUI interaction task.",
+      "url": "/skills/agent-desktop-windows/SKILL.md",
+      "sha256": "babc8d3f0583afc3f41b3b84cc775d3be24010043b57966755fcf9bda8880073",
+      "bytes": 8510
+    },
+    {
+      "name": "agent-friendly-apis",
+      "description": "Companion skill for the Agent-Friendly APIs course on Vercel Academy. Use when the user mentions \"agent-friendly APIs\", \"API documentation\", \"llms.txt\", \"the course\", \"teach me\", or asks about agent-friendly docs, documentation patterns, or building Claude Code skills in the context of the Academy course.",
+      "url": "/skills/agent-friendly-apis/SKILL.md",
+      "sha256": "8864ad37898aca793b7decc1a64046b9821dbaf6a5fd2e35543526558d1d9467",
+      "bytes": 30758
+    },
+    {
+      "name": "agentcore",
+      "description": "Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser session backed by AWS infrastructure. Triggers include \"use agentcore\", \"run on AWS\", \"cloud browser with AWS\", \"bedrock browser\", \"agentcore session\", or any task requiring AWS-hosted browser automation.",
+      "url": "/skills/agentcore/SKILL.md",
+      "sha256": "f616b6dbce7cce388eb62701f254d87a78a3650a9c365db653fee1da3d7388a0",
+      "bytes": 4006
+    },
+    {
+      "name": "ai",
+      "description": "AI SDK for Python (the `ai` package). Use for Python model calls (LLMs, image, video, speech, embedding, transcription, reranking, or decisions), agents, model interaction tests, tool calling, subagents, approvals, durable execution, telemetry, AI SDK UI backends, and custom providers.",
+      "url": "/skills/ai/SKILL.md",
+      "sha256": "aeef2d9db871d2d64a219361392fa2dda93cb5795432604536a4688f4ab4f6ec",
+      "bytes": 3368
+    },
+    {
+      "name": "ai-cli",
+      "description": "Generate text, images, video, and audio, and make typed decisions from the terminal.",
+      "url": "/skills/ai-cli/SKILL.md",
+      "sha256": "d3d2f0304fe058782cacd0a14990d202352bdcd879ab9089c52544388aec6d16",
+      "bytes": 14625
+    },
+    {
+      "name": "ai-elements",
+      "description": "Build AI chat interfaces using ai-elements components — conversations, messages, tool displays, prompt inputs, and more. Use when the user wants to build a chatbot, AI assistant UI, or any AI-powered chat interface.",
+      "url": "/skills/ai-elements/SKILL.md",
+      "sha256": "6e1697f6728f131cfbbb6b53543438921ce11faafcc4d5e0cc361b1643324e71",
+      "bytes": 7246
+    },
+    {
+      "name": "ai-gateway",
+      "description": "Vercel AI Gateway guidance for setup, model discovery, authentication, routing, fallbacks, virtual models, evaluation models, BYOK, budgets, spend reporting, observability, compatible APIs, and coding-agent configuration. Use when adding AI Gateway to an app, migrating provider calls, choosing models or providers, centralizing model configuration, evaluating application state, debugging gateway requests, or running `vercel ai-gateway` commands.",
+      "url": "/skills/ai-gateway/SKILL.md",
+      "sha256": "5e9341b91e634daaaa18d02075a218f84177d886cabf59106fe20c9c88d58077",
+      "bytes": 18150
+    },
+    {
+      "name": "ai-sdk",
+      "description": "Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
+      "url": "/skills/ai-sdk/SKILL.md",
+      "sha256": "f5bde33c1c3435ceedcf70cf353a48a2eca83dd5e5bc0489c56b203409a05797",
+      "bytes": 21232
+    },
+    {
+      "name": "apple",
+      "description": "Emulated Sign in with Apple / Apple OIDC for local development and testing. Use when the user needs to test Apple sign-in locally, emulate Apple OIDC discovery, handle Apple token exchange, configure Apple OAuth clients, or work with Apple userinfo without hitting real Apple APIs. Triggers include \"Apple OAuth\", \"emulate Apple\", \"mock Apple login\", \"test Apple sign-in\", \"Sign in with Apple\", \"Apple OIDC\", \"local Apple auth\", or any task requiring a local Apple OAuth/OIDC provider.",
+      "url": "/skills/apple/SKILL.md",
+      "sha256": "f0f56a72fb060bf92f7b89089f7451b6f140f2aba0d7313e65aaef67bb4272f1",
+      "bytes": 8348
+    },
+    {
+      "name": "astro-webflow-to-vercel",
+      "description": "Migrate an Astro application from Webflow Cloud to Vercel. Use this skill when a user wants to move, migrate, or port an Astro app off Webflow Cloud onto Vercel. This covers swapping the @astrojs/cloudflare adapter for @astrojs/vercel, removing Wrangler and the Webflow Cloud config files (webflow.json, wrangler.json, worker-configuration.d.ts), dropping the base path the app mounted under on a Webflow site, removing the Edge runtime directive from API routes, repointing Cloudflare storage bindings read through locals.runtime.env (Object Storage/R2, Key Value Store/Workers KV, SQLite/D1) to Vercel storage, recreating environment variables, and deploying. Triggers include phrases like 'migrate to Vercel', 'move off Webflow Cloud', 'Astro Webflow Cloud to Vercel', or the presence of webflow.json, wrangler.json, @astrojs/cloudflare, or locals.runtime.env in an Astro project. Do not use for non-Astro frameworks or for migrations in the opposite direction (Vercel to Webflow Cloud).",
+      "url": "/skills/astro-webflow-to-vercel/SKILL.md",
+      "sha256": "d1f5417b50743163cb0d17df95c916c3377b182046722f87385b1d37b9356883",
+      "bytes": 18335
+    },
+    {
+      "name": "auth",
+      "description": "Authentication integration guidance — Clerk (native Vercel Marketplace), Better Auth, Descope, and Auth0 setup for Next.js applications, plus Sign in with Vercel, Vercel Passport, and Vercel KMS. Covers server config, route handlers, proxy.ts auth patterns, sign-in/sign-up flows, and Marketplace provisioning. Use when implementing user authentication, sessions, protected routes, or protecting deployments.",
+      "url": "/skills/auth/SKILL.md",
+      "sha256": "3ca767fbfc0bfd97d9235cc39aa9ccdc390a39632e9b1be5a3a382dfb48d2be1",
+      "bytes": 25879
+    },
+    {
+      "name": "autoship",
+      "description": "CLI tool for automated changeset-based releases with AI-generated descriptions. Use when the user needs to release a package, create changesets, bump versions, or automate npm publishing workflows. Triggers include requests to \"release a package\", \"create a changeset\", \"publish to npm\", \"bump the version\", \"automate releases\", or any task involving version management and package publishing for repositories using the changesets workflow.",
+      "url": "/skills/autoship/SKILL.md",
+      "sha256": "5513498d14b578ed3ed944950b5486e93acc29b6378086ed31390529b2f9daef",
+      "bytes": 5245
+    },
+    {
+      "name": "aws",
+      "description": "Emulated AWS cloud services (S3, SQS, Cognito, IAM, STS) for local development and testing. Use when the user needs to interact with AWS API endpoints locally, test S3 bucket and object operations, emulate SQS queues and messages, test Cognito sign-up, sign-in, JWTs, or Identity Pools, manage IAM users/roles/access keys, test STS assume role, or work without hitting real AWS APIs. Triggers include \"AWS emulator\", \"emulate AWS\", \"mock S3\", \"local SQS\", \"test IAM\", \"emulate S3\", \"AWS locally\", \"STS assume role\", or any task requiring local AWS service emulation.",
+      "url": "/skills/aws/SKILL.md",
+      "sha256": "5906148ffd64b0430be7c32229308c341668b1e085e0edbd049a16de429475bf",
+      "bytes": 21789
+    },
+    {
+      "name": "ay-vercel-ops",
+      "description": "Manage the ay-vercel superproject, upstream fork synchronization across vercel and vercel-labs, agent skills indexing, MCP catalog verification, and tsc-ts/scriptc/Turborepo/Next.js builds.",
+      "url": "/skills/ay-vercel-ops/SKILL.md",
+      "sha256": "1441ba574aa48b1e4cd01060d52f3d8774b4efd09d5ad8ed2072672a09483210",
+      "bytes": 1026
+    },
+    {
+      "name": "before-and-after",
+      "description": "Add existing screenshots or screen recordings to a GitHub pull request as a before/after or preview block. Use when a PR needs visual media attached to its description. Browser navigation and capture belong to agent-browser.",
+      "url": "/skills/before-and-after/SKILL.md",
+      "sha256": "324c12c490fbf13d098c2204487d75302e8aa55b578986019ac1c02d5c3e0d1c",
+      "bytes": 8298
+    },
+    {
+      "name": "bootstrap",
+      "description": "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
+      "url": "/skills/bootstrap/SKILL.md",
+      "sha256": "259fb02b116e9298390f691282b2ebbcf395d8640bdac4d906f688df3b50f1a0",
+      "bytes": 9214
+    },
+    {
+      "name": "botid",
+      "description": "Protect specific routes and server actions from bots in code with Vercel BotID (`botid` npm package). Use when installing BotID, calling `initBotId()` or `checkBotId()`, mounting `<BotIdClient />`, gating signup, login, checkout or AI inference endpoints, allowing verified bots such as ChatGPT agents through, enabling Deep Analysis, or debugging a route that always reports a bot. For site-wide bot rules (Bot Protection, AI Bots, custom rules on bot name or category), use the `vercel-firewall` skill.",
+      "url": "/skills/botid/SKILL.md",
+      "sha256": "c3db239502faa59dd027ea262a8258da436bf86f665587da2f86978661437a56",
+      "bytes": 7201
+    },
+    {
+      "name": "build-agents",
+      "description": "Default guidance for building AI agents. Use for generic requests to build, create, scaffold, design, architect, or implement an AI agent, agent app, tool-calling agent, durable agent, multi-agent system, or scheduled agent.",
+      "url": "/skills/build-agents/SKILL.md",
+      "sha256": "584fb637e708d8e466a0cb89158c7ce6cb3a1476261fdba1fc04f4d350c68474",
+      "bytes": 6315
+    },
+    {
+      "name": "building-agents-with-eve",
+      "description": "Companion skill for the Building Agents with eve course on Vercel Academy. Use when the user mentions \"building agents with eve\", \"the eve course\", \"the bike shop agent\", \"the dispatcher\", \"teach me\", or asks about eve (the filesystem-first agent framework) — defineTool, defineState, dynamic skills, approval gates, channels, or deploying an eve agent — in the context of the Academy course.",
+      "url": "/skills/building-agents-with-eve/SKILL.md",
+      "sha256": "b2184610f1b539c9cafe6993216ae16fe59251b8ae3a0c2ac61f2b8524898ef5",
+      "bytes": 35257
+    },
+    {
+      "name": "building-components",
+      "description": "Guide for building modern, accessible, and composable UI components. Use when building new components, implementing accessibility, creating composable APIs, setting up design tokens, publishing to npm/registry, or writing component documentation.",
+      "url": "/skills/building-components/SKILL.md",
+      "sha256": "c26a17c53e59d119df99eade77bd608f864f888ac877979bfc4ffbba25792eb8",
+      "bytes": 2151
+    },
+    {
+      "name": "capture-api-response-test-fixture",
+      "description": "Capture API response test fixture.",
+      "url": "/skills/capture-api-response-test-fixture/SKILL.md",
+      "sha256": "05feab002033c911aa2c9befc907d84f274c758045f9209751a3a3b8443c936e",
+      "bytes": 2164
+    },
+    {
+      "name": "cdn-caching",
+      "description": "Debug Vercel CDN caching — cache hit rate, stale content, revalidation behavior, ISR + PPR, per-request cache reasons (cacheReason) and PPR state (ppr_state), and costs.",
+      "url": "/skills/cdn-caching/SKILL.md",
+      "sha256": "888a00c5220beb040afb53f87c3cd56e76687a2a3b19c98d0800cbb3f60ddf8f",
+      "bytes": 22176
+    },
+    {
+      "name": "chat",
+      "description": "Chat SDK renderer for json-render that turns JSON specs into native chat cards (Block Kit on Slack, Adaptive Cards on Teams, and the card format of other Chat SDK adapters). Use when working with @json-render/chat, building bots that post rich messages with tables, charts, fields, or buttons, streaming a generated card into a chat thread, or when the user mentions Chat SDK, Slack Block Kit, or Teams Adaptive Cards together with json-render.",
+      "url": "/skills/chat/SKILL.md",
+      "sha256": "4d05e75feaf71f5c8ae3462530384d4eb56fe92847e20ccf65be31ac0efeac53",
+      "bytes": 4080
+    },
+    {
+      "name": "chat-sdk",
+      "description": "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
+      "url": "/skills/chat-sdk/SKILL.md",
+      "sha256": "9f32a023462894fa1d0c00ec449420044fdc53a8263205520c587c0bda1754b2",
+      "bytes": 11902
+    },
+    {
+      "name": "codegen",
+      "description": "Code generation utilities for json-render. Use when generating code from UI specs, building custom code exporters, traversing specs, or serializing props for @json-render/codegen.",
+      "url": "/skills/codegen/SKILL.md",
+      "sha256": "897685310d325069ef97007d56fcd7b6ac60fe783dd1f6755d0e3130b6841fb5",
+      "bytes": 2587
+    },
+    {
+      "name": "core",
+      "description": "Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot, log into a site, test a web app, or automate any browser task.",
+      "url": "/skills/core/SKILL.md",
+      "sha256": "5c1ab70d399230750b746cfc4446d6dc1f1c5d5eba83769c8d2c076704e58fe8",
+      "bytes": 16770
+    },
+    {
+      "name": "cra-to-next-migration",
+      "description": "Comprehensive guide for migrating Create React App (CRA) projects to Next.js. Use when migrating a CRA app, converting React Router to file-based routing, or adopting Next.js patterns like Server Components, App Router, or image optimization.",
+      "url": "/skills/cra-to-next-migration/SKILL.md",
+      "sha256": "50edca40e777dc4a12f7f24442a3e8142b1436853599e765c16f3e818f28f921",
+      "bytes": 16349
+    },
+    {
+      "name": "create-a-backend",
+      "description": "Backend architecture guidance. Use when planning, building, or migrating an API or backend; choosing between Functions, Services, containers, Daemons, Workflow, Queues, and Marketplace databases; or selecting a supported backend framework or runtime.",
+      "url": "/skills/create-a-backend/SKILL.md",
+      "sha256": "0ddc9aac80e1ef35700951984befc6606bf7562da33cd0127f35b09b4d72ae2d",
+      "bytes": 6933
+    },
+    {
+      "name": "create-remotion-geist",
+      "description": "Create Remotion videos using the Geist design system aesthetic. Use when asked to create videos, animations, or motion graphics that should follow Vercel's visual style - dark theme, spring animations, Geist typography, and the Geist color palette.",
+      "url": "/skills/create-remotion-geist/SKILL.md",
+      "sha256": "034b46cccf435e74399388787284419fde71e78604c5fe2ff76a5d74f3280a8b",
+      "bytes": 5424
+    },
+    {
+      "name": "custom-apis",
+      "description": "Build and share third-party HTTP API emulators with emulate. Use to emulate an external provider, add a custom service plugin, model stateful vendor endpoints, configure custom seeds, or package an emulator. For an existing built-in service, use that service's skill.",
+      "url": "/skills/custom-apis/SKILL.md",
+      "sha256": "14d34a90388d1f5c801e555d31931cefa14c571517524909c579c5a5b0d2892f",
+      "bytes": 5824
+    },
+    {
+      "name": "custom-metrics",
+      "description": "Emit and query Vercel Custom Metrics. Use proactively whenever you write or change server code that runs as a Vercel Function (route handlers, API routes, server actions, webhooks, scheduled jobs, queue consumers, AI or external API calls) to record outcomes and latency with metric() from @vercel/functions, even when the user did not ask for metrics. Also use when choosing metric names and attributes or querying emitted values with vc metrics.",
+      "url": "/skills/custom-metrics/SKILL.md",
+      "sha256": "7a93924e29b43da0a1113a7e3aba44f66338cfbca10797dca6250e4fbeebf1a5",
+      "bytes": 9470
+    },
+    {
+      "name": "d3k",
+      "description": "Test and debug a web app in its existing d3k browser, including local Chrome connected to a Vercel Sandbox over CDP. Use for UI checks, browser interactions, screenshots, and reproducing app issues when d3k is running.",
+      "url": "/skills/d3k/SKILL.md",
+      "sha256": "103a20fae248f605e60902c91a1a15c37d07dfe2b112d90a590e678ba1d9bbd5",
+      "bytes": 26620
+    },
+    {
+      "name": "daemons",
+      "description": "Vercel Daemons guidance — long-running background workers built from a Dockerfile and declared under the `daemons` key in vercel.json. Use when running queue consumers, Celery/Sidekiq/BullMQ workers, workflow workers, or job runners next to an app on Vercel; configuring daemon instances per region, memory, or command; handling SIGTERM; or choosing between Daemons, Functions, Queues, and Workflows.",
+      "url": "/skills/daemons/SKILL.md",
+      "sha256": "909f15b519c718e97f558054b2ba39b36b661fd467b1307d97a81b58f2e41ce5",
+      "bytes": 18856
+    },
+    {
+      "name": "deepsec-docs",
+      "description": "Use deepsec (an AI-powered vulnerability scanner) — one-shot initialization, resumable setup, project/model credentials, scans, generated or hand-authored matchers, and plugins. Activates when the user asks how to initialize, scan, configure, resume, or extend deepsec.",
+      "url": "/skills/deepsec-docs/SKILL.md",
+      "sha256": "64b46ff7793330ed5fc6949b882f157a73ad9d359e17af6072778b12f37ad378",
+      "bytes": 4102
+    },
+    {
+      "name": "deploy",
+      "description": "Deploy applications to Vercel. Use when the user says \"deploy\", \"deploy to Vercel\", \"push to production\", \"deploy my app\", or \"go live\".",
+      "url": "/skills/deploy/SKILL.md",
+      "sha256": "f8fd85d5917393fe8596312c90a5b9ac489d3a1a0339ccb39a7f7ad11b8b4b94",
+      "bytes": 551
+    },
+    {
+      "name": "deploy-to-vercel",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "url": "/skills/deploy-to-vercel/SKILL.md",
+      "sha256": "418ca2a60d35c551e6cb645f4e82c1b704a8335486ffe74b1b3d0617a17504e5",
+      "bytes": 9721
+    },
+    {
+      "name": "deployments-cicd",
+      "description": "Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
+      "url": "/skills/deployments-cicd/SKILL.md",
+      "sha256": "3fb2a3853c497b513c311954bc41f6cecbdee5258d582b7e75943a325eb89781",
+      "bytes": 11925
+    },
+    {
+      "name": "derive-client",
+      "description": "Reverse-engineer a website's internal API by recording browser traffic into a HAR file, then generate a standalone client or CLI that calls the endpoints directly, with no browser needed after the first recording. Use when asked to \"derive a client\", \"build a CLI for <site>\", \"reverse engineer this site's API\", \"record network requests\", \"turn this site into an API\", or when the same site will be automated repeatedly and direct HTTP calls would beat driving the browser every time.",
+      "url": "/skills/derive-client/SKILL.md",
+      "sha256": "f0d6bff1ed4d849e7852128aee3e57bbf5877c737c79e29dd80e7a8372caa51d",
+      "bytes": 5609
+    },
+    {
+      "name": "develop-ai-functions-example",
+      "description": "Develop examples for AI SDK functions. Use when creating, running, or modifying examples under examples/ai-functions/src to validate provider support, demonstrate features, or create test fixtures.",
+      "url": "/skills/develop-ai-functions-example/SKILL.md",
+      "sha256": "061834220ae847bfeb434cd425ced0136ee29d4f50989bd59ca9db9d03ddda0d",
+      "bytes": 9209
+    },
+    {
+      "name": "devtools",
+      "description": "Drop-in inspector panel for any json-render app. Use when the user wants to debug a generative UI, inspect the spec tree, edit state at runtime, see dispatched actions, follow stream patches live, browse a catalog, or pick DOM elements to find their spec keys. Triggers include \"add devtools\", \"debug json-render\", \"inspect the spec\", \"why is this element not rendering\", \"see the state at runtime\", or requests to tap streams / capture action logs for `@json-render/devtools`.",
+      "url": "/skills/devtools/SKILL.md",
+      "sha256": "af269197d0dd14c15dd2835cce77902435553946adaa44c132dd768336d579b9",
+      "bytes": 9240
+    },
+    {
+      "name": "devtools-react",
+      "description": "React adapter for the json-render devtools inspector. Use whenever the user wants to add, configure, or troubleshoot @json-render/devtools-react in a React json-render app, including spec inspection, state editing, action and stream timelines, catalog browsing, or DOM picking.",
+      "url": "/skills/devtools-react/SKILL.md",
+      "sha256": "27beaafa84fae57975d105ea998013debae11987bf943a4dc9e96b68f2027300",
+      "bytes": 1669
+    },
+    {
+      "name": "devtools-solid",
+      "description": "SolidJS adapter for the json-render devtools inspector. Use whenever the user wants to add, configure, or troubleshoot @json-render/devtools-solid in a SolidJS json-render app, including spec inspection, state editing, action and stream timelines, catalog browsing, or DOM picking.",
+      "url": "/skills/devtools-solid/SKILL.md",
+      "sha256": "eebac62589a9d6f63d608801e5dc4677d91f6506f776a95e8a3309ef5d5313ab",
+      "bytes": 1214
+    },
+    {
+      "name": "devtools-svelte",
+      "description": "Svelte 5 adapter for the json-render devtools inspector. Use whenever the user wants to add, configure, or troubleshoot @json-render/devtools-svelte in a Svelte json-render app, including spec inspection, state editing, action and stream timelines, catalog browsing, or DOM picking.",
+      "url": "/skills/devtools-svelte/SKILL.md",
+      "sha256": "99b85675f5c08b0ddc147a29306fee1b7a713d1cddb7e22dd8b1ebd8ba074b03",
+      "bytes": 1177
+    },
+    {
+      "name": "devtools-vue",
+      "description": "Vue adapter for the json-render devtools inspector. Use whenever the user wants to add, configure, or troubleshoot @json-render/devtools-vue in a Vue json-render app, including spec inspection, state editing, action and stream timelines, catalog browsing, or DOM picking.",
+      "url": "/skills/devtools-vue/SKILL.md",
+      "sha256": "d1d837c368c9364bd95292a42d814144bc44a324bda3b567073aa8a79107e252",
+      "bytes": 1229
+    },
+    {
+      "name": "directives",
+      "description": "Pre-built custom directives for json-render — formatting, math, string manipulation, and i18n. Use when working with @json-render/directives, defining custom directives with defineDirective, or adding $format, $math, $concat, $count, $truncate, $pluralize, $join, or $t to specs.",
+      "url": "/skills/directives/SKILL.md",
+      "sha256": "af32f33e68b73393306d759b52b9e4f753ca9502e2411110df46f8350c76969c",
+      "bytes": 6613
+    },
+    {
+      "name": "dogfood",
+      "description": "Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to \"dogfood\", \"QA\", \"exploratory test\", \"find issues\", \"bug hunt\", \"test this app/site/platform\", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.",
+      "url": "/skills/dogfood/SKILL.md",
+      "sha256": "83afc0f6ce5598ae56ab06c7e18090d6769ec0a9a2abb3a12df240a81c77ed02",
+      "bytes": 10845
+    },
+    {
+      "name": "domains",
+      "description": "Search, register, connect, transfer, and renew domain names on Vercel using the CLI or Domains Registrar API. Use for domain availability and pricing, custom domains, DNS records, nameservers, ownership verification, and domain orders.",
+      "url": "/skills/domains/SKILL.md",
+      "sha256": "8fc51a9fe4b6319928491d3e012fddbef7408c2964d9c7f99dee7676f184c7ff",
+      "bytes": 9373
+    },
+    {
+      "name": "electron",
+      "description": "Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app, connect to a running app, control a native app, or test an Electron application. Triggers include \"automate Slack app\", \"control VS Code\", \"interact with Discord app\", \"test this Electron app\", \"connect to desktop app\", or any task requiring automation of a native Electron application.",
+      "url": "/skills/electron/SKILL.md",
+      "sha256": "d97a2bc221b5044184ad0af51376b07bcb94f259622f2af254fb3701e6f01861",
+      "bytes": 6727
+    },
+    {
+      "name": "email-agent",
+      "description": "Helps users understand and extend the Email Agent repo — an AI-powered outbound email generation app using Exa research, the Vercel AI SDK, and Outreach CRM. Use this skill when a user asks how the codebase works, how to hook up or swap an integration (Exa, OpenAI/AI models, Outreach, Neon Postgres), or how to add a feature. Loaded automatically for any question about this repository.",
+      "url": "/skills/email-agent/SKILL.md",
+      "sha256": "1c151a0215b48bf67d3f9e9047aad2f95ae18a5eaeb83f9a1c4ae7d3eb360959",
+      "bytes": 13519
+    },
+    {
+      "name": "emulate",
+      "description": "Local drop-in API emulator for Vercel, GitHub, Google, Slack, Apple, Microsoft, AWS, Clerk, Linear, Twilio, OpenAI, and other developer APIs. Use when the user needs to start emulated services, configure seed data, write tests against local APIs, set up CI without network access, or work with the emulate CLI or programmatic API. Triggers include \"start the emulator\", \"emulate services\", \"mock API locally\", \"create emulator config\", \"test against local API\", \"npx emulate\", or any task requiring local service emulation.",
+      "url": "/skills/emulate/SKILL.md",
+      "sha256": "6946ba00db90492ae1f5f1ef172812ee4a6647c046fbb17b668f6191eb06ef68",
+      "bytes": 20376
+    },
+    {
+      "name": "env-vars",
+      "description": "Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, Secret or Config variable types, OIDC tokens, or managing environment-specific configuration.",
+      "url": "/skills/env-vars/SKILL.md",
+      "sha256": "7b192613da5b91404a75f27bf3b11e9827d26482c50f45a12fdf98cd0baca6bf",
+      "bytes": 12418
+    },
+    {
+      "name": "eve",
+      "description": "eve framework guidance for durable AI agents and agent-powered applications. Use when creating, editing, or debugging an eve project, when the user explicitly asks for eve, or when the build-agents skill has selected eve as the default framework. Covers eve's filesystem-first runtime, durable sessions, tools, skills, connections, channels, sandboxes, subagents, schedules, evals, frontend clients, and Agent Runs observability. Do not use for incidental agent mentions, generic agent-building prompts, or established non-eve stacks unless the user asks for comparison or migration.",
+      "url": "/skills/eve/SKILL.md",
+      "sha256": "854e7acd9b172f95f043dc1ec8cb154c3d25d2f80df634c7b42ebcde4131540b",
+      "bytes": 5274
+    },
+    {
+      "name": "fast-link",
+      "description": "Integrate, migrate, troubleshoot, or review Fast Link when named, when the project uses or is adopting @fast-link/next, @fast-link/react, or @fast-link/core, or when explicitly asked for early mouse navigation such as \"navigate on pointerdown\", \"navigate on mousedown\", or \"navigate on press\". General navigation performance requests alone are outside this skill's scope.",
+      "url": "/skills/fast-link/SKILL.md",
+      "sha256": "4e5b65d9bc1380ce3de69d88dbc6bbcf403e2b3485bfea380cdbe0f81b69b5e9",
+      "bytes": 7724
+    },
+    {
+      "name": "filesystem-agents",
+      "description": "Companion skill for the Building Filesystem Agents course on Vercel Academy. Use when the user mentions \"filesystem agents\", \"the course\", \"teach me\", or asks about ToolLoopAgent, Vercel Sandbox, or bash tools in the context of the Academy course.",
+      "url": "/skills/filesystem-agents/SKILL.md",
+      "sha256": "253c04c7283b87e40de1bf89106df8d1343cffb73ce1a6be0585a14f3b2e0cd0",
+      "bytes": 23701
+    },
+    {
+      "name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "url": "/skills/find-skills/SKILL.md",
+      "sha256": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
+      "bytes": 5472
+    },
+    {
+      "name": "flags-sdk",
+      "description": "Implement feature flags in Next.js or SvelteKit code with the Flags SDK (`flags` npm package). Use when installing or configuring the SDK, declaring flags with `flag()`, reading a connected same-team project's flags through Project Connections (`createVercelAdapter({ projectId })`), wiring a provider adapter (`@flags-sdk/vercel`, Statsig, LaunchDarkly, PostHog, GrowthBook, Global Config, OpenFeature, and others), using `identify`, `dedupe`, or `evaluate`, keeping pages static with precompute, setting up Flags Explorer, or encrypting flag values. For planning a flag, Vercel Flags rollouts and experiments, the `vercel flags` CLI, or other frameworks, use the `vercel-flags` skill.",
+      "url": "/skills/flags-sdk/SKILL.md",
+      "sha256": "ae0d9516aa144d0466f9d2cdc2706f0b82f4f77e2bd856f07a6a20c59f62bcf6",
+      "bytes": 25845
+    },
+    {
+      "name": "geist-learning-lab",
+      "description": "Build explorative, interactive learning experiences as Next.js apps using the Geist design system. Use when creating tutorials, explorable explanations, interactive lessons, code sandboxes, quizzes, or any educational UI. Covers the Learning Loop pedagogy, 23+ learning component patterns, progress tracking, spaced repetition, and Bret-Victor-style interactive exploration — all with Geist's dark-first minimal aesthetic.",
+      "url": "/skills/geist-learning-lab/SKILL.md",
+      "sha256": "234cf045ff2c50bcf1fc29c508c7f1eae160d5589e7adf31198377b1c5b77f49",
+      "bytes": 7650
+    },
+    {
+      "name": "github",
+      "description": "Emulated GitHub REST API for local development and testing. Use when the user needs to interact with GitHub API endpoints locally, test GitHub integrations, emulate repos/issues/PRs, set up GitHub OAuth flows, configure GitHub Apps, test webhooks, or work with actions/checks without hitting the real GitHub API. Triggers include \"GitHub API\", \"emulate GitHub\", \"mock GitHub\", \"test GitHub OAuth\", \"GitHub App JWT\", \"local GitHub\", or any task requiring a local GitHub API.",
+      "url": "/skills/github/SKILL.md",
+      "sha256": "879ad9dbf9752250252c3d41da8a67de0360c1bfd3000bb434b7c03aa06f3a9f",
+      "bytes": 23533
+    },
+    {
+      "name": "google",
+      "description": "Emulated Google OAuth 2.0, OpenID Connect, Gmail, Calendar, and Drive for local development and testing. Use when the user needs to test Google sign-in locally, emulate OIDC discovery, handle Google token exchange, configure Google OAuth clients, work with Gmail messages/drafts/threads/labels, manage Calendar events, upload or list Drive files, or work with Google userinfo without hitting real Google APIs. Triggers include \"Google OAuth\", \"emulate Google\", \"mock Google login\", \"test Google sign-in\", \"OIDC emulator\", \"Google OIDC\", \"Gmail API\", \"Google Calendar\", \"Google Drive\", \"local Google auth\", or any task requiring a local Google API.",
+      "url": "/skills/google/SKILL.md",
+      "sha256": "831622d4b62a56c2df16930efc01e9f683529a804bf33c534f8e024f68e8aa77",
+      "bytes": 21684
+    },
+    {
+      "name": "image",
+      "description": "Image renderer for json-render that turns JSON specs into SVG and PNG images via Satori. Use when working with @json-render/image, generating OG images from JSON, creating social cards, or rendering AI-generated image specs.",
+      "url": "/skills/image/SKILL.md",
+      "sha256": "117929c3ffbf08d394ba7e2e6ebb9cb9bda0c8f96b8b013718010ade67beef76",
+      "bytes": 2875
+    },
+    {
+      "name": "ink",
+      "description": "Ink terminal renderer for json-render that turns JSON specs into interactive terminal UIs. Use when working with @json-render/ink, building terminal UIs from JSON, creating terminal component catalogs, or rendering AI-generated specs in the terminal.",
+      "url": "/skills/ink/SKILL.md",
+      "sha256": "e1e05aafb753379eaa3f213630aef24a63b3f1a04b5662acfc4c9c1e3ba70cb9",
+      "bytes": 9934
+    },
+    {
+      "name": "internal-dev-workbench",
+      "description": "Spin up a portless + tmux dev session for the Workflow SDK that gives each git worktree isolated `<branch>.<name>.localhost` URLs for the Next.js workbench and the observability UI, plus a Claude statusline that surfaces those URLs. Use only when the user asks for a \"portless dev session\", a \"tmux dev layout for workflow\", \"worktree-isolated dev URLs\", or wants to wire workflow dev URLs into the Claude statusline. Do not activate for the generic \"start the dev server\" / \"run pnpm dev\" task.",
+      "url": "/skills/internal-dev-workbench/SKILL.md",
+      "sha256": "47bcc6703822f82c60b127ad27317e815cf22957ef75eaccc5a986c9f8b01357",
+      "bytes": 10881
+    },
+    {
+      "name": "is-agentic",
+      "description": "Score how ready a website, domain, or public MCP endpoint is for AI agents using Is Agentic, and read or act on the resulting report. Use when asked to check a site's agent readiness, get its Is Agentic score, fetch a scored report as JSON, or fix the issues that lower a site's score.",
+      "url": "/skills/is-agentic/SKILL.md",
+      "sha256": "de940bb2d220866c0172f133bb58ed1c0687a858a5d024ef219781a6653b4ee4",
+      "bytes": 4127
+    },
+    {
+      "name": "issue-graph",
+      "description": "Read-only context for issues, pull requests, and backlogs. Use to trace related work, check PR counts, prioritize follow-ups, filter saved captures, open exact dashboard views, replay triage queries, or compare snapshots.",
+      "url": "/skills/issue-graph/SKILL.md",
+      "sha256": "080cfd36997909f95172576929a8e837b16924b1a82a1ccc4d6cdda964042061",
+      "bytes": 1097
+    },
+    {
+      "name": "jev-desktop",
+      "description": "Drive a desktop application from one plain-language goal, or resolve one intent at a time, without ever reading the accessibility tree. Use when automating a desktop app and you want to keep a 150-element JSON tree out of your context. Hand `run.mjs` a whole goal and it observes, decides and acts until the goal is met; hand `act.mjs` a single step when you want to keep the plan yourself. Covers which element, which operation, when to look deeper, and when to stop. Needs a clone of the agent-desktop repository and a TYPESAFE_API_KEY.",
+      "url": "/skills/jev-desktop/SKILL.md",
+      "sha256": "9149311fdb5601359eaeb1424f1443711d12ab50c93b11a96a2f7a7146b9f0d1",
+      "bytes": 16283
+    },
+    {
+      "name": "jotai",
+      "description": "Jotai adapter for json-render's StateStore interface. Use when integrating json-render with Jotai for state management via @json-render/jotai.",
+      "url": "/skills/jotai/SKILL.md",
+      "sha256": "9b0fd4fd0359465dba010159b936bd4480ed68e1ff17eb730ae9c19fcb1580e1",
+      "bytes": 2023
+    },
+    {
+      "name": "json-render-shadcn",
+      "description": "Pre-built shadcn/ui components for json-render. Use when working with @json-render/shadcn, adding standard UI components to a catalog, or building web UIs with Radix UI + Tailwind CSS components.",
+      "url": "/skills/json-render-shadcn/SKILL.md",
+      "sha256": "b83682c189436aaf960c1cc55c1ca5af70f97b0a6d87112f70bde605baf716cd",
+      "bytes": 6487
+    },
+    {
+      "name": "just-bash-executor",
+      "description": "Convert a GraphQL endpoint, OpenAPI spec, or MCP server into bash CLI commands and a `tools.*` JS API runnable inside `just-bash`'s `js-exec` sandbox. Use when the user wants to expose a remote API to a sandboxed bash agent, build a tool-calling agent on top of just-bash, or generate CLI commands from an existing API spec.",
+      "url": "/skills/just-bash-executor/SKILL.md",
+      "sha256": "0374257d87a9ca1ea36356ba3bcb088d0189ae250da849378662ce043758eaa9",
+      "bytes": 20877
+    },
+    {
+      "name": "knowledge-update",
+      "description": "Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start.",
+      "url": "/skills/knowledge-update/SKILL.md",
+      "sha256": "4aef8f0cd88a41946eb477846e48e28f50a5e47539b6c5149f914d03d8b5cbc6",
+      "bytes": 12348
+    },
+    {
+      "name": "konsistent-config",
+      "description": "Create or modify a konsistent.json configuration file that enforces structural conventions in a TypeScript codebase. Use when the user wants to enforce consistent code structure, validate exports/imports across files, ensure directories contain required files, enforce naming patterns, add/remove/update convention rules, configure case map overrides for acronyms or special casing (kebabToPascalMap, kebabToCamelMap), or troubleshoot why konsistent is reporting violations. Triggers on: \"konsistent\", \"konsistent.json\", \"enforce conventions\", \"structural consistency\", \"consistent exports\", \"consistent structure\", \"code conventions config\", \"add convention\", \"update convention\", \"fix konsistent errors\", \"case map\", \"case override\", \"acronym casing\".",
+      "url": "/skills/konsistent-config/SKILL.md",
+      "sha256": "d454c8e5b4513320b963d22920a1cb1e083a540255e9e80ad5a712fe329de5a7",
+      "bytes": 11819
+    },
+    {
+      "name": "konsistent-fix-violations",
+      "description": "Run the konsistent CLI, review all reported violations, and fix them in the codebase. Use when the user wants to \"fix konsistent violations\", \"resolve konsistent errors\", \"clean up konsistent diagnostics\", \"make konsistent pass\", \"address structural convention violations\", or asks to run konsistent and act on the results. The skill is interactive: it requires explicit user decisions when many violations stem from the same rule (rule vs. code question), explicit user confirmation before modifying any code, and a triage step for non-trivial violations. For editing `konsistent.json`, this skill defers to the `konsistent-config` skill.",
+      "url": "/skills/konsistent-fix-violations/SKILL.md",
+      "sha256": "dc8afa1966c15b031b88a79041c4de021f3725a7322fee377f109b2ccbb46a75",
+      "bytes": 13996
+    },
+    {
+      "name": "launch-an-ai-startup",
+      "description": "Companion skill for the Launch an AI Startup on Vercel course on Vercel Academy. Use when the user mentions \"launch an AI startup\", \"Up and to the Right\", \"investor update app\", \"the course\", \"teach me\", or asks about Previews, Instant Rollback, Marketplace Postgres, Vercel Queues, AI Gateway fallbacks, eve agents with approval, Vercel Sandbox, BotID, or Vercel Flags in the context of the Academy course.",
+      "url": "/skills/launch-an-ai-startup/SKILL.md",
+      "sha256": "c1adc7089f86d175b55c84ed7ad6892a770192d57b7b5a175784d39eb76b7b7a",
+      "bytes": 32619
+    },
+    {
+      "name": "linear",
+      "description": "Emulated Linear GraphQL API for local development and testing. Use when the user needs to test Linear integrations locally, emulate Linear issues, comments, teams, workflow states, OAuth apps, webhooks, agent sessions, or work with the Linear API without hitting the real Linear service. Triggers include \"Linear API\", \"emulate Linear\", \"mock Linear\", \"test Linear OAuth\", \"Linear webhook\", \"Linear agent\", \"local Linear\", or any task requiring a local Linear API.",
+      "url": "/skills/linear/SKILL.md",
+      "sha256": "5450721564891cf217c76dc438446e9b32bbadb04f676aa2527a9579b865902f",
+      "bytes": 9608
+    },
+    {
+      "name": "list-npm-package-content",
+      "description": "List the contents of an npm package tarball before publishing. Use when the user wants to see what files are included in an npm bundle, verify package contents, or debug npm publish issues.",
+      "url": "/skills/list-npm-package-content/SKILL.md",
+      "sha256": "77d8cd66c4fdb6a229bdc812894fc98cc81d79bbb548f33ba9bc2f48ef8c44e9",
+      "bytes": 1054
+    },
+    {
+      "name": "logs",
+      "description": "View Vercel deployment logs. Use when the user says \"show logs\", \"check logs\", \"vercel logs\", or \"what went wrong with the deployment\".",
+      "url": "/skills/logs/SKILL.md",
+      "sha256": "ebbca5de171c327585a133215536bfb5ad3b106fa0c833a753ace65d6959a585",
+      "bytes": 473
+    },
+    {
+      "name": "major-version-mode",
+      "description": "Context for working on the next AI SDK major release. Only use when explicitly invoked by the user (e.g. via '/major-version-mode'). Do NOT trigger autonomously based on task content.",
+      "url": "/skills/major-version-mode/SKILL.md",
+      "sha256": "d1a8fd62e49149a8781dd84c98524ae5adc3a1ee4d16c1d5aace2add61654769",
+      "bytes": 3209
+    },
+    {
+      "name": "marketplace",
+      "description": "Vercel Marketplace expert guidance — discovering, installing, and managing third-party integrations via the `vercel integration` CLI. Use when building any app that needs an external capability without a dedicated skill — commerce (stores, storefronts, selling products), payments (checkout, subscriptions, billing), observability/monitoring, messaging/email, search, or CMS — or when discovering, installing, or managing integrations.",
+      "url": "/skills/marketplace/SKILL.md",
+      "sha256": "5433d26ba5ceab41722597635599a7a810a78671e468d82dc098be4664299679",
+      "bytes": 9792
+    },
+    {
+      "name": "mcp",
+      "description": "MCP Apps integration for json-render. Use when building MCP servers that render interactive UIs in Claude, ChatGPT, Cursor, or VS Code, or when integrating json-render with the Model Context Protocol.",
+      "url": "/skills/mcp/SKILL.md",
+      "sha256": "706ccd32b5107bd5f5abb0bf83b2b1a782456c9e96c0fca43ee6fd8494fe221b",
+      "bytes": 3528
+    },
+    {
+      "name": "microfrontends",
+      "description": "Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill when the user mentions microfrontends, multi-zones, splitting an app across teams, independent deployments, cross-app routing, incremental migration, composing multiple frontends under one domain, microfrontends.json, @vercel/microfrontends, the microfrontends local proxy, or path-based routing between Vercel projects. Also use when the user asks about shared layouts across projects, navigation between microfrontends, fallback environments, asset prefixes, or feature flag controlled routing.",
+      "url": "/skills/microfrontends/SKILL.md",
+      "sha256": "56dc44a43a00da0cb0303c46c4fc5d853d9c85ef8508d850ee221c200d53e5c3",
+      "bytes": 5546
+    },
+    {
+      "name": "microsoft",
+      "description": "Emulated Microsoft Entra ID (Azure AD) OAuth 2.0 / OpenID Connect for local development and testing. Use when the user needs to test Microsoft sign-in locally, emulate Entra ID OIDC discovery, handle Microsoft token exchange, configure Azure AD OAuth clients, work with Microsoft Graph /me, or test PKCE/client credentials flows without hitting real Microsoft APIs. Triggers include \"Microsoft OAuth\", \"Entra ID\", \"Azure AD\", \"emulate Microsoft\", \"mock Microsoft login\", \"test Microsoft sign-in\", \"Microsoft OIDC\", \"local Microsoft auth\", or any task requiring a local Microsoft OAuth/OIDC provider.",
+      "url": "/skills/microsoft/SKILL.md",
+      "sha256": "7d1882c31e3c01a6f5f725176eca134ff6451ea79557d6a7253b8d623b943b7c",
+      "bytes": 12366
+    },
+    {
+      "name": "migrate-ai-sdk-v6-to-v7",
+      "description": "Migrate applications from AI SDK 6.x to AI SDK 7.0. Use when upgrading Vercel AI SDK packages, fixing v7 migration errors, or when the user mentions AI SDK v6, v7, upgrade, migration, breaking changes, system to instructions, fullStream, telemetry, tool context, or finalStep.",
+      "url": "/skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "sha256": "ad70ac5629cafeca263289d6b4edfa00c3488b0f5d3ec795b1bec532331f0d41",
+      "bytes": 8357
+    },
+    {
+      "name": "migrating-to-workflow-sdk",
+      "description": "Migrates Temporal, Inngest, Trigger.dev, and AWS Step Functions workflows to the Workflow SDK. Use when porting Activities, Workers, Signals, step.run(), step.waitForEvent(), Trigger.dev tasks / wait.forToken / triggerAndWait, ASL JSON state machines, Task/Choice/Wait/Parallel states, task tokens, or child workflows. For Inngest, runs the `workflow migrate inngest` codemod first and finishes what it leaves as TODOs.",
+      "url": "/skills/migrating-to-workflow-sdk/SKILL.md",
+      "sha256": "752d2eb19f4c8fa063ec041b405ac9ec9484fbd3d5bb161ecd0f74eac637aab3",
+      "bytes": 10431
+    },
+    {
+      "name": "migrating-workflow-v4-to-v5",
+      "description": "Upgrades an app from Workflow SDK 4.x to 5.0. Use when bumping the `workflow` / `@workflow/*` dependencies to v5, or when hitting removed v4 APIs — `runStep`, `stepEntrypoint`, `workflow/internal/private`, `@workflow/core/private`, `writeToStream` / `closeStream` / `readFromStream` on a World, `world.steps.get` without a runId, `hook.getConflict()` returning `{ runId }`, `hook.metadata` read synchronously off a `getHookByToken()` result, `experimental_setAttributes`, `createLocalWorld` / `createVercelWorld`, `NestLocalBuilder` imported from `@workflow/nest`, or an SWC transform invoked with `mode: 'client'`.",
+      "url": "/skills/migrating-workflow-v4-to-v5/SKILL.md",
+      "sha256": "910d13d2fba889a5d1d1aa4f4afa82541563866d7005c076b4d48c1fe001fc48",
+      "bytes": 21186
+    },
+    {
+      "name": "migrating-world-v4-to-v5",
+      "description": "Upgrades a custom Workflow SDK World implementation from the v4 spec, or from a 5.0.0 beta, to the current v5 spec (spec version 8). Use when a package implements the `World` interface from `@workflow/world` and is moving to 5.x, or is on a 5.0.0 beta and the runtime reports `This Workflow runtime supports Worlds with spec version 6 through 8, but the configured World declares spec version N`; or when it shows event IDs that are ULIDs rather than slot positions, `Event id is not slot-numbered` at replay time, a `specVersion` the runtime refuses, `writeToStream` / `closeStream` / `readFromStream` as top-level World methods, `steps.get` or `events.listByCorrelationId` without a `runId`, a `'step'` queue kind or `__wkf_step_*` topics, a `preconditionGuard` capability, or a `createLocalWorld` / `createVercelWorld` factory.",
+      "url": "/skills/migrating-world-v4-to-v5/SKILL.md",
+      "sha256": "25658029d32536e47d6070efc0c4b57a9c7765bbceaf40fc827986c3874011bd",
+      "bytes": 49710
+    },
+    {
+      "name": "modern-web-guidance",
+      "description": "Apply Chrome's Modern Web Guidance to frontend code, then verify the built page in a real browser with agent-browser. Use when asked to build or modernize UI with web platform best practices, follow Modern Web Guidance or Baseline guidance, or check that a change fixed layout shift, respects reduced motion or the color scheme, or gives a dialog correct focus and inert behavior. Triggers include \"use modern web guidance\", \"modern web best practices\", \"fix layout shift\", \"respect reduced motion\", \"add dark mode\", \"build an accessible dialog\", and \"verify this against the guide\".",
+      "url": "/skills/modern-web-guidance/SKILL.md",
+      "sha256": "93234d8103db74fa91c7a532eb1f0f6b2b7fdb5b6b3c45f5cfe99b12a5ec7cb2",
+      "bytes": 9977
+    },
+    {
+      "name": "mongoatlas",
+      "description": "Emulated MongoDB Atlas for local development and testing. Use when the user needs to manage Atlas projects, clusters, and database users through the Atlas Administration API v2 locally, run document CRUD and aggregation through the Atlas Data API v1, seed Atlas data for tests, or test an Atlas integration without a real Atlas organization. Triggers include \"MongoDB Atlas\", \"Atlas Admin API\", \"Atlas Data API\", \"emulate MongoDB Atlas\", \"mock Atlas\", \"Atlas cluster\", \"data-api action\", or any task requiring a local MongoDB Atlas API.",
+      "url": "/skills/mongoatlas/SKILL.md",
+      "sha256": "5388d3cd7b73ecb2211dff15b152c0f162e289fd2142d22711d0d91c2c74db29",
+      "bytes": 12710
+    },
+    {
+      "name": "native-sdk",
+      "description": "Discovery skill for the Native SDK, the complete toolkit for building native desktop applications. Apps are authored in TypeScript + declarative Native markup (.native) by default and compiled to native code with no JS runtime in the binary; Zig cores are an explicit alternative, and WebViews are the optional web-content path. Use when the user asks what the Native SDK is, how to build a Native SDK app, author native UI, scaffold an app, configure app.json or legacy app.zon, add bridge commands, embed web content, package an app, test a running app, or automate a Native SDK app.",
+      "url": "/skills/native-sdk/SKILL.md",
+      "sha256": "e8a4250fde73104dbd53caabfc365a0890954f969ba9979b3314b828220aafae",
+      "bytes": 3379
+    },
+    {
+      "name": "neon-postgres",
+      "description": "Guides and best practices for working with Neon Serverless Postgres. Covers setup, connection methods, branching, autoscaling, scale-to-zero, read replicas, connection pooling, Neon Auth, and the Neon CLI, MCP server, REST API, TypeScript SDK, and Python SDK. Use when users ask about \"Neon setup\", \"connect to Neon\", \"Neon project\", \"DATABASE_URL\", \"serverless Postgres\", \"Neon CLI\", \"neonctl\", \"Neon MCP\", \"Neon Auth\", \"@neondatabase/serverless\", \"@neondatabase/neon-js\", \"scale to zero\", \"Neon autoscaling\", \"Neon read replica\", or \"Neon connection pooling\".",
+      "url": "/skills/neon-postgres/SKILL.md",
+      "sha256": "580ceb3e2805066a7be34d8b83d66de1ac1916714383bd7bcc7da3ce4feeb704",
+      "bytes": 11415
+    },
+    {
+      "name": "next",
+      "description": "Next.js adapter for embedding emulators directly in a Next.js app via @emulators/adapter-next. Use when the user needs to embed emulators in Next.js, set up same-origin OAuth for Vercel preview deployments, create an emulate catch-all route handler, configure Auth.js/NextAuth with embedded emulators, add persistence to embedded emulators, or wrap next.config with withEmulate. Triggers include \"Next.js emulator\", \"adapter-next\", \"embedded emulator\", \"same-origin OAuth\", \"Vercel preview\", \"createEmulateHandler\", \"withEmulate\", or any task requiring emulators inside a Next.js app.",
+      "url": "/skills/next/SKILL.md",
+      "sha256": "d4de3fc415a56924ce687a6a7b19353a7333c03ba1aa9b46639f687969767a39",
+      "bytes": 7588
+    },
+    {
+      "name": "next-bundle-optimizer",
+      "description": "Audit and reduce Next.js browser initial-load work. Use for slow route startup, oversized client bundles, duplicate browser dependencies, or features that can wait for interaction.",
+      "url": "/skills/next-bundle-optimizer/SKILL.md",
+      "sha256": "a0cba357640fdba9077e529547a512062db50665e456485bc234bf096589edda",
+      "bytes": 12455
+    },
+    {
+      "name": "next-cache-components-adoption",
+      "description": "Turn on Cache Components in a Next.js app and resolve the blocking routes it surfaces. Use when the user wants to enable, adopt, or migrate to Cache Components, flip the `cacheComponents` flag, work through a flood of blocking-prerender / instant validation errors, run the `cache-components-instant-false` codemod, or decide between opting routes out with `export const instant = false` and fixing them in place.",
+      "url": "/skills/next-cache-components-adoption/SKILL.md",
+      "sha256": "5b7a98dfbd333237f7291f0ca6ddc10c17509525eade25a1cb458b23fddd612c",
+      "bytes": 33301
+    },
+    {
+      "name": "next-cache-components-optimizer",
+      "description": "Optimize the meaningful UI available immediately from a Next.js route on an initial load (hard navigation) or named client-side navigation (soft navigation). Encode the goal as a failing @next/playwright instant() e2e and work it to green, one verified route and entry point at a time; the shipped test then guards against regression. Use when asked to grow a static shell, fix a slow first paint or non-instant navigation, diagnose which Suspense boundary blocks useful UI, or add instant() regression coverage. Requires Next.js 16.3+ with Cache Components already adopted.",
+      "url": "/skills/next-cache-components-optimizer/SKILL.md",
+      "sha256": "d8f78aeab5916a91d071baec197c12ff92a2cc5a6b6508c209910b72fd20cd6d",
+      "bytes": 23537
+    },
+    {
+      "name": "next-dev-loop",
+      "description": "Verify Next.js runtime behavior after editing app code. Use this skill to confirm a change actually works in a running app — not just that it compiles or type-checks. Combines /_next/mcp (Next.js's view) with agent-browser (the browser's view). Requires a running `next dev`.",
+      "url": "/skills/next-dev-loop/SKILL.md",
+      "sha256": "a5406518dbf30c63bea2860b4e4043cc89efe1286a411d9a7717909183f60a66",
+      "bytes": 9567
+    },
+    {
+      "name": "next-forge",
+      "description": "Expert assistance for next-forge — a production-grade Turborepo template for Next.js SaaS apps. Triggers on questions about next-forge installation, setup, architecture, packages, customization, deployment, and development workflows.",
+      "url": "/skills/next-forge/SKILL.md",
+      "sha256": "be76e0d67cfd50860e2014643fa085977d73e9d9f775f8132791b8e5d1ed5ac6",
+      "bytes": 5318
+    },
+    {
+      "name": "next-partial-prefetching-adoption",
+      "description": "Turn on Partial Prefetching in a Next.js app and work through the insights it surfaces. Use when the user wants to enable or adopt Partial Prefetching, flip the `partialPrefetching` flag, opt routes in with `export const prefetch = 'partial'`, audit `Link prefetch={true}` behavior, preserve existing prefetched UI with `instant()` tests, or resolve the instant-link-prefetch-partial and instant-shell-url-data insights.",
+      "url": "/skills/next-partial-prefetching-adoption/SKILL.md",
+      "sha256": "36f221999cfcc02bc9e45b462964a0faa741ca40142114d3aea3b1e29c36800f",
+      "bytes": 27712
+    },
+    {
+      "name": "next-partial-prefetching-optimizer",
+      "description": "Optimize what selected Next.js client navigations include before the click under Partial Prefetching. Use after Cache Components and Partial Prefetching are adopted when the user wants selected URL-specific UI to be instant, wants reusable content to wait for navigation, or needs to choose between default, viewport, and intent prefetching. Requires Next.js 16.3+.",
+      "url": "/skills/next-partial-prefetching-optimizer/SKILL.md",
+      "sha256": "81429cd87a463a86a0acb2eb47f817b89d960ef34307b8878e25aced1d269966",
+      "bytes": 11969
+    },
+    {
+      "name": "nextjs-bisect-regression",
+      "description": "Locate the introduction or fix boundary for a validated Next.js regression using releases or commits and an executable reproduction. Use after reported-version-versus-canary verification when a vercel/next.js maintainer needs the last unchanged and first changed version or commit.",
+      "url": "/skills/nextjs-bisect-regression/SKILL.md",
+      "sha256": "cb72987a35e1574d37db8d6396a07c2bb95e830aa71ef7bc2c58c6b27cf46918",
+      "bytes": 2768
+    },
+    {
+      "name": "nextjs-create-regression-test",
+      "description": "Turn a validated Next.js reproduction and canary verification into the smallest appropriate regression test in vercel/next.js. Use when a confirmed issue needs a focused test that proves the reported behavior and fits the existing Next.js test suite.",
+      "url": "/skills/nextjs-create-regression-test/SKILL.md",
+      "sha256": "6bb7ba3e3893b9d286bf9f2a54b07fcd783cd062d4f5cf13108801dcc7632b4b",
+      "bytes": 2530
+    },
+    {
+      "name": "nextjs-fix-issue",
+      "description": "Implement and validate the smallest correct fix for a confirmed issue in vercel/next.js after reproduction, canary verification, and regression-test work. Use when a focused failing Next.js regression test exists and the product code must be corrected without weakening that test.",
+      "url": "/skills/nextjs-fix-issue/SKILL.md",
+      "sha256": "3540666e1033ff50a71643e7ab20f096d73279c6fe35ca79c8e409d934a761fb",
+      "bytes": 2384
+    },
+    {
+      "name": "nextjs-reproduce-issue",
+      "description": "Reproduce and validate a reported Next.js issue using real code and runtime evidence. Use when investigating whether a vercel/next.js bug report is reproducible, repairing an incomplete reproduction, or creating the smallest standalone reproduction when none is provided.",
+      "url": "/skills/nextjs-reproduce-issue/SKILL.md",
+      "sha256": "1750ada69610a1f67d2df7bcaf2a7c4e3dc3bb393c240869925269b811f35ab3",
+      "bytes": 2957
+    },
+    {
+      "name": "nextjs-verify-canary",
+      "description": "Compare a validated Next.js reproduction on its reported version and the latest published next@canary under equivalent conditions. Use when determining whether a confirmed vercel/next.js issue still reproduces on canary or appears fixed there.",
+      "url": "/skills/nextjs-verify-canary/SKILL.md",
+      "sha256": "2722d3d992e0aefa55d8ff5872e8827290459427aefaca42b21f0b42643bf8b6",
+      "bytes": 2379
+    },
+    {
+      "name": "nextjs-webflow-to-vercel",
+      "description": "Migrate a Next.js application from Webflow Cloud to Vercel. Use this skill when a user wants to move, migrate, or port a Next.js app off Webflow Cloud onto Vercel. This covers removing the OpenNext Cloudflare adapter (@opennextjs/cloudflare) and the initOpenNextCloudflareForDev dev hook, uninstalling Wrangler, deleting the Webflow Cloud config files (webflow.json, wrangler.json, open-next.config.ts, cloudflare-env.d.ts), dropping the base path the app mounted under on a Webflow site (basePath and assetPrefix in next.config.ts), removing the Edge runtime directive (export const runtime = 'edge') from Route Handlers and middleware, repointing Cloudflare storage bindings read through getCloudflareContext().env (Object Storage/R2, Key Value Store/Workers KV, SQLite/D1) to Vercel storage, recreating environment variables, and deploying. Next.js runs natively on Vercel, so no adapter replaces OpenNext. Triggers include phrases like 'migrate to Vercel', 'move off Webflow Cloud', 'Next.js Webflow Cloud to Vercel', or the presence of webflow.json, wrangler.json, @opennextjs/cloudflare, open-next.config.ts, or getCloudflareContext in a Next.js project. Do not use for non-Next.js frameworks or for migrations in the opposite direction (Vercel to Webflow Cloud).",
+      "url": "/skills/nextjs-webflow-to-vercel/SKILL.md",
+      "sha256": "f4a04dc5d9cd22b46420402a587e0c835383349271dc3fcc73f99eac157572d9",
+      "bytes": 17146
+    },
+    {
+      "name": "nostics",
+      "description": "Structured diagnostic code library for JavaScript/TypeScript. Turns errors and other conditions into typed, machine-readable `Diagnostic` instances with stable codes, docs URLs, and actionable fields. Use this skill whenever the project imports `nostics`, or works with `defineDiagnostics`/`defineProdDiagnostics`, the `Diagnostic` class, diagnostic code registries, or structured error handling. Also covers reporters (`createConsoleReporter`, `createFetchReporter` from nostics/reporters/fetch, `createFileReporter` from nostics/reporters/node, `createDevReporter` from nostics/reporters/dev), formatters (`formatDiagnostic`, `ansiFormatter`, `jsonFormatter`), and Vite plugins (`nosticsStrip` from @nostics/unplugin/strip-transform, `nosticsCollector` from @nostics/unplugin/dev-server-collector). Also use when migrating a library's existing `console.warn`/`console.error`/`warn()` helpers or thrown `Error`s to diagnostics: follow `references/migration.md`.",
+      "url": "/skills/nostics/SKILL.md",
+      "sha256": "c2d09b35cd10801ed7b07dafaaf4fed6533076ff596c4fbb0b4f91b36fcf9b2f",
+      "bytes": 10880
+    },
+    {
+      "name": "nuxt",
+      "description": "Nuxt adapter for embedding emulators directly in a Nuxt app via @emulators/adapter-nuxt. Use when the user needs to embed emulators in Nuxt, set up same-origin OAuth for preview deployments, create an emulate catch-all server route, configure persistence for embedded Nuxt emulators, or wrap nuxt.config with withEmulate. Triggers include \"Nuxt emulator\", \"adapter-nuxt\", \"embedded emulator\", \"same-origin OAuth\", \"createEmulateHandler\", \"withEmulate\", or any task requiring emulators inside a Nuxt app.",
+      "url": "/skills/nuxt/SKILL.md",
+      "sha256": "6d068090cda91738ed11ce4cf024cb20b4ad7c06f30bddac2943c7c5121d76e1",
+      "bytes": 7197
+    },
+    {
+      "name": "oauth",
+      "description": "Configure OAuth providers (Google, Apple, Microsoft, Facebook, GitHub, etc.) to work with portless local dev URLs. Use when setting up OAuth redirect URIs, fixing \"redirect_uri_mismatch\" or \"invalid redirect\" errors, configuring sign-in providers for local development, or when a provider rejects .localhost subdomains. Triggers include \"OAuth not working with portless\", \"redirect URI mismatch\", \"Google/Apple/Microsoft sign-in fails locally\", \"configure OAuth for local dev\", or any task involving OAuth callback URLs with portless domains.",
+      "url": "/skills/oauth/SKILL.md",
+      "sha256": "e0c9d668497bcc610c7ccd05080161a95764f785df59d498748785c9b3b1dfc5",
+      "bytes": 7465
+    },
+    {
+      "name": "offload-to-sandbox",
+      "description": "Offload heavy builds, full test suites and parallel experiments from the local machine to Vercel Sandboxes with the `vercel sandbox` CLI. Use when a local machine is overloaded or shared by several agents, when a test suite should be sharded, or when many tasks should run side by side without consuming local CPU, memory or disk.",
+      "url": "/skills/offload-to-sandbox/SKILL.md",
+      "sha256": "34d9950a6a3527a498fd43525d38ba0e0251dbe5f3bef7c633e65290788b36e4",
+      "bytes": 26002
+    },
+    {
+      "name": "opensrc",
+      "description": "Fetch dependency source code to give AI agents deeper implementation context. Use when the agent needs to understand how a library works internally, read source code for a package, fetch implementation details for a dependency, or explore how an npm/PyPI/crates.io package is built. Triggers include \"fetch source for\", \"read the source of\", \"how does X work internally\", \"get the implementation of\", \"opensrc path\", or any task requiring access to dependency source code beyond types and docs.",
+      "url": "/skills/opensrc/SKILL.md",
+      "sha256": "2c4d873a423e30dbdbabc30b104bef8f09eae00d9a186a952dfc88c53e2e34fb",
+      "bytes": 2877
+    },
+    {
+      "name": "phase",
+      "description": "Use when optimizing, auditing, or preparing to ship web animations or rendering performance work: frame loops, scroll/viewport reveals, mount/unmount transitions, canvas/WebGL lifecycles, reduced motion, lazy rendering, and deferred off-screen work. Use for jank, per-frame allocations, forced reflows, render loops, animations that do not pause off-screen, content-visibility, requestIdleCallback, analyzing Chrome DevTools performance traces for animation or rendering issues, or choosing between browser-driven CSS/WAAPI, minimal JS, phase, and Motion/GSAP. Use when the user explicitly asks about phase APIs or behavior. Do not use during exploratory animation ideation, prototyping, visual iteration, or trying variants, even when the code already imports phase; wait until the user asks for performance guidance, an audit, production implementation, ship-readiness review, or about phase itself.",
+      "url": "/skills/phase/SKILL.md",
+      "sha256": "5dde4e63ddda53477394fa522eb7a75908cfb75bc5124c0151cc63faae5b5f76",
+      "bytes": 32750
+    },
+    {
+      "name": "portless",
+      "description": "Set up and use portless for named local dev server URLs (e.g. https://myapp.localhost instead of http://localhost:3000). Use when integrating portless into a project, configuring dev server names, setting up the local proxy, working with .localhost domains, or troubleshooting port/proxy issues.",
+      "url": "/skills/portless/SKILL.md",
+      "sha256": "0d1a444bea75c8265d525d47f265b587af137df425d7b5afdf4dcb8b3a603109",
+      "bytes": 44625
+    },
+    {
+      "name": "python-on-vercel",
+      "description": "Companion skill for the Python on Vercel course on Vercel Academy. Help learners work through the Hazel Home FastAPI and Next.js project using Vercel Services, local development, service bindings, and deployment. Use for questions or progress checks about this Academy course.",
+      "url": "/skills/python-on-vercel/SKILL.md",
+      "sha256": "b092ab2e840d449e9666623dd37db49ca9ceffb993a600f96681aea4f4c13247",
+      "bytes": 10306
+    },
+    {
+      "name": "queues",
+      "description": "Vercel Queues guidance — durable topics with at-least-once delivery, independent consumer groups, retries, delays, and idempotency keys via @vercel/queue (JS) or vercel-queue (Python). Use when deferring background work, buffering traffic, fanning out events, or choosing between Queues and Workflows.",
+      "url": "/skills/queues/SKILL.md",
+      "sha256": "5e82576e77da5d50044089f75e47e5cd4f1ea139356ddc0a24064e3659ae3192",
+      "bytes": 9937
+    },
+    {
+      "name": "react",
+      "description": "React renderer for json-render that turns JSON specs into React components. Use when working with @json-render/react, building React UIs from JSON, creating component catalogs, or rendering AI-generated specs.",
+      "url": "/skills/react/SKILL.md",
+      "sha256": "15c1ccc5f776cf403d97c66836d353fdf917e167363164c9f4890165037ddbad",
+      "bytes": 11790
+    },
+    {
+      "name": "react-best-practices",
+      "description": "Vercel's React and Next.js performance rules (70 rules in 8 categories ordered by impact - eliminating waterfalls, bundle size, server-side performance, client-side data fetching, re-renders, rendering performance, JavaScript performance, and advanced patterns). Use when writing, reviewing, or refactoring React components, Next.js pages, or data fetching for performance. Not an accessibility or TypeScript style guide.",
+      "url": "/skills/react-best-practices/SKILL.md",
+      "sha256": "a0fa3aca87cae1fddaa8219c3273291063f47bac4883349db420f18172d889d2",
+      "bytes": 8440
+    },
+    {
+      "name": "react-email",
+      "description": "React Email renderer for json-render that turns JSON specs into HTML or plain-text emails using @react-email/components and @react-email/render. Use when working with @json-render/react-email, building transactional or marketing emails from JSON, creating email catalogs, rendering AI-generated email specs, or when the user mentions react-email, HTML email, or transactional email.",
+      "url": "/skills/react-email/SKILL.md",
+      "sha256": "a226eddc48900067ec3af13c4a75c36d836c12a863d15c3c343f0dcc3abd0536",
+      "bytes": 6286
+    },
+    {
+      "name": "react-native",
+      "description": "React Native renderer for json-render that turns JSON specs into native mobile UIs. Use when working with @json-render/react-native, building React Native UIs from JSON, creating mobile component catalogs, or rendering AI-generated specs on mobile.",
+      "url": "/skills/react-native/SKILL.md",
+      "sha256": "d5dfbc6128d29da04b307f3b6b0d1629c4f3c5a4269bc6e374cf45a7b773c463",
+      "bytes": 6498
+    },
+    {
+      "name": "react-pdf",
+      "description": "React PDF renderer for json-render. Use when generating PDF documents from JSON specs, working with @json-render/react-pdf, or rendering specs to PDF buffers/streams/files.",
+      "url": "/skills/react-pdf/SKILL.md",
+      "sha256": "8e94db1ea2ba078589ff4f2e321dcd6eac78f7d42b6b1c027d6a0f819a13e72d",
+      "bytes": 3827
+    },
+    {
+      "name": "react-three-fiber",
+      "description": "React Three Fiber 3D renderer for json-render. Use when working with @json-render/react-three-fiber, building 3D scenes from JSON specs, rendering meshes/lights/models/environments, or integrating Three.js with json-render catalogs.",
+      "url": "/skills/react-three-fiber/SKILL.md",
+      "sha256": "f1120aeaf7cf695838b4daa37879403b007014babaf7ec3fed1eaafc7fb61593",
+      "bytes": 5301
+    },
+    {
+      "name": "redux",
+      "description": "Redux adapter for json-render's StateStore interface. Use when integrating json-render with Redux or Redux Toolkit for state management via @json-render/redux.",
+      "url": "/skills/redux/SKILL.md",
+      "sha256": "39b7e0118373688d9ab163debf19d10cb2a24a78970019aa7cc57c8aa3a268ec",
+      "bytes": 2023
+    },
+    {
+      "name": "remotion",
+      "description": "Remotion renderer for json-render that turns JSON timeline specs into videos. Use when working with @json-render/remotion, building video compositions from JSON, creating video catalogs, or rendering AI-generated video timelines.",
+      "url": "/skills/remotion/SKILL.md",
+      "sha256": "e18ad0b3307fe1b125705f592e123aa02168bbc95e7a8ee579ccd04859a467f9",
+      "bytes": 3064
+    },
+    {
+      "name": "remotion-best-practices",
+      "description": "Best practices for Remotion - Video creation in React",
+      "url": "/skills/remotion-best-practices/SKILL.md",
+      "sha256": "a76a94cc9ad73ace3811da97f91961ad1a08ba78f9ca1a45d83dc2b2dd764e2e",
+      "bytes": 3547
+    },
+    {
+      "name": "resend",
+      "description": "Emulated Resend email API for local development and testing. Use when the user needs to send emails locally, test transactional email flows, implement magic link or verification code auth, inspect sent emails, manage domains/contacts/API keys, or work with the Resend API without sending real emails. Triggers include \"Resend API\", \"emulate Resend\", \"send email locally\", \"test email\", \"magic link\", \"verification email\", \"email inbox\", \"RESEND_BASE_URL\", or any task requiring a local email API.",
+      "url": "/skills/resend/SKILL.md",
+      "sha256": "a486a8dac59904b4b4a40e85bbe7749f4e7e7b19a6356a0b100057fdc6972fed",
+      "bytes": 12551
+    },
+    {
+      "name": "routing-middleware",
+      "description": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, Bun, and Python runtimes. Use when intercepting requests at the platform level.",
+      "url": "/skills/routing-middleware/SKILL.md",
+      "sha256": "e7c10fc03e922320b0ede4b9626cc57ca5775aaec5d7e24af1c24996a0db69b5",
+      "bytes": 11782
+    },
+    {
+      "name": "runtime-cache",
+      "description": "Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching strategies beyond framework-level caching.",
+      "url": "/skills/runtime-cache/SKILL.md",
+      "sha256": "b774232ac671b9fe993c1b48504452b21aec3240dd07931fb836a32728b6fc58",
+      "bytes": 9372
+    },
+    {
+      "name": "sandbox",
+      "description": "Creates isolated Linux MicroVMs using Vercel Sandbox SDK. Use when building code execution environments, running untrusted code, spinning up dev servers, testing in isolation, or when the user mentions \"sandbox\", \"microvm\", \"isolated execution\", or \"@vercel/sandbox\".",
+      "url": "/skills/sandbox/SKILL.md",
+      "sha256": "8fece0884cab2f499f9303f2120ebbe1f65d5b86fdbcbfa08a53b539763df737",
+      "bytes": 39964
+    },
+    {
+      "name": "screen-relay",
+      "description": "Stream a desktop and control it with the screen-relay CLI (screenshot, click, type, key). Use when an agent needs to see and operate a GUI on a Linux VM, sandbox or container, or on a Mac or Windows PC.",
+      "url": "/skills/screen-relay/SKILL.md",
+      "sha256": "fedddcd9c7af931b71154a73f6880d437cc049e3f995e09cf309f5268822c71c",
+      "bytes": 560
+    },
+    {
+      "name": "setup",
+      "description": "Set up Vercel CLI and project configuration. Use when the user says \"set up Vercel\", \"configure Vercel\", \"link to Vercel\", or \"vercel init\".",
+      "url": "/skills/setup/SKILL.md",
+      "sha256": "0d0f88f282aea022433365da4c3193f167855ccafcd8cf83cc92db7654d50514",
+      "bytes": 471
+    },
+    {
+      "name": "shadcn-svelte",
+      "description": "Pre-built shadcn-svelte components for json-render Svelte apps. Use when working with @json-render/shadcn-svelte, adding standard UI components to a Svelte catalog, or building Svelte web UIs with shadcn-svelte + Tailwind CSS components.",
+      "url": "/skills/shadcn-svelte/SKILL.md",
+      "sha256": "2afe2d38f582163d99aa280b0ef7504091a29c3cfa42dba663613cd746d16e47",
+      "bytes": 5497
+    },
+    {
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "url": "/skills/skill-creator/SKILL.md",
+      "sha256": "b2e3d83f60425c2d0b9d4162efb8f9aa322b45843497340f2289f42be422801c",
+      "bytes": 17837
+    },
+    {
+      "name": "slack",
+      "description": "Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or automate any Slack task. Triggers include \"check my Slack\", \"what channels have unreads\", \"send a message to\", \"search Slack for\", \"extract from Slack\", \"find who said\", or any task requiring programmatic Slack interaction.",
+      "url": "/skills/slack/SKILL.md",
+      "sha256": "a0bc65db2788224f185fcbd42cf99a43b368fb569b48defdf88233013ecad47d",
+      "bytes": 8425
+    },
+    {
+      "name": "slack-agent",
+      "description": "Use when building Slack agents/bots with eve (Vercel's filesystem-first agent framework), @vercel/connect, or eve/channels/slack. Covers defineAgent/defineTool patterns, Vercel Connect credential brokering, Slack channel setup, testing requirements, and quality standards.",
+      "url": "/skills/slack-agent/SKILL.md",
+      "sha256": "2fc119702b502fd6ee88adfd8575ae63f73cd860fff7dcd3d33b4e67e94487d3",
+      "bytes": 31313
+    },
+    {
+      "name": "slack-agents",
+      "description": "Companion skill for the Slack Agents on Vercel with the AI SDK course on Vercel Academy. Use when the user mentions \"slack agents\", \"slack bot\", \"the course\", \"teach me\", or asks about Bolt, Nitro, the ack-first pattern, AI SDK tools, or deploying Slack apps on Vercel in the context of the Academy course.",
+      "url": "/skills/slack-agents/SKILL.md",
+      "sha256": "909befb086d2dc4ee209337cf2cf8d533de6239873eb2aad2f83a77027eaf5f0",
+      "bytes": 6647
+    },
+    {
+      "name": "solid",
+      "description": "SolidJS renderer for json-render. Use when building @json-render/solid catalogs/registries, wiring Renderer providers, implementing bindings/actions, or troubleshooting Solid-specific reactivity patterns.",
+      "url": "/skills/solid/SKILL.md",
+      "sha256": "e5f890da78d396357290e0ee209dcf0cdef72025afb19ee1173a74e5548535c0",
+      "bytes": 5161
+    },
+    {
+      "name": "streamdown",
+      "description": "Implement, configure, and customize Streamdown — a streaming-optimized React Markdown renderer with syntax highlighting, Mermaid diagrams, math rendering, and CJK support. Use when working with Streamdown setup, configuration, plugins, styling, security, or integration with AI streaming (e.g., Vercel AI SDK). Triggers on: (1) Installing or setting up Streamdown, (2) Configuring plugins (code, mermaid, math, cjk), (3) Styling or theming Streamdown output, (4) Integrating with AI chat/streaming, (5) Configuring security, link safety, or custom HTML tags, (6) Using carets, static mode, or custom components, (7) Troubleshooting Tailwind, Shiki, or Vite issues.",
+      "url": "/skills/streamdown/SKILL.md",
+      "sha256": "1465e100885588a3c27bd63f7a43283ff14835b091d38a6fd3453f94a738c9d8",
+      "bytes": 6725
+    },
+    {
+      "name": "stripe",
+      "description": "Emulated Stripe API for local development and testing. Use when the user needs to process payments locally, test checkout flows, create customers, manage products and prices, handle payment intents, work with webhooks, or use the Stripe SDK without hitting real Stripe servers. Triggers include \"Stripe API\", \"emulate Stripe\", \"test payments locally\", \"checkout flow\", \"payment intent\", \"Stripe webhook\", \"Stripe SDK\", \"STRIPE_API_KEY\", or any task requiring a local Stripe API.",
+      "url": "/skills/stripe/SKILL.md",
+      "sha256": "274d1e3d9b18fbb25d88f080a5b10cc97156387e567c47a9b26bbd7fc06e7f2a",
+      "bytes": 11690
+    },
+    {
+      "name": "subscription-store",
+      "description": "Companion skill for the Launch a Subscription Store with Vercel and Stripe course on Vercel Academy. Use when the user mentions \"subscription store\", \"the course\", \"teach me\", or asks about Supabase Auth, Stripe Checkout, Stripe webhooks, or subscription access control in the context of the Academy course.",
+      "url": "/skills/subscription-store/SKILL.md",
+      "sha256": "a8948e996aeb7d8ec2ae5e803724cd15ba79c839ee234c2bb26ccb6780cb2ec4",
+      "bytes": 7475
+    },
+    {
+      "name": "svelte",
+      "description": "Svelte 5 renderer for json-render that turns JSON specs into Svelte component trees. Use when working with @json-render/svelte, building Svelte UIs from JSON, creating component catalogs, or rendering AI-generated specs.",
+      "url": "/skills/svelte/SKILL.md",
+      "sha256": "03e6e301b51996001cc1641ee8ace97209a49fe948d2f1c8d3304f2b620e584e",
+      "bytes": 7256
+    },
+    {
+      "name": "tanstack-start",
+      "description": "Build JSON-defined TanStack Start applications with @json-render/tanstack-start. Use for Start route specs, splat routing, SSR loaders, head metadata, layouts, and client navigation. Do not use for generic TanStack Router apps that do not use json-render.",
+      "url": "/skills/tanstack-start/SKILL.md",
+      "sha256": "ca31a5a557a1a459a971714220350a0b3bd6a7d4aa8bb1411e86e48ede9a75d8",
+      "bytes": 5912
+    },
+    {
+      "name": "tanstack-start-cloudflare-to-vercel",
+      "description": "Migrate a TanStack Start application from Cloudflare Workers to Vercel. Use this skill when a user wants to move, migrate, or port a TanStack Start (or TanStack) app off Cloudflare Workers or Wrangler onto Vercel. This covers swapping the @cloudflare/vite-plugin for Nitro, removing Wrangler config, repointing Cloudflare bindings (R2, Workers KV, D1, Durable Objects, Workers AI) to Vercel storage, and moving Cron Triggers and Queues to their Vercel equivalents, then deploying. Triggers include phrases like 'migrate to Vercel', 'move off Cloudflare', 'TanStack Start Cloudflare to Vercel', or the presence of wrangler.jsonc, wrangler.toml, or cloudflare:workers imports in a TanStack project. Do not use for non-TanStack frameworks or for migrations in the opposite direction (Vercel to Cloudflare).",
+      "url": "/skills/tanstack-start-cloudflare-to-vercel/SKILL.md",
+      "sha256": "828cd2a7ab355a2a17fb20d966dd3aaaf39649ac840f6f1552c2dfbff4c04490",
+      "bytes": 14643
+    },
+    {
+      "name": "tanstack-start-netlify-to-vercel",
+      "description": "Migrate a TanStack Start application from Netlify to Vercel. Use this skill when a user wants to move, migrate, or port a TanStack Start (or TanStack) app off Netlify onto Vercel. This covers swapping @netlify/vite-plugin-tanstack-start for Nitro, removing netlify.toml, repointing Netlify Blobs and Netlify DB to Vercel storage (Vercel Blob, Redis, Edge Config, Postgres), and moving Scheduled Functions and Background Functions to their Vercel equivalents (Cron Jobs and Queues), then deploying. Triggers include phrases like 'migrate to Vercel', 'move off Netlify', 'TanStack Start Netlify to Vercel', or the presence of netlify.toml, @netlify/vite-plugin-tanstack-start, or @netlify/blobs imports in a TanStack project. Do not use for non-TanStack frameworks or for migrations in the opposite direction (Vercel to Netlify).",
+      "url": "/skills/tanstack-start-netlify-to-vercel/SKILL.md",
+      "sha256": "e31a0a0e03fa1097a889eb9ea1c97ae931352b44c1dca54b67b0de21d806a73a",
+      "bytes": 16561
+    },
+    {
+      "name": "trackcn",
+      "description": "Use the trackcn CLI to sync files, directories, commits, pull requests, and agent skills from GitHub into a codebase while preserving local edits. Read this before running trackcn commands or modifying trackcn-managed files.",
+      "url": "/skills/trackcn/SKILL.md",
+      "sha256": "6357880ff330a6baa0a1c93a77dfd77379244e04a241fb5b6237289d79cdce01",
+      "bytes": 6037
+    },
+    {
+      "name": "turborepo",
+      "description": "Configure and troubleshoot Turborepo repositories. Use when working with turbo.json, task pipelines, caching, Remote Cache, the turbo CLI, filtering, environment variables, package boundaries, monorepo structure, or CI workflows.",
+      "url": "/skills/turborepo/SKILL.md",
+      "sha256": "e475e520f1822f0de4ca5fbbfd37906949db67d35b038f2b8a76ef4c95c13c53",
+      "bytes": 1160
+    },
+    {
+      "name": "tw-blocks",
+      "description": "Semantic spacing system for Tailwind CSS v4 using block (32px) and tab (4px) units. Use when building UIs with consistent spacing, dashboards, admin panels, design tools, or any interface requiring a harmonious spacing system. Provides patterns for buttons, inputs, cards, toolbars, panels, and layouts.",
+      "url": "/skills/tw-blocks/SKILL.md",
+      "sha256": "abb12598588cfbe4a3a1dc501243e24f440f55539e798348d79b9446f660ece1",
+      "bytes": 9138
+    },
+    {
+      "name": "twilio",
+      "description": "Emulated Twilio REST APIs for local development and testing. Use when the user needs to test Twilio Messaging, Verify, Voice, phone numbers, webhooks, status callbacks, inbound SMS simulation, or Twilio SDK integrations without hitting the real Twilio service.",
+      "url": "/skills/twilio/SKILL.md",
+      "sha256": "57a6912de61e42899ea98a47a83903feb65891b0b216afcac638a54fd12a0f7a",
+      "bytes": 4627
+    },
+    {
+      "name": "ucp",
+      "description": "Expert-level implementation assistant for the Universal Commerce Protocol (UCP). Provides comprehensive tooling for adding UCP support to Next.js ecommerce codebases — from initial consultation through full implementation, testing, and validation.",
+      "url": "/skills/ucp/SKILL.md",
+      "sha256": "c7cc2e01645089fa14784cd553f722d810b5331d28623fdd9f615685aee38a96",
+      "bytes": 82072
+    },
+    {
+      "name": "ui-sdk",
+      "description": "Builds interfaces with ui-sdk in React, Vue, Svelte, Solid or web components. Covers choosing and composing its components, building a component or behavior it doesn't ship from @ui-sdk/core (like a stepper, splitter, transfer list or emoji picker), making the interface usable by agents through createAgent, agent tools and WebMCP, and testing keyboard, focus, ARIA, server rendering and right to left, including writing tests for an existing component. Use whenever a project has @ui-sdk/* installed or the user mentions ui-sdk.",
+      "url": "/skills/ui-sdk/SKILL.md",
+      "sha256": "ae96d59e4f575dbd28eb86b94a272adad34cd92271b4a8da2dd8cced1bbbf479",
+      "bytes": 6376
+    },
+    {
+      "name": "update-harness-dependencies",
+      "description": "Update the primary SDK dependencies of harness packages. Use when asked to update the harness SDKs or harness adapter dependencies.",
+      "url": "/skills/update-harness-dependencies/SKILL.md",
+      "sha256": "5eaf89b15c4738bce43e45c6424bc4ab15042e84af840481611d8e73704ae7d0",
+      "bytes": 6814
+    },
+    {
+      "name": "update-provider-models",
+      "description": "Add new or remove obsolete model IDs for existing AI SDK providers. Use when adding a model to a provider, removing an obsolete model, or processing a list of model changes from an issue. Triggers on \"add model\", \"remove model\", \"new model ID\", \"obsolete model\", \"update model IDs\".",
+      "url": "/skills/update-provider-models/SKILL.md",
+      "sha256": "51105d58a20d55cbbbfcf2b461eab224354f52925427884f5b0c5016b5785ff0",
+      "bytes": 9586
+    },
+    {
+      "name": "vercel",
+      "description": "Access and test Vercel deployments with agent-browser, behind Deployment Protection or at a different feature flag variant. Use when a preview or production URL redirects to a Vercel login page, returns a protection 401 or 403, needs short-lived Trusted Sources OIDC authentication instead of a static bypass secret or public exception, or must be viewed with a Vercel feature flag set to another variant.",
+      "url": "/skills/vercel/SKILL.md",
+      "sha256": "43320c97b3817f2253990ef92576f65cf6f8208d4ec6b9b62b3402deda7d9bd9",
+      "bytes": 11408
+    },
+    {
+      "name": "vercel-agent",
+      "description": "Vercel Agent guidance — dashboard and Slack chat, code review, Security Review, production investigation, approved actions, and product installation. Use when configuring or working with Vercel's AI assistant.",
+      "url": "/skills/vercel-agent/SKILL.md",
+      "sha256": "f8f97a8e7e8cd4b0637406b04982b190072ed16b1348811553d5aefd793ac9c2",
+      "bytes": 4674
+    },
+    {
+      "name": "vercel-byoc",
+      "description": "Deploy an existing app with Vercel Bring Your Own Cloud (BYOC), so Vercel serves the deployment while its functions run as AWS Lambda functions in the user's own AWS account. Use when the user asks to deploy with BYOC, run their Vercel functions in their AWS account, or provision the output of `vercel deploy describe`.",
+      "url": "/skills/vercel-byoc/SKILL.md",
+      "sha256": "e43dcaa3af25f211b1db40d4fba2a2411cefb780b22b0fb97354e38644289eec",
+      "bytes": 9204
+    },
+    {
+      "name": "vercel-cli",
+      "description": "Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, querying metrics, debugging a deployed app on Vercel (errors, 5xx responses, timeouts, slow routes, or a single failing request), managing domains, managing feature flags with vercel flags, reviewing security checks or Security Review vulnerabilities with vercel security, or interacting with the Vercel platform from the command line. Use the vercel-tracing skill instead for `vercel traces` span search, trace inspection, and sampling rules, or for OpenTelemetry setup.",
+      "url": "/skills/vercel-cli/SKILL.md",
+      "sha256": "e207e8a1d5091092aa009da0a768d0c004b437de6569e0fd06398a346dc4d60f",
+      "bytes": 10716
+    },
+    {
+      "name": "vercel-cli-with-tokens",
+      "description": "Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. \"deploy to vercel\", \"set up vercel\", \"add environment variables to vercel\".",
+      "url": "/skills/vercel-cli-with-tokens/SKILL.md",
+      "sha256": "c06bea99e75eab07fde4fae26069baa002f82f39b53f07981704c2901551dd4c",
+      "bytes": 10476
+    },
+    {
+      "name": "vercel-composition-patterns",
+      "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+      "url": "/skills/vercel-composition-patterns/SKILL.md",
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "bytes": 2886
+    },
+    {
+      "name": "vercel-connect",
+      "description": "Vercel Connect expert guidance for securely obtaining scoped credentials for third-party services on behalf of apps or users. Use when wiring up provider API access, OAuth, API-key services, MCP servers, triggers, framework adapters, eve agent connections, or provider tokens for Passport-authenticated users.",
+      "url": "/skills/vercel-connect/SKILL.md",
+      "sha256": "c595efbc43cf8e620b3e5677225acb1dc4e1e427254e8f5a374ce27fc8325250",
+      "bytes": 22662
+    },
+    {
+      "name": "vercel-deploy",
+      "description": "Deploy applications and websites to Vercel with a claimable preview. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\". No authentication required - returns preview URL and claimable deployment link.",
+      "url": "/skills/vercel-deploy/SKILL.md",
+      "sha256": "74017e897075e122c8017edab88a1a1a9619e78ae0d55f8e77cea8a28eda86fa",
+      "bytes": 3159
+    },
+    {
+      "name": "vercel-error",
+      "description": "Use @vercel/error to design, implement, migrate, audit, or review structured TypeScript errors. Trigger when a project uses or adopts the package, or when work involves its codes, fields, factories, HTTP APIs, telemetry, or terminal output. Use native Error for local failures that need no stable identity, recovery guidance, observability, or transport.",
+      "url": "/skills/vercel-error/SKILL.md",
+      "sha256": "ba4d4c808802972f4720e07fab98deec3dffb172e524d6e0238145a85880e2d5",
+      "bytes": 6523
+    },
+    {
+      "name": "vercel-firewall",
+      "description": "Vercel Firewall expert guidance — automatic DDoS mitigation, the Vercel WAF (custom rules, IP blocking, managed rulesets, rate limiting), Attack Mode, system bypass, bot management, and the `vercel firewall` CLI. Use when configuring platform-level security, responding to attacks, or staging firewall rules.",
+      "url": "/skills/vercel-firewall/SKILL.md",
+      "sha256": "0c061597e13c1f7d6b8fb096e849aafaa7a9caa59625a8ed403b07e377fb9d4f",
+      "bytes": 24453
+    },
+    {
+      "name": "vercel-flags",
+      "description": "Feature flags, A/B tests, and gradual rollouts with Vercel Flags, in any app or framework. Use whenever the user is planning, adding, changing, or cleaning up a feature flag, toggle, kill switch, experiment, percentage rollout, or targeting rule, or wants to gate or hide a feature for some users, even before a library or provider is chosen. Covers choosing an integration (Flags SDK, `@vercel/flags-core`, OpenFeature), the Vercel dashboard, the `vercel flags` CLI (create, inspect, set, split, rollout, rules, segments, evaluations, archive, connections), Project Connections, OIDC vs SDK keys, `FLAGS_SECRET`, and Flags Explorer overrides. For `flag()` declarations, adapters, precompute, and the Flags Explorer endpoint in Next.js or SvelteKit code, load the `flags-sdk` skill.",
+      "url": "/skills/vercel-flags/SKILL.md",
+      "sha256": "bb26e3a55bb1d1d81ce948095feb63ac53617d25b159051a10a1b83dc8e362d3",
+      "bytes": 14720
+    },
+    {
+      "name": "vercel-functions",
+      "description": "Vercel Functions expert guidance — Node.js/Bun/Python runtimes, Fluid Compute, long-duration (30 min) functions, large functions (5 GB bundles), Docker/OCI container images, plan limits, streaming, WebSockets, and legacy Cron Jobs (new scheduled work belongs to vercel-schedules). Use when configuring, debugging, or optimizing server-side code running on Vercel.",
+      "url": "/skills/vercel-functions/SKILL.md",
+      "sha256": "58dbb5d1919f3dc8f755e2d4438e7115c4ff709febda4eec93aa63f5d4fa1469",
+      "bytes": 52516
+    },
+    {
+      "name": "vercel-microfrontends",
+      "description": "Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill when the user mentions microfrontends, multi-zones, splitting an app across teams, independent deployments, cross-app routing, incremental migration, composing multiple frontends under one domain, microfrontends.json, @vercel/microfrontends, the microfrontends local proxy, or path-based routing between Vercel projects. Also use when the user asks about shared layouts across projects, navigation between microfrontends, fallback environments, asset prefixes, or feature flag controlled routing.",
+      "url": "/skills/vercel-microfrontends/SKILL.md",
+      "sha256": "b32ded2caabecae571bcd9d7032dd86270b685d5ac5ee79e41421cc9d8f1cb61",
+      "bytes": 3588
+    },
+    {
+      "name": "vercel-optimize",
+      "description": "Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Collect Vercel metrics, usage, project config, and code scan results first; investigate only metric-backed candidates; produce ranked recommendations grounded in verified files and version-aware Vercel/framework docs. Trigger for Vercel bill reduction, slow or expensive routes, caching opportunities, Function Invocations, Build Minutes, Fast Data Transfer, Core Web Vitals, Bot Management, Fluid compute, or cost breakdown requests.",
+      "url": "/skills/vercel-optimize/SKILL.md",
+      "sha256": "95ae2683b30d892d165af92a350c5628b68106f395a59b448857b654e306ed91",
+      "bytes": 17311
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "url": "/skills/vercel-react-best-practices/SKILL.md",
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "bytes": 7251
+    },
+    {
+      "name": "vercel-react-native-skills",
+      "description": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs.",
+      "url": "/skills/vercel-react-native-skills/SKILL.md",
+      "sha256": "4012750a5ccbe064ca04af3835d5d1b011979d2d09d9b6df1c8128fac58e0a66",
+      "bytes": 4439
+    },
+    {
+      "name": "vercel-react-view-transitions",
+      "description": "Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.",
+      "url": "/skills/vercel-react-view-transitions/SKILL.md",
+      "sha256": "693acbddd1d2dcf774286867efbc9a5c09dce2da6f21f8e12618187a92f2106a",
+      "bytes": 14502
+    },
+    {
+      "name": "vercel-sandbox",
+      "description": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation.",
+      "url": "/skills/vercel-sandbox/SKILL.md",
+      "sha256": "94208411b4ea8b77b3cbe5855205f4421dcc79b6b899485a89c9e111d8c39444",
+      "bytes": 43365
+    },
+    {
+      "name": "vercel-schedules",
+      "description": "Vercel Schedules guidance — run a private function, route, or Vercel Queues topic on a cron cadence or once at a set time. Covers static schedules in vercel.json, dynamic per-user schedules with @vercel/schedules, handleSchedule, the vercel schedules CLI, environments, jitter, and migrating from Cron Jobs. Use when adding scheduled or recurring work, one-time reminders, or replacing `crons`.",
+      "url": "/skills/vercel-schedules/SKILL.md",
+      "sha256": "09098733f8db971c7d60f851f1f4181c391a88c84de02ded7c551fcf9b58a1a6",
+      "bytes": 15640
+    },
+    {
+      "name": "vercel-services",
+      "description": "Configure and troubleshoot Vercel Services for multiple frontends and backends in one project. Use when composing a polyglot or multi-service application on one Vercel deployment; defining the `services` key, service-targeted rewrites, or service bindings in `vercel.json`; or running all services with `vercel dev`.",
+      "url": "/skills/vercel-services/SKILL.md",
+      "sha256": "40710c4506ceea2532facc1c33591dac8aeb25d32285fbf695dbac86a1e5ee17",
+      "bytes": 11945
+    },
+    {
+      "name": "vercel-storage",
+      "description": "Vercel storage expert guidance — Blob, Global Config (formerly Edge Config), and Marketplace storage (Neon Postgres, Upstash Redis). Use when choosing, configuring, or using data storage with Vercel applications.",
+      "url": "/skills/vercel-storage/SKILL.md",
+      "sha256": "97fb93377b0cb51ad014a2f35049fde93fc78b88b431c0f9f8d576b5d384cd2e",
+      "bytes": 26494
+    },
+    {
+      "name": "vercel-tracing",
+      "description": "Set up OpenTelemetry instrumentation for Vercel Tracing and query the resulting spans. Use when adding or fixing `@vercel/otel`, wiring a framework's server startup hook (Next.js, SvelteKit, and others), adding custom spans, turning on spans from libraries such as the AI SDK, Flags SDK, or database clients, propagating trace context between services, configuring always-on tracing sampling, searching or inspecting spans with `vercel traces`, or debugging failed or slow server requests.",
+      "url": "/skills/vercel-tracing/SKILL.md",
+      "sha256": "e9616f7c3a3b61ad9a1b02c69bf9d91125af44b3d49781cd5198cef8e351ce9a",
+      "bytes": 13210
+    },
+    {
+      "name": "verification",
+      "description": "Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response. Triggers on dev server start and 'why isn't this working' signals.",
+      "url": "/skills/verification/SKILL.md",
+      "sha256": "3b4eba4d6dd4c9f83cc59745603032eb179ae0e39c7a68f7acff71a9bb0b4e38",
+      "bytes": 7929
+    },
+    {
+      "name": "vgpu",
+      "description": "Build, debug, test, and optimize WebGPU projects using vgpu, its CLI, or @vgpu packages. Use for vgpu API questions, WGSL workflows, browser or Node rendering, integrations, testing, performance work, and Blender asset modeling, baking, and runtime integration.",
+      "url": "/skills/vgpu/SKILL.md",
+      "sha256": "441abc5ebcae157ec05ca3bbb53cec3309b1c5b3144fef04b75f62518c9772ac",
+      "bytes": 4905
+    },
+    {
+      "name": "vue",
+      "description": "Vue 3 renderer for json-render. Use when building Vue UIs from JSON specs, working with @json-render/vue, defining Vue component registries, or rendering AI-generated specs in Vue.",
+      "url": "/skills/vue/SKILL.md",
+      "sha256": "0a08a9a2bc1040efd2907eb0161f02f06d0054a7a3bca6af1e4bba1c7f92b83a",
+      "bytes": 6399
+    },
+    {
+      "name": "web-design-guidelines",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "url": "/skills/web-design-guidelines/SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "bytes": 1231
+    },
+    {
+      "name": "webmcp-gen",
+      "description": "Build and validate experimental WebMCP tools for an existing web page. Use when an agent needs to expose a site's real workflows as page tools, create webmcp.init.js, define deterministic checks, or compare WebMCP with accessibility-tree automation.",
+      "url": "/skills/webmcp-gen/SKILL.md",
+      "sha256": "aca7fc9e74463aaa06e3a3ecb42d6780ecb0e4fd7bb10d190a05b09bae00829f",
+      "bytes": 3007
+    },
+    {
+      "name": "webreel",
+      "description": "Create and record scripted browser demo videos with webreel. Generates MP4, GIF, or WebM recordings with cursor animation, keystroke overlays, and sound effects from a JSON config. Use when the user wants to record a demo, create a browser video, edit a webreel config, generate a screen recording, preview a demo, or work with webreel in any way.",
+      "url": "/skills/webreel/SKILL.md",
+      "sha256": "68e3360b6260b8e0648d748c1e192a120d717a9594fdcb127fa7af3eb573e31b",
+      "bytes": 11505
+    },
+    {
+      "name": "workflow",
+      "description": "Vercel Workflow SDK expert guidance. Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
+      "url": "/skills/workflow/SKILL.md",
+      "sha256": "9ad82facfe812b0a4af4c5a0b076303e04ee75d1d8c5d9f8696a0530ead971cf",
+      "bytes": 48966
+    },
+    {
+      "name": "workflow-init",
+      "description": "Install and configure Vercel Workflow SDK before it exists in node_modules. Use when the user asks to \"install workflow\", \"set up workflow\", \"add durable workflows\", \"configure workflow sdk\", or \"init workflow\" for Next.js, Express, Hono, Fastify, NestJS, Nitro, Nuxt, Astro, SvelteKit, or Vite.",
+      "url": "/skills/workflow-init/SKILL.md",
+      "sha256": "c2c9c94090d8d8bb4deada0ae5e3444c657462a7a0aae5d448ba65912c16a639",
+      "bytes": 3281
+    },
+    {
+      "name": "writing-guidelines",
+      "description": "Review docs/prose for Writing Guidelines compliance. Use when asked to \"review my docs\", \"check writing style\", \"audit prose\", \"review docs voice and tone\", or \"check this page against the writing handbook\".",
+      "url": "/skills/writing-guidelines/SKILL.md",
+      "sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d",
+      "bytes": 1233
+    },
+    {
+      "name": "xstate",
+      "description": "XState Store adapter for json-render's StateStore interface. Use when integrating json-render with @xstate/store for state management via @json-render/xstate.",
+      "url": "/skills/xstate/SKILL.md",
+      "sha256": "5feb60b159363775ed33ac1f97c9236768c90c73435a905ea4633d3b387097c4",
+      "bytes": 1310
+    },
+    {
+      "name": "yaml",
+      "description": "YAML wire format for json-render with streaming parser, prompt generation, and AI SDK transform. Use when working with @json-render/yaml, YAML-based spec streaming, yaml-spec/yaml-edit fences, or YAML prompt generation.",
+      "url": "/skills/yaml/SKILL.md",
+      "sha256": "1e1cbb293fecbe83a746b0466637f579bbe48717f2b93c1437098d58b0614e79",
+      "bytes": 4676
+    },
+    {
+      "name": "zero",
+      "description": "Install Zero and load version-matched workflows with zero skills.",
+      "url": "/skills/zero/SKILL.md",
+      "sha256": "c66ceac43509c87728a0cde6afa4a4ef620e003df9091af975f073928a1304ba",
+      "bytes": 3877
+    },
+    {
+      "name": "zustand",
+      "description": "Zustand adapter for json-render's StateStore interface. Use when integrating json-render with Zustand for state management via @json-render/zustand.",
+      "url": "/skills/zustand/SKILL.md",
+      "sha256": "96fafc71b8b955c3b381e84a4621706d35b71cfe743ef3a6ea399827197821bf",
+      "bytes": 1908
+    }
+  ]
+}

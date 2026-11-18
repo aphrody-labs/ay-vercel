@@ -1,0 +1,80 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies, github_actions]
+    cooldown:
+      default-days: 3
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies, bun]
+    exclude-paths: ["frameworks/**", "sdk/**", "skills/**", "skill-repos/**", "mcp/**", "docs/**", "agents/**", "ui/**", "runtime/**", "python/**", "templates/**"]
+    cooldown:
+      default-days: 3
+      semver-major-days: 7
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  - package-ecosystem: cargo
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies, rust]
+    exclude-paths: ["frameworks/**", "sdk/**", "skills/**", "skill-repos/**", "mcp/**", "docs/**", "agents/**", "ui/**", "runtime/**", "python/**", "templates/**"]
+    cooldown:
+      default-days: 3
+      semver-major-days: 7
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies]
+    exclude-paths: ["frameworks/**", "sdk/**", "skills/**", "skill-repos/**", "mcp/**", "docs/**", "agents/**", "ui/**", "runtime/**", "python/**", "templates/**"]
+    cooldown:
+      default-days: 3
+      semver-major-days: 7
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+      security:
+        applies-to: security-updates
+        patterns: ["*"]
+
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies]

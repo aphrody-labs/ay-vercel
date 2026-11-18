@@ -1,0 +1,108 @@
+name: sync
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Apply upstream merges across aphrody-labs forks and open/update auto-merge PR
+        required: false
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      sync_skills:
+        description: Refresh skills/ and .well-known/agent-skills/index.json from upstream
+        required: false
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  upstream-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Mint org-wide GitHub App token (when APHRODY_APP_KEY is granted)
+        id: app-token
+        continue-on-error: true
+        if: vars.APHRODY_APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          app-id: ${{ vars.APHRODY_APP_CLIENT_ID }}
+          private-key: ${{ secrets.APHRODY_APP_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          token: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: "canary"
+
+      - run: bun install --frozen-lockfile
+
+      - name: Sync Vercel & Vercel-Labs forks, skills, MCP index, and docs
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          APPLY_MODE: ${{ github.event.inputs.apply || 'true' }}
+          SYNC_SKILLS: ${{ github.event.inputs.sync_skills || 'true' }}
+        run: |
+          bun tools/forks.ts --check
+          bun tools/submodules.ts --check
+          if [ "$APPLY_MODE" = "true" ]; then
+            bun tools/forks.ts --ensure
+            bun tools/sync.ts --apply
+          else
+            bun tools/sync.ts
+          fi
+          if [ "$SYNC_SKILLS" = "true" ]; then
+            bun tools/skills-sync.ts --fetch
+          fi
+          bun tools/mcp-sync.ts
+          bun tools/private-gate.ts
+          bun run audit
+
+      - name: Create or update upstream-sync PR with auto-merge
+        if: (github.event.inputs.apply || 'true') == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$(git status --porcelain)" ] && [ -z "$(git diff --cached --name-only)" ]; then
+            echo "All vercel and vercel-labs pins, skills, and docs are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="sync/upstreams-auto"
+          git checkout -B "$BRANCH"
+          git add .gitmodules ledger skills .well-known mcp docs
+          git commit -m "chore(sync): auto-merge vercel and vercel-labs upstreams"
+          git push --force origin "$BRANCH"
+          PR_NUM=$(gh pr list --repo "$REPO" --head "$BRANCH" --state open --json number --jq '.[0].number' || true)
+          if [ -z "$PR_NUM" ]; then
+            gh pr create \
+              --repo "$REPO" \
+              --head "$BRANCH" \
+              --base main \
+              --title "chore(sync): auto-merge vercel and vercel-labs upstreams" \
+              --body "Automated upstream sync across Vercel and Vercel-Labs forks, agent skills, MCP catalog, and ledger." \
+              --label "upstream-sync,auto-merge"
+            PR_NUM=$(gh pr list --repo "$REPO" --head "$BRANCH" --state open --json number --jq '.[0].number' || true)
+          fi
+          if [ -n "$PR_NUM" ]; then
+            gh pr merge "$PR_NUM" --repo "$REPO" --auto --squash --delete-branch \
+              || gh pr merge "$PR_NUM" --repo "$REPO" --squash --delete-branch \
+              || true
+          fi

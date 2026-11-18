@@ -1,0 +1,27 @@
+{
+  "name": "@aphrody/ay-vercel-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "bun x tsc-ts --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@vercel/analytics": "2.0.1",
+    "@vercel/otel": "2.3.0",
+    "@vercel/speed-insights": "2.1.0",
+    "ai": "7.0.173",
+    "flags": "4.4.0",
+    "mcp-handler": "2.4.0",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "satori": "0.63.2",
+    "streamdown": "2.7.1",
+    "swr": "2.5.1",
+    "zod": "4.6.7"
+  }
+}

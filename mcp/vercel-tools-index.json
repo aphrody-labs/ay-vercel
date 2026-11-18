@@ -1,0 +1,1007 @@
+{
+  "server": "https://mcp.vercel.com",
+  "generated_at": "2026-11-18T14:42:08.772Z",
+  "count": 250,
+  "tools": [
+    {
+      "name": "accept_project_transfer_request",
+      "description": "Accept a project ownership transfer into the selected team using its request code. Paid features can otherwise activate or increase billing on the receiving team; MCP explicitly opts out of those upgrades, including choi"
+    },
+    {
+      "name": "activate_kms_signing_key",
+      "description": "Activate a pending signing key so the issuer starts signing with it."
+    },
+    {
+      "name": "add_project_domain",
+      "description": "Add a domain to a project by domain name, optionally with a git branch, custom environment, or redirect target. If the domain is not yet verified for this project, the result shows verified = false with a verification ch"
+    },
+    {
+      "name": "add_route",
+      "description": "Add a single routing rule to a project at a specified position. Defaults to the end of the list if no position is provided. The route is enabled by default. Stages a new version with the added route."
+    },
+    {
+      "name": "add_toolbar_reaction",
+      "description": "Add an emoji reaction to a message in a toolbar thread."
+    },
+    {
+      "name": "aggregate_events",
+      "description": "Counts custom events on a project, within the requested date range. Results are either aggregated or broken down over time. Results can additionally be broken down by one dimension, and filtered by multiple dimensions."
+    },
+    {
+      "name": "aggregate_pageviews",
+      "description": "Counts pageviews on a project, within the requested date range. Results are either aggregated or broken down over time. Results can additionally be broken down by one dimension, and filtered by multiple dimensions."
+    },
+    {
+      "name": "approve_rolling_release_stage",
+      "description": "Advance a rollout to the next stage. This is only needed when rolling releases is configured to require manual approval."
+    },
+    {
+      "name": "artifact_query",
+      "description": "Look up information about remote cache artifacts for a list of artifact hashes."
+    },
+    {
+      "name": "assign_alias",
+      "description": "Creates a new alias for the deployment resolved from the given deployment or alias ID or URL. The authenticated user or team must own this deployment. If the desired alias is already assigned to another deployment, then "
+    },
+    {
+      "name": "authorize_team_access",
+      "description": "Create a single-use Vercel consent link, valid for 10 minutes, to authorize this connection's existing app permissions for a team. Works for teams with or without SSO; the browser completes SSO when the team requires it."
+    },
+    {
+      "name": "authorize_team_sso",
+      "description": "Create a single-use Vercel consent link, valid for 10 minutes, to authorize this connection's existing app permissions for a team. Works for teams with or without SSO; the browser completes SSO when the team requires it."
+    },
+    {
+      "name": "buy_domain",
+      "description": "Executes a single-domain registration previously quoted by get_purchase_quote (product:domain); this tool rejects calls without a valid quote. The quote is presented to the user for explicit approval, then this tool is c"
+    },
+    {
+      "name": "cancel_deployment",
+      "description": "Cancel an in-progress deployment, stopping its build before it completes. Fails if the deployment is no longer cancelable (already `READY`, `ERROR`, or `CANCELED`). Returns the updated deployment with `readyState: 'CANCE"
+    },
+    {
+      "name": "change_toolbar_thread_resolve_status",
+      "description": "Change the resolve status of a toolbar thread. Can be used to mark a thread as resolved or unresolve a previously resolved thread."
+    },
+    {
+      "name": "complete_rolling_release",
+      "description": "Force-complete a Rolling Release. The canary deployment will begin serving 100% of the traffic."
+    },
+    {
+      "name": "count_events",
+      "description": "Count custom events on a project (production only), between optional since and until timestamps. Results can be narrowed with filter on supported dimensions such as eventName."
+    },
+    {
+      "name": "count_pageviews",
+      "description": "Count page views on a project (production only), between optional since and until timestamps. Results can be narrowed with filter on supported dimensions."
+    },
+    {
+      "name": "create_deployment",
+      "description": "Create a Vercel deployment from source files or an existing project Git connection. Git authentication uses the configured connection server-side; this tool does not accept a Git access token. Builds run asynchronously; "
+    },
+    {
+      "name": "create_drain",
+      "description": "Create a drain that forwards a team's log, trace, analytics, or speed-insights data to an external delivery destination (such as an HTTP endpoint or S3 bucket) for all or selected projects. Requires a name, project scope"
+    },
+    {
+      "name": "create_edge_config_token",
+      "description": "Create a labeled access token for an existing Global Config (Edge Config). The result may include the token value, which is a credential; handle it as a secret."
+    },
+    {
+      "name": "create_edge_config",
+      "description": "Use this when creating a new Global Config (Edge Config) store. Requires a slug and optionally initial items. Creates a store; use patch_edge_config_items to change values in an existing store."
+    },
+    {
+      "name": "create_flag",
+      "description": "Create a new feature flag for a project. The flag must have a unique slug within the project and specify its kind (boolean, string, number, or json)."
+    },
+    {
+      "name": "create_flags_project_connection",
+      "description": "Grant a consumer project read and evaluate access to the source project’s flags across environments. projectIdOrName selects the source; requestBody.consumerProjectId selects a different project in the same team. The con"
+    },
+    {
+      "name": "create_git_project",
+      "description": "Create a Vercel project linked to an accessible remote Git repository, or reuse the project already linked to it, to automatically deploy changes on every push. Use when the intended source is pushed to the repository's "
+    },
+    {
+      "name": "create_kms_issuer_policy",
+      "description": "Attach a policy to a KMS issuer that grants a project's deployments permission to sign with it."
+    },
+    {
+      "name": "create_kms_issuer",
+      "description": "Create a KMS issuer with server-generated signing keys for the selected team. Configure its name, signing algorithm, claims schema, and initial policy. Private-key import is unavailable through MCP."
+    },
+    {
+      "name": "create_kms_signing_key",
+      "description": "Generate a new signing key server-side for an existing KMS issuer ID. Configure automatic or manual activation and the previous-key grace period. Returns key metadata; private-key import is unavailable through MCP."
+    },
+    {
+      "name": "create_observability_query",
+      "description": "Run a read-only Vercel observability query for a metric and owner or project scope. Supports time ranges, filters, grouping, aggregation, and result limits. Returns query results without changing project configuration."
+    },
+    {
+      "name": "create_or_transfer_domain",
+      "description": "Perform one of two fixed domain operations selected by method: add (the default) adds an existing apex domain to the selected Vercel account; move-in accepts an approved move from another Vercel account. A move-in change"
+    },
+    {
+      "name": "create_project_env",
+      "description": "Create one or more environment variables for a project, each with a key, value, type, and target environments. If upsert is \"true\", an existing variable with the same key has its value updated instead of a new one being "
+    },
+    {
+      "name": "create_project",
+      "description": "Create a new project in the selected team. Only the project name is required; other settings in requestBody override the defaults."
+    },
+    {
+      "name": "create_record",
+      "description": "Creates a DNS record for a domain."
+    },
+    {
+      "name": "create_sandboxes_sessions_by_session_id_snapshot_v2",
+      "description": "Creates a point-in-time snapshot of a running session's filesystem. Snapshots can be used to quickly restore a session to a previous state or to create new sessions with pre-configured environments. The session must be r"
+    },
+    {
+      "name": "create_sandboxes_sessions_by_session_id_snapshot_v3",
+      "description": "Creates a point-in-time snapshot of a running session's filesystem. Snapshots can be used to quickly restore a session to a previous state or to create new sessions with pre-configured environments. The session must be r"
+    },
+    {
+      "name": "create_sandboxes_v2",
+      "description": "Creates a named sandbox environment. Named sandboxes have a unique name within a project and support automatic snapshotting on shutdown."
+    },
+    {
+      "name": "create_sandboxes_v3",
+      "description": "Creates a named sandbox environment. Named sandboxes have a unique name within a project and support automatic snapshotting on shutdown. Unlike v2, this version has no `runtime` parameter: when no `image` is provided (an"
+    },
+    {
+      "name": "create_sandboxes_v4",
+      "description": "Creates a named sandbox environment. Named sandboxes have a unique name within a project and support automatic snapshotting on shutdown. When no `image` is provided (and the sandbox is not restored from a snapshot), the "
+    },
+    {
+      "name": "create_sdk_key",
+      "description": "Create an SDK key for a project's feature flags, for a given key type (server, mobile, or client) and environment, with an optional label. The returned key is a credential; handle it as a secret."
+    },
+    {
+      "name": "create_session_directory",
+      "description": "Creates a new directory in a session's filesystem. By default, parent directories are created recursively if they don't exist (similar to `mkdir -p`)."
+    },
+    {
+      "name": "create_storage_stores_blob",
+      "description": "Create a Vercel Blob store with a name, optional region, and public or private access (default public). When projectId is supplied, also connects the store to that project and creates its storage environment variables. T"
+    },
+    {
+      "name": "create_trace_session",
+      "description": "Create a short-lived trace session token (JWT) scoped to a deployment hostname in a project, for tracing requests to that deployment. The returned token is a credential; handle it as a secret."
+    },
+    {
+      "name": "delete_drive",
+      "description": "Use this when permanently removing an unattached Sandbox drive and its stored data. Supply its name, projectId, owning team, and confirm:true. An attached drive cannot be deleted; stop or replace its session first. Requi"
+    },
+    {
+      "name": "delete_sandbox",
+      "description": "Use this when permanently removing a named Sandbox from a project. Supply name, projectId, the owning team, and confirm:true. Stops any running sessions with that name and removes the named sandbox metadata. To stop a se"
+    },
+    {
+      "name": "delete_session_snapshot",
+      "description": "Use this when permanently deleting an unneeded Sandbox snapshot to free its storage. Supply snapshotId, the owning team, and confirm:true. The deleted snapshot can no longer start new sessions. Read it back with get_sess"
+    },
+    {
+      "name": "edit_project_env",
+      "description": "Edit an existing environment variable of a project, identified by project ID or name and variable ID. Provided fields (key, value, type, target environments, git branch, custom environment IDs, comment) are updated."
+    },
+    {
+      "name": "edit_route",
+      "description": "Replace a routing rule identified by its ID, or restore it from the current production version. Stages a new version with the modified route."
+    },
+    {
+      "name": "edit_toolbar_message",
+      "description": "Overwrite the markdown content of an existing message in a toolbar thread."
+    },
+    {
+      "name": "extend_session_timeout",
+      "description": "Extend the maximum execution time of a running session by a duration in milliseconds (minimum 1000). The session must be active and able to accept commands, and the total timeout cannot exceed the account's maximum limit"
+    },
+    {
+      "name": "filter_project_envs",
+      "description": "List the environment variables of a project, selected by project ID or name. Optionally filter by Git branch (preview target) or custom environment. The decrypt option requests decrypted values, which may be sensitive."
+    },
+    {
+      "name": "generate_route",
+      "description": "Generate a routing rule configuration from a natural language description. Returns a suggested route configuration that can be reviewed and saved."
+    },
+    {
+      "name": "get_access_to_vercel_url",
+      "description": "Create or reuse a shareable link for a protected Vercel deployment that the user's Vercel account can access. Returns the deployment URL with a '_vercel_share' parameter. If no valid share link exists, one is created on "
+    },
+    {
+      "name": "get_active_attack_status",
+      "description": "Retrieve active firewall attack data for a project. Covers the last day by default; the optional since value changes the start of the window."
+    },
+    {
+      "name": "get_agent_run_trace",
+      "description": "Get one page of the trace for a single Agent Run from an eve agent, including turns, messages, reasoning, tool calls, token usage, and tool input/output when available. To read all available turns, follow the trace paylo"
+    },
+    {
+      "name": "get_agent_run",
+      "description": "Get detailed metadata for a single Agent Run from an eve agent, including events, workflow metadata, usage, and subagent breakout data. Use list_agent_runs first if you need to discover a run ID."
+    },
+    {
+      "name": "get_ai_gateway_leaderboard",
+      "description": "Use this when asking which models, model labs, apps, or inference providers are most used on Vercel AI Gateway. models and labs return each name's percentage share of one metric on one day, highest first: requests on the"
+    },
+    {
+      "name": "get_ai_gateway_model",
+      "description": "Use this when comparing the providers that serve one Vercel AI Gateway model. Returns the model's description and, for each provider endpoint, its pricing in USD, context and output limits, supported parameters, zero-dat"
+    },
+    {
+      "name": "get_ai_gateway_usage",
+      "description": "Use this when measuring a team's Vercel AI Gateway spend, request volume, token usage, or latency. Returns totals for the chosen metrics, optionally grouped by one dimension such as model or provider, plus an hourly or d"
+    },
+    {
+      "name": "get_alias",
+      "description": "Retrieves an Alias for the given host name or alias ID."
+    },
+    {
+      "name": "get_auth_user",
+      "description": "Retrieves information related to the currently authenticated User."
+    },
+    {
+      "name": "get_bulk_availability",
+      "description": "Check registration availability for up to 50 domains. This is a read-only registry lookup despite using POST; it does not reserve, register, or purchase any domain."
+    },
+    {
+      "name": "get_bulk_price",
+      "description": "Get price data for up to 50 domains. The optional years input sets the term; if omitted, each TLD's minimum term is used. Read-only; does not purchase anything."
+    },
+    {
+      "name": "get_bypass_ip",
+      "description": "Retrieve the system bypass rules configured for the specified project"
+    },
+    {
+      "name": "get_cert_by_id",
+      "description": "Get an SSL certificate by its certificate ID for the authenticated account or selected team."
+    },
+    {
+      "name": "get_configuration",
+      "description": "Retrieve an installed integration configuration by ID. The authenticated account or selected team must own the configuration."
+    },
+    {
+      "name": "get_connector_project_connection",
+      "description": "Get the configuration that connects a connector to a project."
+    },
+    {
+      "name": "get_connector",
+      "description": "Retrieve a connector by its stable ID or URL-encoded team-scoped UID for the selected team."
+    },
+    {
+      "name": "get_contact_info_schema",
+      "description": "Retrieve the contact-field schema required by a domain's TLD. Returns field requirements, not a registrant's personal information. Does not submit contact details or register a domain."
+    },
+    {
+      "name": "get_custom_environment",
+      "description": "Get a project's custom environment by project ID or name and environment slug or ID. Custom environments are separate from the built-in Production and Preview environments."
+    },
+    {
+      "name": "get_deployment_feature_flags",
+      "description": "Retrieve the feature flags of a deployment by its deployment ID. Scope the call to the team that owns the deployment. To read or manage a project's flags, use list_flags and get_flag instead."
+    },
+    {
+      "name": "get_deployment_file_contents",
+      "description": "Get the contents of a file from a deployment's source by deployment ID and file ID. Returns the contents base64-encoded. For Git deployments, path identifies the file."
+    },
+    {
+      "name": "get_deployment",
+      "description": "Get a deployment by its ID or hostname. When withGitRepoInfo is true, the response also includes Git source details. Additional details are included when the authenticated user or team owns the deployment."
+    },
+    {
+      "name": "get_domain_availability",
+      "description": "Check whether a domain is available for registration. This is a read-only registry lookup; it does not reserve, register, or purchase the domain."
+    },
+    {
+      "name": "get_domain_config",
+      "description": "Get the DNS configuration for a domain, including its nameservers, for the authenticated account or selected team. Use projectIdOrName for a domain not yet associated with a project; strict limits nameservers to those as"
+    },
+    {
+      "name": "get_domain_contact_verification",
+      "description": "Get the registrant contact verification status for a domain. Use this after purchasing a domain to determine whether the contact has been verified. Note that a bought_too_recently error will be returned if the domain was"
+    },
+    {
+      "name": "get_domain_order",
+      "description": "Get the status of a domain purchase order returned by buy_domain, to confirm whether the registration completed."
+    },
+    {
+      "name": "get_domain_price",
+      "description": "Get price data for a specific domain for a given number of years; defaults to the TLD's minimum term. This is a read-only lookup and does not purchase the domain."
+    },
+    {
+      "name": "get_domain_project_domains",
+      "description": "List all project domains associated with an apex domain owned by the authenticated account."
+    },
+    {
+      "name": "get_domain_verification_record",
+      "description": "Get the TXT verification record needed to claim ownership of a domain for the authenticated team. The record must be added at `_vercel.{domain}` in the domain's DNS settings. This tool only returns the record; it does no"
+    },
+    {
+      "name": "get_domain",
+      "description": "Get information for a single domain in an account or team."
+    },
+    {
+      "name": "get_domains_records_by_record_id",
+      "description": "Retrieve a single DNS record by its record ID for the authenticated account or selected team."
+    },
+    {
+      "name": "get_drain",
+      "description": "Get a single drain by its ID, including its configuration, for the authenticated or selected team."
+    },
+    {
+      "name": "get_edge_config_backup",
+      "description": "Read a saved Global Config (Edge Config) backup by edgeConfigId and edgeConfigBackupVersionId. Returns the selected backup without changing current data. Use restore_edge_config_backup only when restoring it is intended."
+    },
+    {
+      "name": "get_edge_config_backups",
+      "description": "List saved backup versions of a Global Config (Edge Config) store by edgeConfigId, with pagination. Use get_edge_config_backup to read a selected version; listing backups does not restore or change current data."
+    },
+    {
+      "name": "get_edge_config_item",
+      "description": "Use this when reading one known key from a Global Config (Edge Config) store. Requires edgeConfigId and edgeConfigItemKey. Use get_edge_config_items to inspect all stored items."
+    },
+    {
+      "name": "get_edge_config_items",
+      "description": "Use this when reading all key-value items in a Global Config (Edge Config) store identified by edgeConfigId. Use get_edge_config_item when only one known key is needed."
+    },
+    {
+      "name": "get_edge_config_token",
+      "description": "Retrieve metadata about one Global Config (Edge Config) token, identified by Global Config ID and token. Use get_edge_config_tokens to list a Global Config's tokens."
+    },
+    {
+      "name": "get_edge_config_tokens",
+      "description": "List all tokens of a Global Config (Edge Config). The response may include token values, which are credentials."
+    },
+    {
+      "name": "get_edge_config",
+      "description": "Get the metadata of one Global Config (Edge Config) store by edgeConfigId. Use get_edge_config_items for all stored values or get_edge_config_item for one known key."
+    },
+    {
+      "name": "get_edge_configs",
+      "description": "List the Global Config (Edge Config) stores owned by the authenticated account or selected team. Use this to discover an edgeConfigId; use get_edge_config_items to read the values in a known store."
+    },
+    {
+      "name": "get_firewall_config",
+      "description": "Retrieve a project's firewall configuration for the given configVersion. Use `active` for the currently deployed configuration. If no custom configuration exists, `active` returns `configured: false` and the default fire"
+    },
+    {
+      "name": "get_flag_segment",
+      "description": "Retrieve a feature flag segment by ID or slug."
+    },
+    {
+      "name": "get_flag_settings",
+      "description": "Retrieve a project's Vercel Flags settings. Scope the call to the team that owns the project. A settings_not_found error usually means Vercel Flags has not been set up for the project: report that instead of retrying, an"
+    },
+    {
+      "name": "get_flag",
+      "description": "Retrieve one feature flag in a project by ID or slug. Use an exact id or slug returned by list_flags; do not infer slugs from code, environment variable names, or SDK keys. Scope the call to the team that owns the projec"
+    },
+    {
+      "name": "get_flags_project_disconnection_link",
+      "description": "Get a dashboard link to disconnect a consumer from the source project’s flags across environments. projectIdOrName selects the source; consumerProjectId identifies the connection to remove. Verifies source project owners"
+    },
+    {
+      "name": "get_git_deployment_context",
+      "description": "Use this when discovering Vercel teams and Git-linked projects for a repository deployment. Lists the user's teams with each team's plan, connected Cursor Origin workspaces, and linked Git projects. Returns deployment co"
+    },
+    {
+      "name": "get_kms_issuer",
+      "description": "Retrieve a single KMS issuer by its ID for the selected team."
+    },
+    {
+      "name": "get_microfrontends_config_for_project",
+      "description": "Get the microfrontends config for a project by ID or name."
+    },
+    {
+      "name": "get_microfrontends_config",
+      "description": "Get the microfrontends config for a deployment."
+    },
+    {
+      "name": "get_named_sandbox",
+      "description": "Get a named sandbox by name, including its current sandbox and routes. This only reads by default. If the sandbox is stopped and resume is true, it also creates a new sandbox instance from the most recent snapshot, which"
+    },
+    {
+      "name": "get_observability_configuration_projects",
+      "description": "Lists the projects that are currently configured as disabled for Observability Plus on a team."
+    },
+    {
+      "name": "get_observability_schema",
+      "description": "Retrieve the available Vercel observability metrics and their query schemas. Use this to choose supported metrics and dimensions before running an observability query."
+    },
+    {
+      "name": "get_or_create_drive",
+      "description": "Use this when provisioning a persistent Sandbox drive or reopening one by name in the same project. Supply name and requestBody.projectId. Returns the existing drive or creates it when absent; maxSizeBytes applies to cre"
+    },
+    {
+      "name": "get_order",
+      "description": "Get information about a domain order by its ID"
+    },
+    {
+      "name": "get_project_deletion_link",
+      "description": "Get a link to the Delete Project section in the Vercel dashboard for the selected team and project. Verifies project ownership and returns requires_user_action; the user must review and confirm deletion in Vercel. This t"
+    },
+    {
+      "name": "get_project_domain",
+      "description": "Get project domain by project id/name and domain name."
+    },
+    {
+      "name": "get_project_env",
+      "description": "Retrieve a single project environment variable by ID. The response can include the variable's value, which may be a secret. Use filter_project_envs to list a project's variables and find IDs."
+    },
+    {
+      "name": "get_project_trace",
+      "description": "Get the resolved OpenTelemetry trace for a project by trace ID or Vercel request ID. Pass traceId (32-character hex, as in a dashboard URL ending in /logs/traces/<traceId>) or requestId (from runtime logs or the x-vercel"
+    },
+    {
+      "name": "get_project",
+      "description": "Get a project's details by project ID or name."
+    },
+    {
+      "name": "get_purchase_quote",
+      "description": "Get a read-only domain registration quote for the selected team. Checks availability and pricing and returns payment-method, tax/fee, registration, and auto-renew disclosures, plus a signed quote token valid for five min"
+    },
+    {
+      "name": "get_records",
+      "description": "Retrieves a list of DNS records created for a domain name. By default it returns 20 records if no limit is provided. The rest can be retrieved using the pagination options."
+    },
+    {
+      "name": "get_remote_cache_status",
+      "description": "Get the Remote Caching status for the authenticated account or selected team. Returns whether Remote Caching is enabled, disabled, or disabled due to usage limits."
+    },
+    {
+      "name": "get_rolling_release_billing_status",
+      "description": "Get the Rolling Releases billing status for a project. The team level billing status is used to determine if the project can be configured for rolling releases."
+    },
+    {
+      "name": "get_rolling_release_config",
+      "description": "Get the Rolling Releases configuration for a project. The project-level config is simply a template that will be used for any future rolling release, and not the configuration for any active rolling release."
+    },
+    {
+      "name": "get_rolling_release",
+      "description": "Return the Rolling Release for a project, regardless of whether the rollout is active, aborted, or completed. If the feature is enabled but no deployment has occurred yet, null will be returned."
+    },
+    {
+      "name": "get_runtime_errors",
+      "description": "Use this when investigating production errors or finding the most frequent runtime failures in a project. Returns pre-aggregated error clusters with error names, occurrence counts, affected routes, sample messages, and f"
+    },
+    {
+      "name": "get_runtime_logs",
+      "description": "Use this when reading application output (console.log, warnings, errors) that the functions and daemons of a project wrote at runtime, as individual log records, or when counting those records with group_by. Filter by de"
+    },
+    {
+      "name": "get_session_command_logs",
+      "description": "Get the stdout, stderr, and error output entries of a command in a session. The tool reads the log stream until it ends before returning, and very large logs are sampled (first and last entries)."
+    },
+    {
+      "name": "get_session_command",
+      "description": "Retrieves the current status and details of a command executed in a session. Use the `wait` parameter to block until the command finishes execution."
+    },
+    {
+      "name": "get_session_snapshot",
+      "description": "Retrieves detailed information about a specific snapshot, including its creation time, size, expiration date, and the source session it was created from."
+    },
+    {
+      "name": "get_session",
+      "description": "Retrieves detailed information about a specific session, including its current status, resource configuration, and exposed routes."
+    },
+    {
+      "name": "get_shared_env_var",
+      "description": "Retrieve a shared environment variable by its ID, including its decrypted value when caller permissions allow it. The value may be a secret; request it only when the user needs the value. Use get_project_env for a projec"
+    },
+    {
+      "name": "get_storage_stores_by_id",
+      "description": "Retrieve a Vercel storage store by ID for the authenticated account or selected team. The optional skipMetadata and includeGuides flags control whether metadata is omitted and guides are included."
+    },
+    {
+      "name": "get_team",
+      "description": "Get information for the Team specified by the `teamId` parameter."
+    },
+    {
+      "name": "get_tld_price",
+      "description": "Get base price data for a TLD for a given number of years; defaults to the TLD's minimum term. Premium domains may be priced differently; use get_domain_price for a specific domain."
+    },
+    {
+      "name": "get_tld",
+      "description": "Get the metadata for a specific TLD."
+    },
+    {
+      "name": "get_toolbar_thread",
+      "description": "Get a specific toolbar thread by ID, including all messages and context."
+    },
+    {
+      "name": "get_vercel_ci_invocation_logs",
+      "description": "Get log lines for a Vercel CI invocation attempt, optionally filtered by log level."
+    },
+    {
+      "name": "get_vercel_ci_invocation_tree",
+      "description": "Get the current state of a Vercel CI invocation attempt with all its job definitions, each job's latest run, and the task definitions and active task runs of that run. Defaults to the latest attempt when attempt is omitt"
+    },
+    {
+      "name": "get_vercel_ci_invocation",
+      "description": "Get one attempt of a Vercel CI invocation, identified by invocationId and attempt."
+    },
+    {
+      "name": "get_vercel_ci_job_definition",
+      "description": "Get a single job definition of a Vercel CI invocation attempt by jobDefinitionId."
+    },
+    {
+      "name": "get_vercel_ci_job_run_logs",
+      "description": "Get the log lines available so far for one run attempt of a Vercel CI job. Optionally filter by log level or start from a since value. Returns immediately; to see new lines while the job runs, call again later, using sin"
+    },
+    {
+      "name": "get_vercel_ci_job_run",
+      "description": "Get one run attempt (runAttempt) of a job definition within a Vercel CI invocation attempt."
+    },
+    {
+      "name": "get_vercel_ci_task_logs",
+      "description": "Returns log lines for the tasks of an invocation attempt in a single request, grouped by task. Tasks can be narrowed by name and by conclusion, for example `conclusion=failed` to fetch only the logs of failed tasks."
+    },
+    {
+      "name": "get_vercel_ci_task_run_logs",
+      "description": "Get the log lines available so far for one task run attempt of a Vercel CI job run. Optionally filter by log level or since. Returns immediately; to see new lines while the task runs, call again later, using since to ski"
+    },
+    {
+      "name": "get_webhooks",
+      "description": "List the team's webhooks, optionally filtered to a single project by projectId."
+    },
+    {
+      "name": "git_namespaces",
+      "description": "List Git namespaces for a Git provider (github, github-limited, github-custom-host, gitlab, or bitbucket). If provider is omitted, it is derived from the authenticated user. Use host for a custom Git host and viewerMetad"
+    },
+    {
+      "name": "invalidate_by_src_images",
+      "description": "Marks a source image as stale, causing its corresponding transformed images to be revalidated in the background on the next request."
+    },
+    {
+      "name": "invalidate_by_tags",
+      "description": "Marks a cache tag as stale, causing cache entries associated with that tag to be revalidated in the background on the next request."
+    },
+    {
+      "name": "issue_cert",
+      "description": "Issue a new TLS certificate for the common names (domain names) listed in the cns input."
+    },
+    {
+      "name": "kill_session_command",
+      "description": "Sends a signal to terminate a running command in a session. The signal can be used to gracefully stop (SIGTERM) or forcefully kill (SIGKILL) the process. The command must still be running for this operation to succeed."
+    },
+    {
+      "name": "list_access_group_members",
+      "description": "List members of an access group"
+    },
+    {
+      "name": "list_access_group_projects",
+      "description": "List projects of an access group"
+    },
+    {
+      "name": "list_access_groups",
+      "description": "List access groups"
+    },
+    {
+      "name": "list_agent_run_projects",
+      "description": "List projects in a Vercel team that have Agent Runs observability data for agents built with the eve framework, with run counts and average duration rollups. Use this to discover which projects have eve agent activity be"
+    },
+    {
+      "name": "list_agent_runs",
+      "description": "List Agent Runs for a Vercel project. Agent Runs are the observability layer for agents built with the eve framework. The response includes summaries, status, model, trigger, token usage, time series, and pagination meta"
+    },
+    {
+      "name": "list_ai_gateway_models",
+      "description": "Use this when choosing a model on Vercel AI Gateway or checking what one costs. Searches the live public catalog and returns each match's ID, type, context window, output limit, model-specific pricing in USD, and capabil"
+    },
+    {
+      "name": "list_aliases",
+      "description": "Retrieves a list of aliases for the authenticated User or Team. When `domain` is provided, only aliases for that domain will be returned. When `projectId` is provided, it will only return the given project aliases."
+    },
+    {
+      "name": "list_billing_charges",
+      "description": "Retrieve a Vercel team's billing charges (FOCUS v1.3) between from (inclusive) and to (exclusive), at 1-day granularity for up to 1 year. Returns summary totals by currency, service, and category plus a bounded sample of"
+    },
+    {
+      "name": "list_bulk_redirect_versions",
+      "description": "Get the version history for a project's bulk redirects"
+    },
+    {
+      "name": "list_bulk_redirects",
+      "description": "List a project's bulk redirect rules, optionally selecting a version, filtering rules, or comparing versions. Supports sorting and pagination. Use list_bulk_redirect_versions for version history."
+    },
+    {
+      "name": "list_certs",
+      "description": "List the SSL certificates for the authenticated account or selected team."
+    },
+    {
+      "name": "list_connector_project_connections",
+      "description": "List the projects connected to a connector and the environments where each connection is available."
+    },
+    {
+      "name": "list_connectors",
+      "description": "List connectors that belong to a team."
+    },
+    {
+      "name": "list_contract_commitments",
+      "description": "Retrieve a Vercel team's commitment allocations per contract period (FOCUS v1.3). Applies only to Enterprise customers; Pro and Flex teams get an empty result. Large results are returned as a bounded sample of the first "
+    },
+    {
+      "name": "list_deployment_aliases",
+      "description": "Retrieves all Aliases for the Deployment with the given ID. The authenticated user or team must own the deployment."
+    },
+    {
+      "name": "list_deployment_events",
+      "description": "Use this when investigating why a deployment build failed or reading its build logs. Pass the known deployment ID or hostname directly as idOrUrl and set builds:1 for build events; a prior get_deployment lookup is unnece"
+    },
+    {
+      "name": "list_deployment_files",
+      "description": "List the file tree of a deployment's source code by deployment ID. A file tree is available only for deployments created with the Vercel CLI or the API with the `files` key."
+    },
+    {
+      "name": "list_deployments",
+      "description": "Use this when you need deployment records or recent deployment history under the authenticated user or team. Results can be filtered by project, branch, commit, environment, state, creator, or creation time. Returns depl"
+    },
+    {
+      "name": "list_domains",
+      "description": "Retrieves a list of domains registered for the authenticated user or team. By default it returns the last 20 domains if no limit is provided."
+    },
+    {
+      "name": "list_drains",
+      "description": "List the drains configured for the authenticated or selected team, optionally limited to a project (projectId). Set includeMetadata to include drain metadata."
+    },
+    {
+      "name": "list_drives",
+      "description": "Use this when finding persistent Sandbox drives in a known project. Returns drive records and pagination; follow cursor for more results (limit 1–50). Supply projectId and the owning team. namePrefix requires sortBy=name"
+    },
+    {
+      "name": "list_event_types",
+      "description": "Returns the list of user-facing event types with descriptions."
+    },
+    {
+      "name": "list_feature_flag_sdk_keys",
+      "description": "List a project's feature flag SDK keys and their metadata, with masked key values. Use create_sdk_key to create a key; this list does not return the decrypted secret."
+    },
+    {
+      "name": "list_flag_segments",
+      "description": "List all feature flag segments for a project."
+    },
+    {
+      "name": "list_flag_versions",
+      "description": "Lists flag versions for a given flag."
+    },
+    {
+      "name": "list_flags_project_connections",
+      "description": "List Flags connections for a project. role:source (default) lists projects allowed to read its flags; role:consumer lists projects whose flags it can read. Connections apply across environments within one team. Requires "
+    },
+    {
+      "name": "list_flags_v2",
+      "description": "Search a project's feature flags page by page; built for projects with many flags. Results are most recently updated first; pass pagination.next back with the same filters for the next page. Results may lag recent change"
+    },
+    {
+      "name": "list_flags",
+      "description": "List a project's feature flags. Reflects changes immediately, so prefer it right after creating, updating, or archiving a flag, or when you need the complete list. Returns every match unless limit is set, in which case p"
+    },
+    {
+      "name": "list_integration_billing_plans",
+      "description": "Get a list of billing plans for an integration and product."
+    },
+    {
+      "name": "list_integration_configuration_products",
+      "description": "Returns products available for an integration configuration. Each product includes a `metadataSchema` field with the JSON Schema for required and optional metadata fields."
+    },
+    {
+      "name": "list_integration_configurations",
+      "description": "List installed integration configurations for the authenticated account or selected team. The required view input is account or project; the project view excludes configurations generated for the authorization flow. Opti"
+    },
+    {
+      "name": "list_kms_issuers",
+      "description": "Retrieve the list of KMS issuers that belong to the authenticated team. The results are paginated."
+    },
+    {
+      "name": "list_named_sandboxes",
+      "description": "List named sandboxes in a project, sorted by creation time or name. Optionally filter by name prefix (only when sortBy is name), status (only when sortBy is createdAt), or one key:value tag. Paginated with an opaque curs"
+    },
+    {
+      "name": "list_project_connector_connections",
+      "description": "List the connectors connected to a project and the environments where each connection is available."
+    },
+    {
+      "name": "list_project_custom_environments",
+      "description": "List the custom environments of a project, optionally filtered by git branch. Custom environments are separate from the built-in Production and Preview environments."
+    },
+    {
+      "name": "list_project_domains",
+      "description": "List the domains attached to a project, identified by ID or name. Supports filtering by target, production, redirect, verification status, git branch, or custom environment, plus pagination with limit (max 100), since, u"
+    },
+    {
+      "name": "list_project_route_versions",
+      "description": "Get the version history for a project's routing rules. Returns the staging version (if one exists) followed by production versions, most recent first. The staging version has `isStaging: true` and the current production "
+    },
+    {
+      "name": "list_project_routes",
+      "description": "Get the routing rules for a project. Supports searching by name/ID/pattern, filtering by route type, and diffing staged changes against production."
+    },
+    {
+      "name": "list_projects",
+      "description": "List the projects of the authenticated user or the selected team. Results are paginated using limit and from. Optionally filter by name search, Git repository, connected Global Config, build settings, and other listed fi"
+    },
+    {
+      "name": "list_promote_aliases",
+      "description": "Get a list of aliases related to the last promote request with their mapping status"
+    },
+    {
+      "name": "list_session_commands",
+      "description": "Retrieves a list of all commands that have been executed in a session, including their current status, exit codes, and execution times, ordered from the most recent to the oldest."
+    },
+    {
+      "name": "list_session_snapshots",
+      "description": "Retrieves a paginated list of snapshots for a specific project."
+    },
+    {
+      "name": "list_sessions",
+      "description": "List sandbox sessions in a project, optionally filtered by sandbox name. Sorted by creation time; paginated with limit (default 20, max 50) and an opaque cursor."
+    },
+    {
+      "name": "list_supported_tlds",
+      "description": "Get a list of TLDs supported by Vercel"
+    },
+    {
+      "name": "list_team_flag_settings",
+      "description": "Retrieve feature flag settings for projects in a team."
+    },
+    {
+      "name": "list_team_flags_v2",
+      "description": "Retrieve all feature flags for a team across all projects. Returns an opaque cursor for pagination."
+    },
+    {
+      "name": "list_team_flags",
+      "description": "Retrieve all feature flags for a team across all projects. The list can be filtered by state and supports pagination."
+    },
+    {
+      "name": "list_team_members",
+      "description": "Get a paginated list of team members for the provided team."
+    },
+    {
+      "name": "list_teams",
+      "description": "Get a paginated list of all the Teams the authenticated User is a member of."
+    },
+    {
+      "name": "list_toolbar_threads",
+      "description": "List Vercel toolbar comment threads for a team. Returns unresolved threads by default. Use this to see feedback, comments, or discussions on deployments and previews."
+    },
+    {
+      "name": "list_user_events",
+      "description": "Retrieves a list of \"events\" generated by the User on Vercel. Events are generated when the User performs a particular action, such as logging in, creating a deployment, and joining a Team (just to name a few). When the "
+    },
+    {
+      "name": "list_vercel_ci_invocation_attempts",
+      "description": "List all attempts of a Vercel CI invocation, identified by invocationId."
+    },
+    {
+      "name": "list_vercel_ci_invocations",
+      "description": "List Vercel CI invocations for a team. Optionally filter by repository provider, repository, branch, commit snapshot, author, status, conclusion, source, or creation time. Paginated with limit (default 20, max 100) and c"
+    },
+    {
+      "name": "list_vercel_ci_job_definitions",
+      "description": "List the job definitions of a Vercel CI invocation attempt."
+    },
+    {
+      "name": "list_vercel_ci_job_runs",
+      "description": "List the runs of a job definition within a Vercel CI invocation attempt."
+    },
+    {
+      "name": "list_vercel_ci_task_definitions",
+      "description": "List the task definitions of a Vercel CI job run attempt."
+    },
+    {
+      "name": "list_vercel_ci_task_runs",
+      "description": "List the task runs of a job run attempt within a Vercel CI invocation attempt."
+    },
+    {
+      "name": "patch_edge_config_items",
+      "description": "Apply a batch of item changes to a Global Config (Edge Config) by ID. Each entry in requestBody.items has an operation (create, update, upsert, or delete) and a key; delete removes the item."
+    },
+    {
+      "name": "patch_url_protection_bypass",
+      "description": "Change protection bypass for an alias or deployment URL. Depending on requestBody, it creates a shareable link that bypasses Vercel Authentication (never expires unless ttl is set), revokes and optionally regenerates a l"
+    },
+    {
+      "name": "pause_project",
+      "description": "Pause a project by its project ID. Pausing disables automatic assignment of custom production domains and blocks the active Production Deployment. Use unpause_project to reverse it."
+    },
+    {
+      "name": "put_firewall_config",
+      "description": "Set a project's entire firewall configuration to the provided rules and settings, creating it or overwriting the existing configuration. Use update_firewall_config to apply a single change instead."
+    },
+    {
+      "name": "read_access_group_project",
+      "description": "Get a project that belongs to an access group, identified by access group ID or name and project ID. Returns the project's membership in that group."
+    },
+    {
+      "name": "read_access_group",
+      "description": "Get an access group by ID or name for the authenticated account or selected team."
+    },
+    {
+      "name": "read_session_file",
+      "description": "Read a file from a session's filesystem by path (absolute, or relative to an optional cwd). Returns the file contents as base64-encoded data along with its content type and size."
+    },
+    {
+      "name": "record_events",
+      "description": "Record remote cache usage events. Each event in requestBody has a sessionId, a source (LOCAL or REMOTE), an event type (HIT or MISS), the artifact hash, and an optional duration (time taken to generate the artifact, for "
+    },
+    {
+      "name": "replace_domain_dns_records",
+      "description": "Replace the DNS records for a domain using a BIND zone file supplied in requestBody. Overwrites existing records and can disrupt domain routing or verification."
+    },
+    {
+      "name": "reply_to_toolbar_thread",
+      "description": "Post a reply, as the authenticated user, to an existing Vercel Toolbar comment thread. The reply is visible to everyone who can access the thread."
+    },
+    {
+      "name": "request_promote",
+      "description": "Promote an existing deployment to production for a project. This does not rebuild the deployment; use create_deployment to build a new one."
+    },
+    {
+      "name": "request_rollback",
+      "description": "Roll back a project's production traffic to a previous production deployment, identified by deploymentId. The optional description input records the reason for the rollback."
+    },
+    {
+      "name": "rerequest_check",
+      "description": "Use this when rerunning a failed deployment check identified by deploymentId and checkId. The check must be completed, failed, and rerequestable. Sends a new check request; use retry_vercel_ci_invocation for a Vercel CI "
+    },
+    {
+      "name": "restore_edge_config_backup",
+      "description": "Restore a Global Config (Edge Config) from a backup version, identified by Global Config ID and backup version ID. The backup's contents become the Global Config's current data."
+    },
+    {
+      "name": "restore_redirects",
+      "description": "Restores the provided redirects in the staging version to the value in the production version. If no production version exists, removes the redirects from staging."
+    },
+    {
+      "name": "retry_vercel_ci_invocation",
+      "description": "Retry a terminal Vercel CI invocation attempt identified by invocationId and attempt. Starts another attempt; inspect its state to determine whether it completes successfully."
+    },
+    {
+      "name": "revoke_kms_signing_key",
+      "description": "Immediately revoke a signing key that is already scheduled for revocation."
+    },
+    {
+      "name": "run_session_command",
+      "description": "Run a command (an executable plus args) inside a running sandbox session, with optional cwd, environment variables, sudo, and timeout. By default it returns immediately with a command ID; set wait to true to wait for the"
+    },
+    {
+      "name": "search_domains",
+      "description": "Get registration availability and pricing for 1-200 exact domain names. Returns results in input order, with registration and renewal prices in USD for available domains. No authentication required."
+    },
+    {
+      "name": "search_repo",
+      "description": "List Git repositories in a namespace for a supported Git provider, optionally narrowed by query. Get namespaceId from git_namespaces. If provider or namespace is omitted, they are derived from the authenticated user."
+    },
+    {
+      "name": "search_vercel_documentation",
+      "description": "Search Vercel's published documentation for a topic and return relevant excerpts. Covers Vercel platform features, configuration, APIs, limits, and pricing, including projects and deployments, Git integration, environmen"
+    },
+    {
+      "name": "stage_redirects",
+      "description": "Stage a new version of a project's bulk redirects from the provided redirect rules, and return the new version. Staged redirects do not change production until promoted with update_bulk_redirect_version."
+    },
+    {
+      "name": "stage_routes",
+      "description": "Stage routing rules for a project. Set `overwrite` to true to replace all existing rules, or omit it to merge with existing rules by ID. Returns the new staged version."
+    },
+    {
+      "name": "start_rolling_release",
+      "description": "Start a rolling release for a deployment. If a rolling release is already active for the same canary deployment, returns the current state without side effects."
+    },
+    {
+      "name": "stop_session",
+      "description": "Stops a running session and releases its allocated resources. All running processes within the session will be terminated. This action cannot be undone. A stopped session cannot be restarted."
+    },
+    {
+      "name": "submit_feedback",
+      "description": "Send a bug report, friction note, or feature request to the Vercel team when the user wants to give Vercel feedback. message describes what happened and what would have helped; optional context holds structured details s"
+    },
+    {
+      "name": "test_drain",
+      "description": "Validate a drain delivery configuration by sending sample events to the configured external destination. Requires the schemas and delivery settings."
+    },
+    {
+      "name": "unpause_project",
+      "description": "Unpause a paused project by its project ID. Unpausing re-enables automatic assignment of custom production domains and unblocks the active Production Deployment."
+    },
+    {
+      "name": "update_attack_challenge_mode",
+      "description": "Enable or disable Attack Challenge mode for a project by setting attackModeEnabled, optionally with attackModeActiveUntil to set when it stops being active. This changes how the project's live traffic is protected."
+    },
+    {
+      "name": "update_bulk_redirect_version",
+      "description": "Manage a project's bulk redirect version by ID. Each call selects one of the three fixed action values in the input schema: promote publishes a staged version to production; restore republishes a previous production vers"
+    },
+    {
+      "name": "update_connector",
+      "description": "Update metadata, trigger enablement, and event subscriptions for an existing connector ID. Provider credentials and keys stay in the configured connector; changes to provider data or trigger credentials must be made outs"
+    },
+    {
+      "name": "update_drain",
+      "description": "Update an existing drain by ID: name, project scope, filter, schemas, delivery destination, sampling, transforms, or enabled/disabled status. Changing the delivery destination changes where drained data is sent."
+    },
+    {
+      "name": "update_edge_config",
+      "description": "Use this when renaming a Global Config (Edge Config) store: set its new slug by edgeConfigId. This changes the store name, not its items. Use patch_edge_config_items to create, update, or delete stored key-value items."
+    },
+    {
+      "name": "update_firewall_config",
+      "description": "Apply one firewall configuration change to a project. action selects from a fixed set of operations documented in the input schema, each with its matching id/value schema: rulesets.insert/update/remove/priority manage ru"
+    },
+    {
+      "name": "update_flag_segment",
+      "description": "Update an existing feature flag segment."
+    },
+    {
+      "name": "update_flag_settings",
+      "description": "Update feature flag settings for a project."
+    },
+    {
+      "name": "update_flag",
+      "description": "Update an existing feature flag in a project. Supports partial updates to properties such as variants, environments, state, description, or tags; omitted properties are unchanged."
+    },
+    {
+      "name": "update_kms_issuer_policy",
+      "description": "Update an existing KMS issuer policy's environments or token claims."
+    },
+    {
+      "name": "update_kms_issuer",
+      "description": "Update a KMS issuer's name or claims schema."
+    },
+    {
+      "name": "update_project_protection_bypass",
+      "description": "Manage a project's deployment protection automation bypass secrets. requestBody can generate a secret (a random one if neither generate nor revoke is given), revoke a secret with optional regeneration, or update a bypass"
+    },
+    {
+      "name": "update_project",
+      "description": "Update settings of a project by ID or name, such as build, install, and output settings, framework, root directory, deployment protection, and preview settings. Only provided fields in requestBody change."
+    },
+    {
+      "name": "update_record",
+      "description": "Update an existing DNS record by record ID: name, value, type, TTL, MX priority, SRV or HTTPS data, or comment. Changes apply to the domain's live DNS and can affect resolution."
+    },
+    {
+      "name": "update_rolling_release_config",
+      "description": "Update or disable Rolling Releases for a project via requestBody (for example enabled, advancementType, and stages with targetPercentage). When disabling, disableRolloutAction resolves an active rollout: \"abort\" rolls ba"
+    },
+    {
+      "name": "update_route_versions",
+      "description": "Manage a project's routing rule version by ID. Each call selects one of the three fixed action values in the input schema: promote publishes staged routing rules to production; restore republishes a previous production v"
+    },
+    {
+      "name": "update_sandbox",
+      "description": "Update a named sandbox's configuration, such as resources, runtime, timeout, persistence, snapshot retention, or network policy. Only provided fields change. With resume=true, a stopped sandbox is resumed by creating a n"
+    },
+    {
+      "name": "update_session_network_policy",
+      "description": "Replaces the network access policy of a running session. Use this to control which external hosts the session can communicate with. This is a full replacement. Any previously configured network rules will be overwritten."
+    },
+    {
+      "name": "upload_artifact",
+      "description": "Upload a remote cache artifact, provided as base64 content, stored under the given hash. Optional inputs record the artifact's size, generation time, CI environment, and source revision."
+    },
+    {
+      "name": "upload_file",
+      "description": "Upload one file, provided as base64 content in requestBody, so a later create_deployment call can reference it by SHA1 and size. Use xVercelDigest (the file's SHA1) and contentLength to identify and verify the file."
+    },
+    {
+      "name": "upsert_connector_project_connection",
+      "description": "Connect a connector to a project, or replace the environments on an existing project connection."
+    },
+    {
+      "name": "verify_project_domain",
+      "description": "Attempts to verify a project domain with `verified = false` by checking the correctness of the project domain's `verification` challenge."
+    },
+    {
+      "name": "web_fetch_vercel_url",
+      "description": "Fetch a Vercel deployment URL that the user's Vercel account can access, including deployments protected by Vercel Authentication, and return the response. To do so, it creates or reuses a temporary share link on the dep"
+    },
+    {
+      "name": "write_session_files",
+      "description": "Upload files to a session's filesystem as a base64-encoded gzipped tarball (.tar.gz) in requestBody. The contents are extracted into the sandbox home directory, or into the directory given in xCwd, and may overwrite exis"
+    }
+  ]
+}

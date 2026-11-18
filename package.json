@@ -1,0 +1,74 @@
+{
+  "name": "@aphrody/ay-vercel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Unified Vercel & Vercel-Labs monorepo, upstream fork auto-merge, agent skills, MCP catalog, offline docs, and polyglot toolchain",
+  "license": "Apache-2.0",
+  "author": "aphrody-labs <contact@aphrody.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aphrody-labs/ay-vercel.git"
+  },
+  "packageManager": "bun@1.4.5",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "check": "bun run typecheck && bun run typecheck:tsc-ts && bun test packages tools",
+    "typecheck": "bun x tsc --noEmit",
+    "typecheck:tsc-ts": "bun x tsc-ts -p tsconfig.json",
+    "test": "bun test packages tools",
+    "audit": "bun tools/audit.ts --strict",
+    "skills-sync": "bun tools/skills-sync.ts",
+    "mcp-sync": "bun tools/mcp-sync.ts",
+    "docs-sync": "bun tools/docs-sync.ts",
+    "private-gate": "bun tools/private-gate.ts"
+  },
+  "dependencies": {
+    "@vercel/analytics": "2.0.1",
+    "@vercel/blob": "2.9.0",
+    "@vercel/global-config": "1.5.1",
+    "@vercel/otel": "2.3.0",
+    "@vercel/sandbox": "4.0.0",
+    "@vercel/sdk": "1.28.63",
+    "@vercel/speed-insights": "2.1.0",
+    "agent-browser": "0.43.0",
+    "ai": "7.0.173",
+    "chat": "4.45.0",
+    "flags": "4.4.0",
+    "just-bash": "3.6.0",
+    "mcp-handler": "2.4.0",
+    "mcp-to-ai-sdk": "0.1.1",
+    "micro": "10.0.1",
+    "next": "16.4.6",
+    "portless": "0.17.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "satori": "0.63.2",
+    "serve-handler": "6.1.8",
+    "streamdown": "2.7.1",
+    "swr": "2.5.1",
+    "v0-sdk": "0.16.7",
+    "workflow": "5.5.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vercel/style-guide": "6.0.0",
+    "scriptc": "0.4.12",
+    "tsc-ts": "0.1.5",
+    "turbo": "2.11.11",
+    "typescript": "7.0.2",
+    "vercel": "65.16.0"
+  },
+  "trustedDependencies": [
+    "@swc/core",
+    "agent-browser",
+    "scriptc"
+  ]
+}

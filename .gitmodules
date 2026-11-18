@@ -1,0 +1,819 @@
+[submodule "frameworks/cra-to-next"]
+	path = frameworks/cra-to-next
+	url = ../cra-to-next.git
+[submodule "frameworks/fast-link"]
+	path = frameworks/fast-link
+	url = ../fast-link.git
+[submodule "frameworks/fix-react2shell-next"]
+	path = frameworks/fix-react2shell-next
+	url = ../fix-react2shell-next.git
+[submodule "frameworks/kirimase"]
+	path = frameworks/kirimase
+	url = ../kirimase.git
+[submodule "frameworks/mdxjs-rs-turbopack"]
+	path = frameworks/mdxjs-rs-turbopack
+	url = ../mdxjs-rs-turbopack.git
+[submodule "frameworks/microfrontends"]
+	path = frameworks/microfrontends
+	url = ../microfrontends.git
+[submodule "frameworks/next-app-router-playground"]
+	path = frameworks/next-app-router-playground
+	url = ../next-app-router-playground.git
+[submodule "frameworks/next-evals-oss"]
+	path = frameworks/next-evals-oss
+	url = ../next-evals-oss.git
+[submodule "frameworks/next-forge"]
+	path = frameworks/next-forge
+	url = ../next-forge.git
+[submodule "frameworks/next-safe-image-optimization"]
+	path = frameworks/next-safe-image-optimization
+	url = ../next-safe-image-optimization.git
+[submodule "frameworks/next.js"]
+	path = frameworks/next.js
+	url = ../next.js.git
+[submodule "frameworks/nextjs-foundations-starter"]
+	path = frameworks/nextjs-foundations-starter
+	url = ../nextjs-foundations-starter.git
+[submodule "frameworks/platforms"]
+	path = frameworks/platforms
+	url = ../platforms.git
+[submodule "frameworks/styled-jsx"]
+	path = frameworks/styled-jsx
+	url = ../styled-jsx.git
+[submodule "frameworks/swr"]
+	path = frameworks/swr
+	url = ../swr.git
+[submodule "sdk/ai"]
+	path = sdk/ai
+	url = ../ai.git
+[submodule "sdk/ai-catalog-sdk"]
+	path = sdk/ai-catalog-sdk
+	url = ../ai-catalog-sdk.git
+[submodule "sdk/ai-cli"]
+	path = sdk/ai-cli
+	url = ../ai-cli.git
+[submodule "sdk/ai-gateway-provider-php"]
+	path = sdk/ai-gateway-provider-php
+	url = ../ai-gateway-provider-php.git
+[submodule "sdk/ai-python"]
+	path = sdk/ai-python
+	url = ../ai-python.git
+[submodule "sdk/ai-sdk-computer-use"]
+	path = sdk/ai-sdk-computer-use
+	url = ../ai-sdk-computer-use.git
+[submodule "sdk/ai-sdk-tool-code-execution"]
+	path = sdk/ai-sdk-tool-code-execution
+	url = ../ai-sdk-tool-code-execution.git
+[submodule "sdk/analytics"]
+	path = sdk/analytics
+	url = ../analytics.git
+[submodule "sdk/bash-tool"]
+	path = sdk/bash-tool
+	url = ../bash-tool.git
+[submodule "sdk/chat"]
+	path = sdk/chat
+	url = ../chat.git
+[submodule "sdk/durable-harness"]
+	path = sdk/durable-harness
+	url = ../durable-harness.git
+[submodule "sdk/edge-runtime"]
+	path = sdk/edge-runtime
+	url = ../edge-runtime.git
+[submodule "sdk/eve"]
+	path = sdk/eve
+	url = ../eve.git
+[submodule "sdk/eve-examples"]
+	path = sdk/eve-examples
+	url = ../eve-examples.git
+[submodule "sdk/fast-webstreams"]
+	path = sdk/fast-webstreams
+	url = ../fast-webstreams.git
+[submodule "sdk/flags"]
+	path = sdk/flags
+	url = ../flags.git
+[submodule "sdk/just-bash"]
+	path = sdk/just-bash
+	url = ../just-bash.git
+[submodule "sdk/node-vfs-polyfill"]
+	path = sdk/node-vfs-polyfill
+	url = ../node-vfs-polyfill.git
+[submodule "sdk/open-agents"]
+	path = sdk/open-agents
+	url = ../open-agents.git
+[submodule "sdk/otel"]
+	path = sdk/otel
+	url = ../otel.git
+[submodule "sdk/remote-cache"]
+	path = sdk/remote-cache
+	url = ../remote-cache.git
+[submodule "sdk/resumable-stream"]
+	path = sdk/resumable-stream
+	url = ../resumable-stream.git
+[submodule "sdk/sandbox"]
+	path = sdk/sandbox
+	url = ../sandbox.git
+[submodule "sdk/satori"]
+	path = sdk/satori
+	url = ../satori.git
+[submodule "sdk/schemas"]
+	path = sdk/schemas
+	url = ../schemas.git
+[submodule "sdk/sdk"]
+	path = sdk/sdk
+	url = ../sdk.git
+[submodule "sdk/slack-tools"]
+	path = sdk/slack-tools
+	url = ../slack-tools.git
+[submodule "sdk/speed-insights"]
+	path = sdk/speed-insights
+	url = ../speed-insights.git
+[submodule "sdk/storage"]
+	path = sdk/storage
+	url = ../storage.git
+[submodule "sdk/swift-vercel-runtime"]
+	path = sdk/swift-vercel-runtime
+	url = ../swift-vercel-runtime.git
+[submodule "sdk/turborepo"]
+	path = sdk/turborepo
+	url = ../turborepo.git
+[submodule "sdk/v0-language-model-chat-provider"]
+	path = sdk/v0-language-model-chat-provider
+	url = ../v0-language-model-chat-provider.git
+[submodule "sdk/v0-sdk"]
+	path = sdk/v0-sdk
+	url = ../v0-sdk.git
+[submodule "sdk/vercel"]
+	path = sdk/vercel
+	url = ../vercel.git
+[submodule "sdk/vercel-blob-ai-sdk"]
+	path = sdk/vercel-blob-ai-sdk
+	url = ../vercel-blob-ai-sdk.git
+[submodule "sdk/vercel-open"]
+	path = sdk/vercel-open
+	url = ../vercel-open.git
+[submodule "sdk/vercel-py"]
+	path = sdk/vercel-py
+	url = ../vercel-py.git
+[submodule "sdk/workflow"]
+	path = sdk/workflow
+	url = ../workflow.git
+[submodule "sdk/workflow-examples"]
+	path = sdk/workflow-examples
+	url = ../workflow-examples.git
+[submodule "skill-repos/academy-skills"]
+	path = skill-repos/academy-skills
+	url = ../academy-skills.git
+[submodule "skill-repos/agent-skills"]
+	path = skill-repos/agent-skills
+	url = ../agent-skills.git
+[submodule "skill-repos/agentic-commerce-skills"]
+	path = skill-repos/agentic-commerce-skills
+	url = ../agentic-commerce-skills.git
+[submodule "skill-repos/components.build"]
+	path = skill-repos/components.build
+	url = ../components.build.git
+[submodule "skill-repos/cursor-plugin"]
+	path = skill-repos/cursor-plugin
+	url = ../cursor-plugin.git
+[submodule "skill-repos/design-systems-to-agent-skills"]
+	path = skill-repos/design-systems-to-agent-skills
+	url = ../design-systems-to-agent-skills.git
+[submodule "skill-repos/ds-skill-extraction-workshop"]
+	path = skill-repos/ds-skill-extraction-workshop
+	url = ../ds-skill-extraction-workshop.git
+[submodule "skill-repos/marketplace-skills"]
+	path = skill-repos/marketplace-skills
+	url = ../marketplace-skills.git
+[submodule "skill-repos/migration-skills"]
+	path = skill-repos/migration-skills
+	url = ../migration-skills.git
+[submodule "skill-repos/next-maintainer-skills"]
+	path = skill-repos/next-maintainer-skills
+	url = ../next-maintainer-skills.git
+[submodule "skill-repos/next-skills"]
+	path = skill-repos/next-skills
+	url = ../next-skills.git
+[submodule "skill-repos/sitecore-skills"]
+	path = skill-repos/sitecore-skills
+	url = ../sitecore-skills.git
+[submodule "skill-repos/skill-geist-learning-labs"]
+	path = skill-repos/skill-geist-learning-labs
+	url = ../skill-geist-learning-labs.git
+[submodule "skill-repos/skill-remotion-geist"]
+	path = skill-repos/skill-remotion-geist
+	url = ../skill-remotion-geist.git
+[submodule "skill-repos/skills"]
+	path = skill-repos/skills
+	url = ../skills.git
+[submodule "skill-repos/skills-handler"]
+	path = skill-repos/skills-handler
+	url = ../skills-handler.git
+[submodule "skill-repos/slack-agent-skill"]
+	path = skill-repos/slack-agent-skill
+	url = ../slack-agent-skill.git
+[submodule "skill-repos/trackcn"]
+	path = skill-repos/trackcn
+	url = ../trackcn.git
+[submodule "skill-repos/tw-blocks"]
+	path = skill-repos/tw-blocks
+	url = ../tw-blocks.git
+[submodule "skill-repos/vercel-byoc"]
+	path = skill-repos/vercel-byoc
+	url = ../vercel-byoc.git
+[submodule "skill-repos/vercel-deploy-claude-code-plugin"]
+	path = skill-repos/vercel-deploy-claude-code-plugin
+	url = ../vercel-deploy-claude-code-plugin.git
+[submodule "skill-repos/vercel-deploy-codex-skill"]
+	path = skill-repos/vercel-deploy-codex-skill
+	url = ../vercel-deploy-codex-skill.git
+[submodule "skill-repos/vercel-kb-skills"]
+	path = skill-repos/vercel-kb-skills
+	url = ../vercel-kb-skills.git
+[submodule "skill-repos/vercel-plugin"]
+	path = skill-repos/vercel-plugin
+	url = ../vercel-plugin.git
+[submodule "skill-repos/web-interface-guidelines"]
+	path = skill-repos/web-interface-guidelines
+	url = ../web-interface-guidelines.git
+[submodule "skill-repos/writing-guidelines"]
+	path = skill-repos/writing-guidelines
+	url = ../writing-guidelines.git
+[submodule "mcp/acp-handler"]
+	path = mcp/acp-handler
+	url = ../acp-handler.git
+[submodule "mcp/add-mcp"]
+	path = mcp/add-mcp
+	url = ../add-mcp.git
+[submodule "mcp/mcp-apps-nextjs-starter"]
+	path = mcp/mcp-apps-nextjs-starter
+	url = ../mcp-apps-nextjs-starter.git
+[submodule "mcp/mcp-for-next.js"]
+	path = mcp/mcp-for-next.js
+	url = ../mcp-for-next.js.git
+[submodule "mcp/mcp-handler"]
+	path = mcp/mcp-handler
+	url = ../mcp-handler.git
+[submodule "mcp/mcp-to-ai-sdk"]
+	path = mcp/mcp-to-ai-sdk
+	url = ../mcp-to-ai-sdk.git
+[submodule "mcp/next-devtools-mcp"]
+	path = mcp/next-devtools-mcp
+	url = ../next-devtools-mcp.git
+[submodule "mcp/vercel-mcp-overview"]
+	path = mcp/vercel-mcp-overview
+	url = ../vercel-mcp-overview.git
+[submodule "docs/lat.md"]
+	path = docs/lat.md
+	url = ../lat.md.git
+[submodule "docs/mdxg"]
+	path = docs/mdxg
+	url = ../mdxg.git
+[submodule "docs/next-auxiliary-docs"]
+	path = docs/next-auxiliary-docs
+	url = ../next-auxiliary-docs.git
+[submodule "docs/next-docs-agentic-rag"]
+	path = docs/next-docs-agentic-rag
+	url = ../next-docs-agentic-rag.git
+[submodule "docs/next-learn"]
+	path = docs/next-learn
+	url = ../next-learn.git
+[submodule "docs/openwiki"]
+	path = docs/openwiki
+	url = ../openwiki.git
+[submodule "docs/swr-site"]
+	path = docs/swr-site
+	url = ../swr-site.git
+[submodule "docs/vercel-marketing-toolkit"]
+	path = docs/vercel-marketing-toolkit
+	url = ../vercel-marketing-toolkit.git
+[submodule "agents/agent-browser"]
+	path = agents/agent-browser
+	url = ../agent-browser.git
+[submodule "agents/agent-desktop"]
+	path = agents/agent-desktop
+	url = ../agent-desktop.git
+[submodule "agents/agent-eval"]
+	path = agents/agent-eval
+	url = ../agent-eval.git
+[submodule "agents/agentenv-framework"]
+	path = agents/agentenv-framework
+	url = ../agentenv-framework.git
+[submodule "agents/ai-sdk-gateway-demo"]
+	path = agents/ai-sdk-gateway-demo
+	url = ../ai-sdk-gateway-demo.git
+[submodule "agents/ai-sdk-slackbot"]
+	path = agents/ai-sdk-slackbot
+	url = ../ai-sdk-slackbot.git
+[submodule "agents/arcade"]
+	path = agents/arcade
+	url = ../arcade.git
+[submodule "agents/call-summary-agent-with-sandbox"]
+	path = agents/call-summary-agent-with-sandbox
+	url = ../call-summary-agent-with-sandbox.git
+[submodule "agents/chatbot"]
+	path = agents/chatbot
+	url = ../chatbot.git
+[submodule "agents/claude-managed-agents-starter"]
+	path = agents/claude-managed-agents-starter
+	url = ../claude-managed-agents-starter.git
+[submodule "agents/coding-agent-template"]
+	path = agents/coding-agent-template
+	url = ../coding-agent-template.git
+[submodule "agents/community-agent-template"]
+	path = agents/community-agent-template
+	url = ../community-agent-template.git
+[submodule "agents/deepsec"]
+	path = agents/deepsec
+	url = ../deepsec.git
+[submodule "agents/deepsec-runner-template"]
+	path = agents/deepsec-runner-template
+	url = ../deepsec-runner-template.git
+[submodule "agents/dev3000"]
+	path = agents/dev3000
+	url = ../dev3000.git
+[submodule "agents/durable-web-research-agent"]
+	path = agents/durable-web-research-agent
+	url = ../durable-web-research-agent.git
+[submodule "agents/email-agent"]
+	path = agents/email-agent
+	url = ../email-agent.git
+[submodule "agents/emulate"]
+	path = agents/emulate
+	url = ../emulate.git
+[submodule "agents/eve-agent-python-template"]
+	path = agents/eve-agent-python-template
+	url = ../eve-agent-python-template.git
+[submodule "agents/eve-content-agent-template"]
+	path = agents/eve-content-agent-template
+	url = ../eve-content-agent-template.git
+[submodule "agents/eve-contentful-agent-template"]
+	path = agents/eve-contentful-agent-template
+	url = ../eve-contentful-agent-template.git
+[submodule "agents/eve-data-analyst-template"]
+	path = agents/eve-data-analyst-template
+	url = ../eve-data-analyst-template.git
+[submodule "agents/eve-design-template"]
+	path = agents/eve-design-template
+	url = ../eve-design-template.git
+[submodule "agents/eve-memory-agent-template"]
+	path = agents/eve-memory-agent-template
+	url = ../eve-memory-agent-template.git
+[submodule "agents/eve-pr-triage-agent-template"]
+	path = agents/eve-pr-triage-agent-template
+	url = ../eve-pr-triage-agent-template.git
+[submodule "agents/eve-software-factory-template"]
+	path = agents/eve-software-factory-template
+	url = ../eve-software-factory-template.git
+[submodule "agents/eve-sre-agent-template"]
+	path = agents/eve-sre-agent-template
+	url = ../eve-sre-agent-template.git
+[submodule "agents/eve-tanstack-start-template"]
+	path = agents/eve-tanstack-start-template
+	url = ../eve-tanstack-start-template.git
+[submodule "agents/eve-triage-demo"]
+	path = agents/eve-triage-demo
+	url = ../eve-triage-demo.git
+[submodule "agents/eve-vercel-drives-starter"]
+	path = agents/eve-vercel-drives-starter
+	url = ../eve-vercel-drives-starter.git
+[submodule "agents/express-issue-triage-agent-template"]
+	path = agents/express-issue-triage-agent-template
+	url = ../express-issue-triage-agent-template.git
+[submodule "agents/gemini-chatbot"]
+	path = agents/gemini-chatbot
+	url = ../gemini-chatbot.git
+[submodule "agents/harness-agent-eve-extension"]
+	path = agents/harness-agent-eve-extension
+	url = ../harness-agent-eve-extension.git
+[submodule "agents/herdr-vercel-sandbox-plugin"]
+	path = agents/herdr-vercel-sandbox-plugin
+	url = ../herdr-vercel-sandbox-plugin.git
+[submodule "agents/knowledge-agent-template"]
+	path = agents/knowledge-agent-template
+	url = ../knowledge-agent-template.git
+[submodule "agents/nitro-imessage-agent-template"]
+	path = agents/nitro-imessage-agent-template
+	url = ../nitro-imessage-agent-template.git
+[submodule "agents/nostics"]
+	path = agents/nostics
+	url = ../nostics.git
+[submodule "agents/openai-agents-api-v0-clone"]
+	path = agents/openai-agents-api-v0-clone
+	url = ../openai-agents-api-v0-clone.git
+[submodule "agents/openai-agents-api-vercel"]
+	path = agents/openai-agents-api-vercel
+	url = ../openai-agents-api-vercel.git
+[submodule "agents/opencode-vercel-sandbox"]
+	path = agents/opencode-vercel-sandbox
+	url = ../opencode-vercel-sandbox.git
+[submodule "agents/openreview"]
+	path = agents/openreview
+	url = ../openreview.git
+[submodule "agents/opensrc"]
+	path = agents/opensrc
+	url = ../opensrc.git
+[submodule "agents/paseo-vercel-sandbox"]
+	path = agents/paseo-vercel-sandbox
+	url = ../paseo-vercel-sandbox.git
+[submodule "agents/personal-agent-template"]
+	path = agents/personal-agent-template
+	url = ../personal-agent-template.git
+[submodule "agents/phase"]
+	path = agents/phase
+	url = ../phase.git
+[submodule "agents/ralph-loop-agent"]
+	path = agents/ralph-loop-agent
+	url = ../ralph-loop-agent.git
+[submodule "agents/sandboxed-issue-triage-agent"]
+	path = agents/sandboxed-issue-triage-agent
+	url = ../sandboxed-issue-triage-agent.git
+[submodule "agents/sandcastle"]
+	path = agents/sandcastle
+	url = ../sandcastle.git
+[submodule "agents/steve"]
+	path = agents/steve
+	url = ../steve.git
+[submodule "agents/tersa"]
+	path = agents/tersa
+	url = ../tersa.git
+[submodule "agents/workflow-builder-template"]
+	path = agents/workflow-builder-template
+	url = ../workflow-builder-template.git
+[submodule "ui/ai-elements"]
+	path = ui/ai-elements
+	url = ../ai-elements.git
+[submodule "ui/avatar"]
+	path = ui/avatar
+	url = ../avatar.git
+[submodule "ui/bash-video"]
+	path = ui/bash-video
+	url = ../bash-video.git
+[submodule "ui/beautiful-mermaid"]
+	path = ui/beautiful-mermaid
+	url = ../beautiful-mermaid.git
+[submodule "ui/before-and-after"]
+	path = ui/before-and-after
+	url = ../before-and-after.git
+[submodule "ui/fx0"]
+	path = ui/fx0
+	url = ../fx0.git
+[submodule "ui/geist-font"]
+	path = ui/geist-font
+	url = ../geist-font.git
+[submodule "ui/geist-pixel-font"]
+	path = ui/geist-pixel-font
+	url = ../geist-pixel-font.git
+[submodule "ui/gpu-lexer"]
+	path = ui/gpu-lexer
+	url = ../gpu-lexer.git
+[submodule "ui/json-render"]
+	path = ui/json-render
+	url = ../json-render.git
+[submodule "ui/react-native-diffs"]
+	path = ui/react-native-diffs
+	url = ../react-native-diffs.git
+[submodule "ui/react-tweet"]
+	path = ui/react-tweet
+	url = ../react-tweet.git
+[submodule "ui/reel0"]
+	path = ui/reel0
+	url = ../reel0.git
+[submodule "ui/streamdown"]
+	path = ui/streamdown
+	url = ../streamdown.git
+[submodule "ui/vercel-ui"]
+	path = ui/vercel-ui
+	url = ../vercel-ui.git
+[submodule "ui/visual-json"]
+	path = ui/visual-json
+	url = ../visual-json.git
+[submodule "ui/webreel"]
+	path = ui/webreel
+	url = ../webreel.git
+[submodule "ui/wterm"]
+	path = ui/wterm
+	url = ../wterm.git
+[submodule "runtime/ai-action"]
+	path = runtime/ai-action
+	url = ../ai-action.git
+[submodule "runtime/aix"]
+	path = runtime/aix
+	url = ../aix.git
+[submodule "runtime/arg"]
+	path = runtime/arg
+	url = ../arg.git
+[submodule "runtime/async-listen"]
+	path = runtime/async-listen
+	url = ../async-listen.git
+[submodule "runtime/async-sema"]
+	path = runtime/async-sema
+	url = ../async-sema.git
+[submodule "runtime/bincode-fork"]
+	path = runtime/bincode-fork
+	url = ../bincode-fork.git
+[submodule "runtime/ci"]
+	path = runtime/ci
+	url = ../ci.git
+[submodule "runtime/detect-agent"]
+	path = runtime/detect-agent
+	url = ../detect-agent.git
+[submodule "runtime/error"]
+	path = runtime/error
+	url = ../error.git
+[submodule "runtime/firewall-templates"]
+	path = runtime/firewall-templates
+	url = ../firewall-templates.git
+[submodule "runtime/fun"]
+	path = runtime/fun
+	url = ../fun.git
+[submodule "runtime/fx"]
+	path = runtime/fx
+	url = ../fx.git
+[submodule "runtime/github-tools"]
+	path = runtime/github-tools
+	url = ../github-tools.git
+[submodule "runtime/go-bridge"]
+	path = runtime/go-bridge
+	url = ../go-bridge.git
+[submodule "runtime/guarded-fetch"]
+	path = runtime/guarded-fetch
+	url = ../guarded-fetch.git
+[submodule "runtime/issue-graph"]
+	path = runtime/issue-graph
+	url = ../issue-graph.git
+[submodule "runtime/just-secrets"]
+	path = runtime/just-secrets
+	url = ../just-secrets.git
+[submodule "runtime/konsistent"]
+	path = runtime/konsistent
+	url = ../konsistent.git
+[submodule "runtime/markdown-sanitizers"]
+	path = runtime/markdown-sanitizers
+	url = ../markdown-sanitizers.git
+[submodule "runtime/micro"]
+	path = runtime/micro
+	url = ../micro.git
+[submodule "runtime/ms"]
+	path = runtime/ms
+	url = ../ms.git
+[submodule "runtime/native"]
+	path = runtime/native
+	url = ../native.git
+[submodule "runtime/ncc"]
+	path = runtime/ncc
+	url = ../ncc.git
+[submodule "runtime/nft"]
+	path = runtime/nft
+	url = ../nft.git
+[submodule "runtime/npm.bet"]
+	path = runtime/npm.bet
+	url = ../npm.bet.git
+[submodule "runtime/portless"]
+	path = runtime/portless
+	url = ../portless.git
+[submodule "runtime/quickjs-wasi"]
+	path = runtime/quickjs-wasi
+	url = ../quickjs-wasi.git
+[submodule "runtime/remote-agent-browser"]
+	path = runtime/remote-agent-browser
+	url = ../remote-agent-browser.git
+[submodule "runtime/remote-components-in-mdx"]
+	path = runtime/remote-components-in-mdx
+	url = ../remote-components-in-mdx.git
+[submodule "runtime/repository-dispatch"]
+	path = runtime/repository-dispatch
+	url = ../repository-dispatch.git
+[submodule "runtime/review-desk"]
+	path = runtime/review-desk
+	url = ../review-desk.git
+[submodule "runtime/rex-cloud"]
+	path = runtime/rex-cloud
+	url = ../rex-cloud.git
+[submodule "runtime/run"]
+	path = runtime/run
+	url = ../run.git
+[submodule "runtime/screen-relay"]
+	path = runtime/screen-relay
+	url = ../screen-relay.git
+[submodule "runtime/scriptc"]
+	path = runtime/scriptc
+	url = ../scriptc.git
+[submodule "runtime/serve"]
+	path = runtime/serve
+	url = ../serve.git
+[submodule "runtime/serve-handler"]
+	path = runtime/serve-handler
+	url = ../serve-handler.git
+[submodule "runtime/setup-turborepo-remote-cache-action"]
+	path = runtime/setup-turborepo-remote-cache-action
+	url = ../setup-turborepo-remote-cache-action.git
+[submodule "runtime/slack-bolt"]
+	path = runtime/slack-bolt
+	url = ../slack-bolt.git
+[submodule "runtime/specli"]
+	path = runtime/specli
+	url = ../specli.git
+[submodule "runtime/terraform-provider-vercel"]
+	path = runtime/terraform-provider-vercel
+	url = ../terraform-provider-vercel.git
+[submodule "runtime/test-listen"]
+	path = runtime/test-listen
+	url = ../test-listen.git
+[submodule "runtime/traefik-oidc-auth-plugin"]
+	path = runtime/traefik-oidc-auth-plugin
+	url = ../traefik-oidc-auth-plugin.git
+[submodule "runtime/tsc-ts"]
+	path = runtime/tsc-ts
+	url = ../tsc-ts.git
+[submodule "runtime/uid-promise"]
+	path = runtime/uid-promise
+	url = ../uid-promise.git
+[submodule "runtime/vcr-action"]
+	path = runtime/vcr-action
+	url = ../vcr-action.git
+[submodule "runtime/vercel-box-mount"]
+	path = runtime/vercel-box-mount
+	url = ../vercel-box-mount.git
+[submodule "runtime/vercel-bulk-waf-rules"]
+	path = runtime/vercel-bulk-waf-rules
+	url = ../vercel-bulk-waf-rules.git
+[submodule "runtime/vercel-openclaw"]
+	path = runtime/vercel-openclaw
+	url = ../vercel-openclaw.git
+[submodule "runtime/vgpu"]
+	path = runtime/vgpu
+	url = ../vgpu.git
+[submodule "runtime/virtue-fork"]
+	path = runtime/virtue-fork
+	url = ../virtue-fork.git
+[submodule "runtime/wait-for-deployment-action"]
+	path = runtime/wait-for-deployment-action
+	url = ../wait-for-deployment-action.git
+[submodule "runtime/zerolang"]
+	path = runtime/zerolang
+	url = ../zerolang.git
+[submodule "python/ggbuild"]
+	path = python/ggbuild
+	url = ../ggbuild.git
+[submodule "python/hatchery"]
+	path = python/hatchery
+	url = ../hatchery.git
+[submodule "python/modelsdotdev-python"]
+	path = python/modelsdotdev-python
+	url = ../modelsdotdev-python.git
+[submodule "python/nextjs-fastapi-multiplayer-cursors"]
+	path = python/nextjs-fastapi-multiplayer-cursors
+	url = ../nextjs-fastapi-multiplayer-cursors.git
+[submodule "python/ocr-fastapi-nextjs-docker"]
+	path = python/ocr-fastapi-nextjs-docker
+	url = ../ocr-fastapi-nextjs-docker.git
+[submodule "python/postgresbuild"]
+	path = python/postgresbuild
+	url = ../postgresbuild.git
+[submodule "python/python-nextjs-starter"]
+	path = python/python-nextjs-starter
+	url = ../python-nextjs-starter.git
+[submodule "python/seal"]
+	path = python/seal
+	url = ../seal.git
+[submodule "python/tau-agent"]
+	path = python/tau-agent
+	url = ../tau-agent.git
+[submodule "templates/academy-starters"]
+	path = templates/academy-starters
+	url = ../academy-starters.git
+[submodule "templates/ai-facts"]
+	path = templates/ai-facts
+	url = ../ai-facts.git
+[submodule "templates/ai-gateway-embeddings-demo"]
+	path = templates/ai-gateway-embeddings-demo
+	url = ../ai-gateway-embeddings-demo.git
+[submodule "templates/ai-sdk-fundamentals-starter"]
+	path = templates/ai-sdk-fundamentals-starter
+	url = ../ai-sdk-fundamentals-starter.git
+[submodule "templates/ai-sdk-image-generator"]
+	path = templates/ai-sdk-image-generator
+	url = ../ai-sdk-image-generator.git
+[submodule "templates/ai-sdk-preview-multi-steps"]
+	path = templates/ai-sdk-preview-multi-steps
+	url = ../ai-sdk-preview-multi-steps.git
+[submodule "templates/ai-sdk-preview-pdf-support"]
+	path = templates/ai-sdk-preview-pdf-support
+	url = ../ai-sdk-preview-pdf-support.git
+[submodule "templates/ai-sdk-preview-python-streaming"]
+	path = templates/ai-sdk-preview-python-streaming
+	url = ../ai-sdk-preview-python-streaming.git
+[submodule "templates/ai-sdk-rag-starter"]
+	path = templates/ai-sdk-rag-starter
+	url = ../ai-sdk-rag-starter.git
+[submodule "templates/ai-test-clone"]
+	path = templates/ai-test-clone
+	url = ../ai-test-clone.git
+[submodule "templates/arena-fixture"]
+	path = templates/arena-fixture
+	url = ../arena-fixture.git
+[submodule "templates/autoship"]
+	path = templates/autoship
+	url = ../autoship.git
+[submodule "templates/aws-s3-general-purpose-buckets-demo"]
+	path = templates/aws-s3-general-purpose-buckets-demo
+	url = ../aws-s3-general-purpose-buckets-demo.git
+[submodule "templates/aws-s3-tables-demo"]
+	path = templates/aws-s3-tables-demo
+	url = ../aws-s3-tables-demo.git
+[submodule "templates/aws-s3-vectors-demo"]
+	path = templates/aws-s3-vectors-demo
+	url = ../aws-s3-vectors-demo.git
+[submodule "templates/callscript"]
+	path = templates/callscript
+	url = ../callscript.git
+[submodule "templates/chat-sdk-deploy-bot"]
+	path = templates/chat-sdk-deploy-bot
+	url = ../chat-sdk-deploy-bot.git
+[submodule "templates/chat-sdk-form-bot"]
+	path = templates/chat-sdk-form-bot
+	url = ../chat-sdk-form-bot.git
+[submodule "templates/cma-chat-sdk"]
+	path = templates/cma-chat-sdk
+	url = ../cma-chat-sdk.git
+[submodule "templates/daily-digest-bot"]
+	path = templates/daily-digest-bot
+	url = ../daily-digest-bot.git
+[submodule "templates/example-marketplace-integration"]
+	path = templates/example-marketplace-integration
+	url = ../example-marketplace-integration.git
+[submodule "templates/examples"]
+	path = templates/examples
+	url = ../examples.git
+[submodule "templates/flags-sdk-workshop-starter"]
+	path = templates/flags-sdk-workshop-starter
+	url = ../flags-sdk-workshop-starter.git
+[submodule "templates/hono-websockets-presence"]
+	path = templates/hono-websockets-presence
+	url = ../hono-websockets-presence.git
+[submodule "templates/isr-platform-shield"]
+	path = templates/isr-platform-shield
+	url = ../isr-platform-shield.git
+[submodule "templates/jev-ai-sdk-form-router"]
+	path = templates/jev-ai-sdk-form-router
+	url = ../jev-ai-sdk-form-router.git
+[submodule "templates/jev-model-api"]
+	path = templates/jev-model-api
+	url = ../jev-model-api.git
+[submodule "templates/kody-eve-template"]
+	path = templates/kody-eve-template
+	url = ../kody-eve-template.git
+[submodule "templates/marketing-team-eve-template"]
+	path = templates/marketing-team-eve-template
+	url = ../marketing-team-eve-template.git
+[submodule "templates/natural-language-postgres"]
+	path = templates/natural-language-postgres
+	url = ../natural-language-postgres.git
+[submodule "templates/next-dev-bridge"]
+	path = templates/next-dev-bridge
+	url = ../next-dev-bridge.git
+[submodule "templates/nextjs-nights-shader"]
+	path = templates/nextjs-nights-shader
+	url = ../nextjs-nights-shader.git
+[submodule "templates/nextjs-passport-entra-id"]
+	path = templates/nextjs-passport-entra-id
+	url = ../nextjs-passport-entra-id.git
+[submodule "templates/nextjs-waiting-room"]
+	path = templates/nextjs-waiting-room
+	url = ../nextjs-waiting-room.git
+[submodule "templates/nextjs-websocket-chat-app"]
+	path = templates/nextjs-websocket-chat-app
+	url = ../nextjs-websocket-chat-app.git
+[submodule "templates/orb_data_freshness_dashboard"]
+	path = templates/orb_data_freshness_dashboard
+	url = ../orb_data_freshness_dashboard.git
+[submodule "templates/registry-starter"]
+	path = templates/registry-starter
+	url = ../registry-starter.git
+[submodule "templates/sanity-copilot-eve-template"]
+	path = templates/sanity-copilot-eve-template
+	url = ../sanity-copilot-eve-template.git
+[submodule "templates/semantic-image-search"]
+	path = templates/semantic-image-search
+	url = ../semantic-image-search.git
+[submodule "templates/ship26-backends-workshop-template"]
+	path = templates/ship26-backends-workshop-template
+	url = ../ship26-backends-workshop-template.git
+[submodule "templates/shop"]
+	path = templates/shop
+	url = ../shop.git
+[submodule "templates/simple-agent-with-jev"]
+	path = templates/simple-agent-with-jev
+	url = ../simple-agent-with-jev.git
+[submodule "templates/store-front-agent-example"]
+	path = templates/store-front-agent-example
+	url = ../store-front-agent-example.git
+[submodule "templates/storytime-slackbot"]
+	path = templates/storytime-slackbot
+	url = ../storytime-slackbot.git
+[submodule "templates/vectr"]
+	path = templates/vectr
+	url = ../vectr.git
+[submodule "templates/vercel-config-demo"]
+	path = templates/vercel-config-demo
+	url = ../vercel-config-demo.git

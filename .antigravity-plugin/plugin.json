@@ -1,0 +1,22 @@
+{
+  "name": "ay-vercel",
+  "displayName": "Vercel (Aphrody)",
+  "version": "0.1.0",
+  "description": "Unified Vercel & Vercel-Labs ecosystem hub with upstream auto-merge, agent skills, official MCP catalog, offline docs, Turborepo, Next.js, tsc-ts, and scriptc.",
+  "logo": "assets/vercel-antigravity.svg",
+  "suggestedPrompts": [
+    "Audit Vercel Fluid Compute configs, MCP catalog, and agent skill SHA-256 digests",
+    "Sync all vercel and vercel-labs upstream forks and pin 160000 gitlinks",
+    "Typecheck with tsc-ts, compile native targets with scriptc, and build with Turborepo"
+  ],
+  "keywords": ["vercel", "vercel-labs", "nextjs", "turborepo", "ai-sdk", "mcp", "tsc-ts", "scriptc"],
+  "author": {
+    "name": "aphrody-labs",
+    "email": "contact@aphrody.com",
+    "url": "https://github.com/aphrody-labs/ay-vercel"
+  },
+  "homepage": "https://github.com/aphrody-labs/ay-vercel",
+  "repository": "https://github.com/aphrody-labs/ay-vercel",
+  "license": "Apache-2.0",
+  "skills": ["./skills"]
+}

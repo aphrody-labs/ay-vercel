@@ -1,0 +1,10 @@
+{
+  "name": "@aphrody/vercel-native",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun x scriptc build src/main.ts -o dist/ay-vercel-native",
+    "typecheck": "bun x tsc-ts --noEmit -p tsconfig.json"
+  }
+}

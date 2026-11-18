@@ -1,0 +1,94 @@
+name: auto-merge
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, labeled, ready_for_review]
+  merge_group:
+    types: [checks_requested]
+  workflow_run:
+    workflows: [ci]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  approve-and-merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: >-
+      (
+        github.event_name == 'workflow_run' &&
+        github.event.workflow_run.conclusion == 'success'
+      ) ||
+      (
+        github.event_name == 'pull_request_target' &&
+        !github.event.pull_request.draft &&
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        (
+          contains(github.event.pull_request.labels.*.name, 'auto-merge') ||
+          contains(github.event.pull_request.labels.*.name, 'upstream-sync') ||
+          contains(github.event.pull_request.labels.*.name, 'dependencies') ||
+          github.event.pull_request.user.login == 'dependabot[bot]' ||
+          github.event.pull_request.user.login == 'renovate[bot]'
+        )
+      )
+    steps:
+      - name: Mint GitHub App token (when APHRODY_APP_KEY is granted)
+        id: app-token
+        continue-on-error: true
+        if: vars.APHRODY_APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          app-id: ${{ vars.APHRODY_APP_CLIENT_ID }}
+          private-key: ${{ secrets.APHRODY_APP_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: "canary"
+
+      - name: Enable auto-merge on qualifying pull requests
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          OWNER: ${{ github.repository_owner }}
+          RUN_SHA: ${{ github.event.workflow_run.head_sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request_target" ] && [ -n "$PR_NUMBER" ]; then
+            gh pr review "$PR_NUMBER" --repo "$REPO" --approve --body "Automated approval for ay-vercel sync/dependency PR." || true
+            gh pr merge "$PR_NUMBER" --repo "$REPO" --auto --squash --delete-branch || true
+          elif [ "$EVENT_NAME" = "merge_group" ]; then
+            echo "Merge group requested; waiting for ci / gate."
+          else
+            PR_NUMBERS=$(gh pr list --repo "$REPO" --state open --json number,isDraft,headRefOid,labels,headRepositoryOwner,author | bun -e '
+              const prs = JSON.parse(await new Response(Bun.stdin.stream()).text());
+              const owner = process.env.OWNER || "";
+              const runSha = process.env.RUN_SHA || "";
+              const allowed = new Set(["auto-merge", "upstream-sync", "dependencies"]);
+              const bots = new Set(["dependabot[bot]", "renovate[bot]", "app/dependabot", "app/renovate"]);
+              for (const pr of prs) {
+                if (pr.isDraft) continue;
+                if ((pr.headRepositoryOwner?.login || "") !== owner) continue;
+                if (runSha && pr.headRefOid !== runSha) continue;
+                const labels = new Set((pr.labels || []).map((l) => l.name));
+                const author = pr.author?.login || "";
+                if ([...labels].some((l) => allowed.has(l)) || bots.has(author)) {
+                  console.log(pr.number);
+                }
+              }
+            ')
+            for PR in $PR_NUMBERS; do
+              gh pr review "$PR" --repo "$REPO" --approve --body "Automated approval via ay-vercel auto-merge." || true
+              gh pr merge "$PR" --repo "$REPO" --auto --squash --delete-branch \
+                || gh pr merge "$PR" --repo "$REPO" --squash --delete-branch \
+                || true
+            done
+          fi

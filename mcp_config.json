@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vercel": {
+      "serverUrl": "https://mcp.vercel.com"
+    },
+    "next-devtools": {
+      "command": "bunx",
+      "args": ["next-devtools-mcp@latest"]
+    }
+  }
+}
