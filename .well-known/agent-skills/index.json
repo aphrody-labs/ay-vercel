@@ -1,6 +1,6 @@
 {
   "$schema": "https://cloudflare.github.io/agent-skills-discovery-rfc/schema.json",
-  "generated_at": "2026-11-18T14:45:33.598Z",
+  "generated_at": "2026-11-18T15:04:19.146Z",
   "skills": [
     {
       "name": "Vercel Academy",
