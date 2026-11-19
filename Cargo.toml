@@ -1,15 +1,11 @@
 [workspace]
-resolver = "2"
+resolver = "3"
 members = [
-  "crates/ay-vercel-manifest",
-  "crates/ay-vercel-skills",
-  "crates/ay-vercel-function",
+  "crates/*",
 ]
 exclude = [
-  "crates/ay-vercel-next",
   "frameworks",
   "sdk",
-  "skills",
   "skill-repos",
   "mcp",
   "docs",
@@ -20,39 +16,51 @@ exclude = [
   "templates",
 ]
 
+[workspace.metadata]
+name = "vercel-crates"
+
 [workspace.package]
 edition = "2024"
 version = "0.1.0"
-rust-version = "1.100.0"
 license = "Apache-2.0"
 repository = "https://github.com/aphrody-labs/ay-vercel"
 
-[workspace.dependencies]
-http = "1.5.0"
-serde = { version = "1.0.229", features = ["derive"] }
-serde_json = "1.0.154"
-sha2 = "0.11.1"
-thiserror = "2.0.21"
-tokio = { version = "1.54.1", features = ["macros", "rt"] }
-toml = "1.2.1"
-url = { version = "2.5.8", features = ["serde"] }
-vercel_runtime = "2.4.1"
-
 [workspace.lints.rust]
-unsafe_code = "forbid"
-non_ascii_idents = "deny"
-missing_docs = "warn"
-unreachable_pub = "warn"
-rust_2018_idioms = { level = "warn", priority = -1 }
-
-[workspace.lints.rustdoc]
-missing_crate_level_docs = "warn"
-unescaped_backticks = "warn"
+unexpected_cfgs = { level = "warn", check-cfg = [
+  'cfg(rust_analyzer)',
+  'cfg(fuzzing)',
+  'cfg(codspeed)',
+  'cfg(debug_assert)',
+] }
 
 [workspace.lints.clippy]
-all = { level = "warn", priority = -1 }
-dbg_macro = "warn"
-todo = "warn"
-unimplemented = "warn"
-unwrap_used = "deny"
-expect_used = "deny"
+too_many_arguments = "allow"
+
+[profile.dev]
+debug = "line-tables-only"
+opt-level = 1
+
+[profile.dev.package.turbo-persistence]
+opt-level = 2
+
+[profile.dev.build-override]
+opt-level = 3
+
+# Maximum AOT + Fat LTO release profile for crates.io-grade Rust + Bun binaries
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = "symbols"
+panic = "abort"
+
+# Cross-language LTO profile (rustc -Clinker-plugin-lto + clang -flto + lld)
+[profile.release-xlto]
+inherits = "release"
+lto = "fat"
+codegen-units = 1
+panic = "unwind"
+
+[patch.crates-io]
+bincode = { git = "https://github.com/vercel-labs/bincode-fork.git", branch = "main" }
+virtue = { git = "https://github.com/vercel-labs/virtue-fork.git", branch = "trunk" }

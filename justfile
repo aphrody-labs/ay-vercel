@@ -1,7 +1,5 @@
 set windows-shell := ["pwsh", "-NoLogo", "-NoProfile", "-Command"]
 
-export RUSTFLAGS := env("RUSTFLAGS", if os() == "windows" { "-C target-cpu=native" } else { "" })
-
 just := just_executable()
 
 # List available ay-vercel recipes
@@ -65,15 +63,20 @@ vercel-audit:
     bun tools/mcp-sync.ts --check
     bun tools/docs-sync.ts --check
 
-# Run Rust fmt, clippy (-D warnings), and workspace unit tests
-rust-check:
-    cargo fmt --all -- --check
-    cargo clippy --workspace --all-targets -- -D warnings
-    cargo test --workspace
+# Extract and de-workspace official Vercel, Next.js, Turbopack, and Turborepo crates into crates/*
+rust-extract:
+    bun tools/rust-extract.ts
 
-# Check pure-Rust Next.js extracted crate (requires `just submodules-init frameworks/next.js` and nightly)
-next-rust-check:
-    cargo check --manifest-path crates/ay-vercel-next/Cargo.toml
+# Check the 46-crate unified workspace and run strict lints/tests on authored crates
+rust-check:
+    cargo fmt -p vercel-config -p vercel-skills -p next-bun -p vercel-cli -- --check
+    cargo check --workspace
+    cargo clippy -p vercel-config -p vercel-skills -p next-bun -p vercel-cli --all-targets -- -D warnings
+    cargo test -p vercel-config -p vercel-skills -p next-bun -p vercel-cli
+
+# Compile standalone Fat-LTO / AOT `vercel-rs` binary (`lto = "fat"`, `codegen-units = 1`, `panic = "abort"`)
+rust-aot:
+    cargo build --release -p vercel-cli
 
 # Run Python Ruff lint/format checks and pytest suite via uv
 py-check:

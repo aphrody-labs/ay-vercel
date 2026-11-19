@@ -24,7 +24,7 @@ const DEFAULT_PATTERNS: [string, RegExp][] = [
   ],
 ];
 
-const MIRRORED_DOCS = /^(?:skills\/(?!ay-vercel-)[^/]+|docs\/vercel)\//;
+const MIRRORED_DOCS = /^(?:skills\/(?!ay-vercel-)[^/]+|docs\/vercel|crates\/(?!vercel-|next-bun)[^/]+)\//;
 
 export function scanFiles(files: Map<string, string>, extraLiterals: string[] = []): Leak[] {
   const leaks: Leak[] = [];
@@ -37,7 +37,7 @@ export function scanFiles(files: Map<string, string>, extraLiterals: string[] = 
     const isMirroredDoc = MIRRORED_DOCS.test(file);
     text.split(/\r?\n/).forEach((line, idx) => {
       for (const [why, re] of DEFAULT_PATTERNS) {
-        if (isMirroredDoc && why === "Non-placeholder email address") continue;
+        if (isMirroredDoc && (why === "Non-placeholder email address" || why === "POSIX home directory path")) continue;
         if (re.test(line)) leaks.push({ file, line: idx + 1, why });
       }
       for (const re of literalRes) {

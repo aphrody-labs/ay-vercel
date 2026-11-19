@@ -254,13 +254,13 @@
     },
     {
       "name": "ay-vercel-ops",
-      "description": "Manage the ay-vercel superproject, upstream fork synchronization across vercel and vercel-labs, agent skills indexing, MCP catalog verification, and tsc-ts/scriptc/Turborepo/Next.js builds.",
+      "description": "Operate the ay-vercel Rust + Bun superproject — unified crates.io-grade Cargo workspace (vercel-*, next-*, turbopack-*, turborepo-*) with max LTO/XLTO/AOT, upstream fork sync, skills/MCP/docs mirrors, and real-browser verification via agent-browser.",
       "category": "ay-vercel",
       "source_repo": "aphrody-labs/ay-vercel",
       "source_path": "skills/ay-vercel-ops/SKILL.md",
       "local_path": "skills/ay-vercel-ops/SKILL.md",
-      "sha256": "1441ba574aa48b1e4cd01060d52f3d8774b4efd09d5ad8ed2072672a09483210",
-      "bytes": 1026
+      "sha256": "c699c79ec4c38533a4200b88f9e1b2703154a742d11970cd014068687160403f",
+      "bytes": 2232
     },
     {
       "name": "before-and-after",
