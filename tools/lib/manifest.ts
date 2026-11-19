@@ -10,6 +10,8 @@ export const ROLES = [
   "agents",
   "ui",
   "runtime",
+  "rust",
+  "net",
   "python",
   "templates",
   "security",
