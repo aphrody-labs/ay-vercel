@@ -1,6 +1,6 @@
 {
   "$schema": "https://cloudflare.github.io/agent-skills-discovery-rfc/schema.json",
-  "generated_at": "2026-11-18T15:04:19.146Z",
+  "generated_at": "2026-11-19T13:06:18.971Z",
   "skills": [
     {
       "name": "Vercel Academy",
@@ -307,8 +307,8 @@
       "name": "d3k",
       "description": "Test and debug a web app in its existing d3k browser, including local Chrome connected to a Vercel Sandbox over CDP. Use for UI checks, browser interactions, screenshots, and reproducing app issues when d3k is running.",
       "url": "/skills/d3k/SKILL.md",
-      "sha256": "103a20fae248f605e60902c91a1a15c37d07dfe2b112d90a590e678ba1d9bbd5",
-      "bytes": 26620
+      "sha256": "556f490e5b495bf9c8cbd82c670325d2e1f83483680deefad144dd04998b107e",
+      "bytes": 27090
     },
     {
       "name": "daemons",
@@ -566,8 +566,8 @@
       "name": "knowledge-update",
       "description": "Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start.",
       "url": "/skills/knowledge-update/SKILL.md",
-      "sha256": "4aef8f0cd88a41946eb477846e48e28f50a5e47539b6c5149f914d03d8b5cbc6",
-      "bytes": 12348
+      "sha256": "44baa16429644ee814438d062bac9a34b4f9fa74e5a343b403e9e18ac6560717",
+      "bytes": 12527
     },
     {
       "name": "konsistent-config",
@@ -846,8 +846,8 @@
       "name": "portless",
       "description": "Set up and use portless for named local dev server URLs (e.g. https://myapp.localhost instead of http://localhost:3000). Use when integrating portless into a project, configuring dev server names, setting up the local proxy, working with .localhost domains, or troubleshooting port/proxy issues.",
       "url": "/skills/portless/SKILL.md",
-      "sha256": "0d1a444bea75c8265d525d47f265b587af137df425d7b5afdf4dcb8b3a603109",
-      "bytes": 44625
+      "sha256": "571238340aebf8ec42772c234f94dde234e00baad12a1602e5e64ec1487d47da",
+      "bytes": 45460
     },
     {
       "name": "python-on-vercel",
@@ -937,8 +937,8 @@
       "name": "routing-middleware",
       "description": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, Bun, and Python runtimes. Use when intercepting requests at the platform level.",
       "url": "/skills/routing-middleware/SKILL.md",
-      "sha256": "e7c10fc03e922320b0ede4b9626cc57ca5775aaec5d7e24af1c24996a0db69b5",
-      "bytes": 11782
+      "sha256": "54b0fde864aae95ffdb7c7b66303c60bf4e32a22fe471cd98a5fdb38915de160",
+      "bytes": 11790
     },
     {
       "name": "runtime-cache",
@@ -1196,8 +1196,8 @@
       "name": "vercel-functions",
       "description": "Vercel Functions expert guidance — Node.js/Bun/Python runtimes, Fluid Compute, long-duration (30 min) functions, large functions (5 GB bundles), Docker/OCI container images, plan limits, streaming, WebSockets, and legacy Cron Jobs (new scheduled work belongs to vercel-schedules). Use when configuring, debugging, or optimizing server-side code running on Vercel.",
       "url": "/skills/vercel-functions/SKILL.md",
-      "sha256": "58dbb5d1919f3dc8f755e2d4438e7115c4ff709febda4eec93aa63f5d4fa1469",
-      "bytes": 52516
+      "sha256": "9529d9f6cb3c1f3dbb19efeb17c07d58a87797300ff4e94f72e48de689394714",
+      "bytes": 52975
     },
     {
       "name": "vercel-microfrontends",
